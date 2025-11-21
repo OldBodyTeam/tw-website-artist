@@ -82,7 +82,7 @@ export default function Example() {
           <div
             key={v.title}
             // 修复1：使用v.image作为背景色，同时设置flex布局让内容垂直居中
-            className={`${v.image} flex flex-col justify-end items-center md:flex-row md:items-end md:justify-center h-full md:h-auto pb-[16px] md:pb-[40px] overflow-hidden ${v.className} md:-ml-[18px] md:rounded-none`}
+            className={`${v.image} flex flex-col justify-end items-center md:flex-row md:items-end md:justify-center h-full md:h-auto pb-[16px] md:pb-[40px] overflow-hidden ${v.className} md:-ml-[18px] md:rounded-none flex-1`}
           >
             {/* 修复2：竖排容器添加高度，确保文字垂直排列空间 */}
             <div className="flex flex-col md:flex-row gap-[4px] md:gap-[8px] items-center justify-center md:min-h-[132px]">
