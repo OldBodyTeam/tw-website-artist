@@ -36,9 +36,19 @@ const LeftNav = () => {
   const pathname = usePathname();
   return (
     <Drawer direction="left">
-      <div className="bg-[#F8F8EC] h-screen">
+      <div className="md:bg-[#F8F8EC] md:h-screen fixed top-8 left-8 md:static md:top-auto md:left-auto z-50">
         <DrawerTrigger>
-          <div className="flex w-[48px] h-full  flex-col items-center px-[8px] py-[40px] gap-[16px]">
+          {/* Mobile Trigger */}
+          <div className="md:hidden">
+            <Image
+              src="/nav/mobile-menu.svg"
+              alt="menu"
+              width={32}
+              height={32}
+            />
+          </div>
+          {/* Desktop Trigger */}
+          <div className="hidden md:flex w-[48px] h-full flex-col items-center px-[8px] py-[40px] gap-[16px]">
             <Image src="/nav-icon.svg" alt="logo" width={32} height={32} />
             <div className="flex-1 bg-[#0A090F] w-[1px] opacity-10"></div>
           </div>
