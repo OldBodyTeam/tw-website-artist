@@ -4,7 +4,7 @@ import { Form, Input, Radio } from "antd";
 
 const ContactForm = () => {
   return (
-    <Form layout="vertical" className="w-[536px]">
+    <Form layout="vertical" className="w-full md:w-[536px] min-w-[320px]">
       <Form.Item name="name" label="聯絡人姓名">
         <Input placeholder="請輸入聯絡人姓名" className="w-full" />
       </Form.Item>
