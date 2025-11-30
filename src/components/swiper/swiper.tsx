@@ -65,7 +65,7 @@ const features = [
 const HomeSwiper = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const responsive = useResponsive();
-  if (!responsive.middle) {
+  if (!responsive?.middle) {
     return (
       <div className="w-full h-full relative">
         <div className="w-full h-screen relative ">

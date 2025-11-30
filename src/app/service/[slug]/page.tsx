@@ -128,7 +128,7 @@ const designSteps: any[] = [
 ];
 export default function ServiceDetail() {
   const responsive = useResponsive();
-  if (!responsive.middle) {
+  if (!responsive?.middle) {
     return (
       <div className="h-screen overflow-auto">
         <div className="flex-1 bg-[#0A090F]">
