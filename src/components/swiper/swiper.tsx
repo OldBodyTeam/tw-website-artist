@@ -49,20 +49,20 @@ const HomeSwiper = () => {
       <SwiperPagination activeIndex={activeIndex} />
       <SwiperSlide>
         {/* 背景色 换图片 */}
-        <div className="w-full h-screen relative">
+        <div className="w-full h-screen relative ">
           <VideoPlayer />
-          <div className="w-full h-full absolute left-0 top-0 flex justify-between pt-[128px] pb-[44px] px-[64px] flex-col">
-            <div className="flex items-center justify-end">
-              <Image src="/home-1/story.png" alt="1" width={528} height={68} />
+          <div className="w-full h-full absolute left-0 top-0 flex justify-between pt-[128px] pb-[44px] px-[64px] flex-col bg-[rgba(10,9,15,0.35)]">
+            <div className="flex items-center justify-end text-[48px] font-semibold text-white leading-[60px]">
+              懂你的品牌，說你的故事
             </div>
             <div className="flex items-end justify-between">
               <Image
-                src="/home-1/company.png"
+                src="/home-1/company.svg"
                 alt="2"
                 width={422}
                 height={240}
               />
-              <Image src="/home-1/logo.png" alt="3" width={264} height={48} />
+              <Image src="/home-1/logo.svg" alt="3" width={264} height={48} />
             </div>
           </div>
         </div>
@@ -106,17 +106,28 @@ const HomeSwiper = () => {
               <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
             </div>
           </div>
-          <div className="flex-1 grid grid-cols-4 gap-[16px] overflow-x-hidden overflow-y-auto swiper-no-mousewheel">
-            {Array.from({ length: 40 }).map((_, index) => (
-              <div key={index} className="bg-[#222222] w-full h-[304px]">
-                1
+          <div className="flex-1 overflow-x-hidden overflow-y-hidden swiper-no-mousewheel relative">
+            <div className="overflow-x-hidden overflow-y-auto h-full">
+              <div className="grid grid-cols-4 gap-[16px] overflow-x-hidden overflow-y-auto swiper-no-mousewheel">
+                {Array.from({ length: 40 }).map((_, index) => (
+                  <div key={index} className="bg-[#222222] w-full h-[304px]">
+                    1
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
 
+            <div
+              className="h-[124px] w-full absolute bottom-0 left-0 z-[9999]"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(10, 9, 15, 0) 0%, rgba(10, 9, 15, 1) 100%)",
+              }}
+            ></div>
+          </div>
           <div className="flex items-end justify-between">
             <Image src="/home-2/company.png" alt="2" width={320} height={32} />
-            <Image src="/home-2/logo.png" alt="2" width={264} height={48} />
+            <Image src="/home-1/logo.svg" alt="2" width={264} height={48} />
           </div>
         </div>
       </SwiperSlide>
@@ -141,12 +152,11 @@ const HomeSwiper = () => {
           </div>
           <div className="flex-1 grid grid-cols-3 gap-[20px] overflow-x-hidden overflow-y-auto">
             <div className="overflow-hidden relative">
-              <div className="relative h-[258px]">
-                <Image
-                  src="/home-3/1.png"
+              <div className="relative">
+                <img
+                  src="/home-3/1.svg"
                   alt="2"
-                  fill
-                  className="object-cover"
+                  className="object-cover w-full"
                 />
               </div>
               <div className="text-[16px] font-regular text-white mt-[16px]">
@@ -154,12 +164,11 @@ const HomeSwiper = () => {
               </div>
             </div>
             <div className="overflow-hidden ">
-              <div className="relative h-[258px]">
-                <Image
-                  src="/home-3/2.png"
+              <div className="relative">
+                <img
+                  src="/home-3/2.svg"
                   alt="2"
-                  fill
-                  className="object-cover"
+                  className="object-cover w-full"
                 />
               </div>
 
@@ -168,12 +177,11 @@ const HomeSwiper = () => {
               </div>
             </div>
             <div className="overflow-hidden relative">
-              <div className="relative h-[258px]">
-                <Image
-                  src="/home-3/3.png"
+              <div className="relative">
+                <img
+                  src="/home-3/3.svg"
                   alt="2"
-                  fill
-                  className="object-cover"
+                  className="object-cover w-full"
                 />
               </div>
               <div className="text-[16px] font-regular text-white mt-[16px]">
@@ -184,7 +192,7 @@ const HomeSwiper = () => {
 
           <div className="flex items-end justify-between">
             <Image src="/home-2/company.png" alt="2" width={320} height={32} />
-            <Image src="/home-2/logo.png" alt="2" width={264} height={48} />
+            <Image src="/home-1/logo.svg" alt="2" width={264} height={48} />
           </div>
         </div>
       </SwiperSlide>
@@ -237,7 +245,7 @@ const HomeSwiper = () => {
 
           <div className="flex items-end justify-between">
             <Image src="/home-2/company.png" alt="2" width={320} height={32} />
-            <Image src="/home-2/logo.png" alt="2" width={264} height={48} />
+            <Image src="/home-1/logo.svg" alt="2" width={264} height={48} />
           </div>
         </div>
       </SwiperSlide>

@@ -1,62 +1,8 @@
-
+import { Divider } from "antd";
 import Image from "next/image";
-import Link from "next/link";
-const list = [
-  {
-    title: "品牌規劃",
-    desc: "Branding Strategy",
-    image: "bg-[#a23e00]", // 注意：颜色值格式统一（如#a23e00无需加[]）
-    className:
-      "md:[clip-path:polygon(0_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/example/branding",
-  },
-  {
-    title: "網站設計",
-    desc: "Website Design",
-    image: "bg-[#FF6699]",
-    className:
-      "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/example/website",
-  },
-  {
-    title: "社群行銷",
-    desc: "Social Media Marketing",
-    image: "bg-[#FF6700]",
-    className:
-      "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/example/social",
-    },
-  {
-    title: "口碑行銷",
-    desc: "WOM Marketing",
-    image: "bg-[#aF6600]",
-    className:
-      "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/example/wom",
-  },
-  {
-    title: "廣告投放",
-    desc: "Digital Advertising",
-    image: "bg-[#Fa6600]",
-    className:
-      "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/example/ad",  
-  },
-  {
-    title: "各類印刷",
-    desc: "Print Production",
-    image: "bg-[#F16610]",
-    className:
-      "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/example/print",
-  },
-];
-
-export default function Example() {
-  
+export default function Service() {
   return (
-    <div className="flex-1 h-screen bg-black py-[20px] px-[16px] md:py-[44px] md:px-[64px] flex flex-col md:h-auto md:min-h-screen">
-      {/* 顶部图片 */}
+    <div className="flex-1 h-screen relative bg-[#0A090F] p-[44px] flex flex-col">
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 w-full">
         {/* Mobile Title */}
         <Image
@@ -76,38 +22,51 @@ export default function Example() {
           className="hidden md:block"
         />
         <Image
-          src="/home-2/logo.png"
+          src="/home-1/logo.svg"
           alt="logo"
           width={264}
           height={48}
           className="hidden md:block"
         />
       </div>
+      <Divider className="!mt-[32px] !bg-[rgba(255,255,255,0.1)] !border-[rgba(255,255,255,0.1)]" />
 
-      {/* 核心内容区：竖排文字列表 */}
-      <div className="grid grid-cols-3 grid-rows-2 gap-y-[12px] md:flex md:flex-row justify-between items-stretch mt-[32px] md:mt-[64px] flex-1 md:gap-0">
-        {list.map((v) => (
-           <Link href={v.href} key={v.title} className="block flex-1 flex">
-          <div
-            // 修复1：使用v.image作为背景色，同时设置flex布局让内容垂直居中
-            className={`${v.image} flex flex-col justify-end items-center md:flex-row md:items-end md:justify-center h-full md:h-auto pb-[16px] md:pb-[40px] overflow-hidden ${v.className} md:-ml-[18px] md:rounded-none flex-1 cursor-pointer`}
-          >
-           
-            {/* 修复2：竖排容器添加高度，确保文字垂直排列空间 */}
-            <div className="flex flex-col md:flex-row gap-[4px] md:gap-[8px] items-center justify-center md:min-h-[132px]">
-              {/* 中文竖排 */}
-              <div className="md:[writing-mode:vertical-rl] md:[text-orientation:mixed] text-white text-[12px] md:text-[24px] tracking-wider md:self-start font-bold">
-                {v.title}
-              </div>
-              {/* 英文竖排（翻转后正向显示） */}
-              <div className="md:[writing-mode:vertical-rl] md:[text-orientation:mixed] text-white/65 md:text-white/80 text-[11px] md:text-[14px] md:self-end text-center leading-tight">
-                {v.desc}
-              </div>
+      <div className="flex-1 flex flex-col overflow-hidden">
+        <div className="mb-[16px]">
+          <div className="max-w-[850px]">
+            <div className="text-[20px] font-regular text-white mb-[8px]">
+              Driven by Detail, Defined by Quality
             </div>
-            
+            <div className="text-[48px] leading-[68px] font-regular text-white mb-[16px]">
+              專注成功每個細節
+            </div>
+            <div className="text-[16px] font-regular text-white">
+              行銷的價值不只是曝光，而是為企業帶來真正的效益。我們不提供制式化的行銷包套，而是根據品牌現況，結合短期推廣與長期策略，為每個品牌量身規劃最適合的行銷方案。確保每一分投入都能發揮最大價值，幫助品牌被看見，也被選擇。
+            </div>
           </div>
-          </Link>
-        ))}
+          <div className="flex items-center justify-end my-[22px]">
+            <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
+          </div>
+        </div>
+        <div className="flex-1 overflow-x-hidden overflow-y-hidden swiper-no-mousewheel relative">
+          <div className="overflow-x-hidden overflow-y-auto h-full">
+            <div className="grid grid-cols-4 gap-[16px] overflow-x-hidden overflow-y-auto swiper-no-mousewheel">
+              {Array.from({ length: 40 }).map((_, index) => (
+                <div key={index} className="bg-[#222222] w-full h-[304px]">
+                  1
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div
+            className="h-[124px] w-full absolute bottom-0 left-0 z-[9999]"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(10, 9, 15, 0) 0%, rgba(10, 9, 15, 1) 100%)",
+            }}
+          ></div>
+        </div>
       </div>
     </div>
   );

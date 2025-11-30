@@ -55,7 +55,7 @@ const LeftNav = () => {
           </div>
         </DrawerTrigger>
         <DrawerTitle></DrawerTitle>
-        <DrawerContent>
+        <DrawerContent className="backdrop-blur-[8px]">
           <div className="bg-[#F8F8EC] h-screen p-[40px] flex flex-col justify-between">
             <div>
               <Image
@@ -68,7 +68,11 @@ const LeftNav = () => {
               <RadioGroup defaultValue={menu[0].path} value={pathname}>
                 {menu.map((item) => (
                   // 加手
-                  <Link key={item.path} href={item.path} className="cursor-pointer">
+                  <Link
+                    key={item.path}
+                    href={item.path}
+                    className="cursor-pointer"
+                  >
                     <Label
                       htmlFor={item.name}
                       className="flex items-center justify-between w-full mb-[16px] cursor-pointer"
@@ -76,7 +80,11 @@ const LeftNav = () => {
                       <div className="text-[#0A090F] text-[16px] font-bold cursor-pointer">
                         {item.name}
                       </div>
-                      <RadioGroupItem value={item.path} id={item.name} className="cursor-pointer">
+                      <RadioGroupItem
+                        value={item.path}
+                        id={item.name}
+                        className="cursor-pointer"
+                      >
                         {item.name}
                       </RadioGroupItem>
                     </Label>
@@ -86,7 +94,12 @@ const LeftNav = () => {
               </RadioGroup>
             </div>
             <div>
-              <Image src="/nav/nav-logo.png" alt="logo" width={160} height={16} />
+              <Image
+                src="/nav/nav-logo.png"
+                alt="logo"
+                width={160}
+                height={16}
+              />
               <div className="h-[1px] w-full my-[16px] bg-[#0A090F] opacity-10" />
               <div className="flex flex-col gap-[16px]">
                 <div className="flex items-center gap-[8px]">

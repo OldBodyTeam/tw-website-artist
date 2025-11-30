@@ -18,7 +18,7 @@ const ContactForm = () => {
         <Input placeholder="請輸入Email" className="w-full" />
       </Form.Item>
       <Form.Item name="message" label="洽詢項目（多選）">
-        <Radio.Group className="flex gap-[12px] [&_.ant-radio-label]:!pl-[4px] [&_.ant-radio-label]:!pr-[4px] ">
+        <Radio.Group className="flex gap-[12px] [&_.ant-radio-label]:!pl-[4px] [&_.ant-radio-label]:!pr-[4px] radio-primary">
           <Radio value={1}>品牌規劃</Radio>
           <Radio value={2}>網站設計</Radio>
           <Radio value={3}>社群行銷</Radio>

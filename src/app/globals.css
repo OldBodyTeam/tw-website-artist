@@ -2,12 +2,15 @@
 @import "tw-animate-css";
 /* 针对所有可滚动元素 */
 * {
-  -ms-overflow-style: none;   /* IE / Edge */
-  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none; /* IE / Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 *::-webkit-scrollbar {
-  display: none;              /* Chrome / Safari */
+  display: none; /* Chrome / Safari */
+}
+[data-state="open"] {
+  backdrop-filter: blur(8px) !important;
 }
 @custom-variant dark (&:is(.dark *));
 
