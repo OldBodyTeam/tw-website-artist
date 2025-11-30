@@ -5,10 +5,9 @@ export interface SwiperPaginationProps {
   activeIndex: number;
 }
 const SwiperPagination: FC<SwiperPaginationProps> = ({ activeIndex }) => {
-  console.log(activeIndex);
   const swiper = useSwiper();
   return (
-    <div className="flex w-full items-center justify-between gap-[3px] absolute top-[44px] z-[300] cursor-pointer px-[44px]">
+    <div className="flex w-full items-center justify-between gap-[3px] absolute top-[44px] z-[300] cursor-pointer px-[44px]  hidden md:flex">
       <div
         className={clsx(
           "flex-1 transition-all duration-300 h-[4px] [clip-path:polygon(0_0,100%_0,calc(100%_-_8px)_100%,0_100%)]",

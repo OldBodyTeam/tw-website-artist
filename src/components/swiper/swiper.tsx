@@ -7,6 +7,13 @@ import { VideoPlayer } from "../video/player";
 import { SwiperPagination } from "./swiper-pagination";
 import { useState } from "react";
 import { Mousewheel } from "swiper/modules";
+import { configResponsive, useResponsive } from "ahooks";
+import { LayoutGrid } from "./layout";
+import Link from "next/link";
+
+configResponsive({
+  middle: 768,
+});
 const tag = [
   {
     en: "Branding Strategy",
@@ -17,8 +24,8 @@ const tag = [
     zh: "網站設計",
   },
   {
-    en: "Social Media Marketing",
-    zh: "社會行銷",
+    en: "Social Marketing",
+    zh: "社群行銷",
   },
   {
     en: "WOM Marketing",
@@ -33,14 +40,179 @@ const tag = [
     zh: "各類印刷",
   },
 ];
+const features = [
+  {
+    title: "策略思維導向",
+    desc: "我們不追求表面上的曝光，而是從品牌定位、受眾分析到行銷布局，為品牌找到明確方向與市場定位。",
+  },
+  {
+    title: "跨領域整合",
+    desc: "結合品牌企劃、數位行銷與印刷物製作，從線上到線下，為品牌打造一致且完整的溝通體驗。",
+  },
+  {
+    title: "彈性與客製化",
+    desc: "依照品牌現況與需求量身打造，讓預算與成效都能發揮最大效益。",
+  },
+  {
+    title: "重視長期關係",
+    desc: "我們不是一次性的外包，而是陪伴品牌成長的夥伴，與客戶建立持續信任與互相支持的關係。",
+  },
+  {
+    title: "協力團隊整合",
+    desc: "與多位專業攝影、影音、設計、活動合作夥伴緊密協作，為專案組成最強陣容，打造專屬解決方案。",
+  },
+];
 const HomeSwiper = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const responsive = useResponsive();
+  if (!responsive.middle) {
+    return (
+      <div className="w-full h-full relative">
+        <div className="w-full h-screen relative ">
+          <VideoPlayer />
+          <div className="w-full h-full absolute left-0 top-0 flex justify-between pt-[128px] pb-[44px] px-[20px] flex-col bg-[rgba(10,9,15,0.35)]">
+            <div className="flex items-end flex-col justify-end text-[32px] font-semibold text-white leading-[60px]">
+              <span>懂你的品牌</span>
+              <span>說你的故事</span>
+            </div>
+            <div className="flex items-end justify-between">
+              <Image
+                src="/home-1/company.svg"
+                alt="2"
+                width={176}
+                height={100}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="px-[20px] py-[64px] bg-black">
+          <div className="text-[14px] font-regular text-white mb-[8px] opacity-80">
+            Driven by Detail, Defined by Quality
+          </div>
+          <div className="text-[32px] leading-[1.2] font-semibold text-white mb-[24px]">
+            專注成功每個細節
+          </div>
+          <div className="text-[14px] leading-[1.6] font-regular text-[#ccc] mb-[40px]">
+            行銷的價值不只是曝光，而是為企業帶來真正的效益。我們不提供制式化的行銷包套，而是根據品牌現況，結合短期推廣與長期策略，為每個品牌量身規劃最適合的行銷方案。確保每一分投入都能發揮最大價值，幫助品牌被看見，也被選擇。
+          </div>
+          <LayoutGrid
+            num={3}
+            list={tag}
+            renderItem={(item) => (
+              <div className="p-6 space-y-2 flex-1 flex items-center justify-center flex-col">
+                <p className="text-gray-500">{item.en}</p>
+                <p className="text-white text-xl">{item.zh}</p>
+              </div>
+            )}
+          />
+          <div className="flex items-center justify-start my-[12px]">
+            <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
+          </div>
+          <div className="grid grid-cols-2 gap-[8px]">
+            {Array.from({ length: 8 }).map((_, index) => (
+              <div key={index} className="h-[168px] w-full bg-amber-400">
+                {index}
+              </div>
+            ))}
+          </div>
+          <div className="text-[14px] font-regular text-white mb-[8px] opacity-80 mt-[44px]">
+            Amplify Your Brand Value
+          </div>
+          <div className="text-[20px] leading-[28px] font-semibold text-white mb-[12px]">
+            精準｜放大價值
+          </div>
+          <div className="text-[14px] font-regular text-white mb-[8px] opacity-80 mt-[44px]">
+            每一個品牌都值得被看見。我們以整合行銷的專業，針對品牌現況與目標，打造專屬策略，讓您的投入不只是成本，而是能轉化為實際效益的投資。除了行銷策略與數位推廣，我們同時擁有印刷專業與自有設備，能把關從線上到線下的每一個環節，確保品牌不僅在網路上被看見，更能透過精緻實體輸出延伸價值。透過無縫整合，讓您的品牌形象更完整、更具說服力。
+          </div>
+          <div className="overflow-hidden relative">
+            <div className="relative">
+              <img
+                src="/home-3/1.svg"
+                alt="2"
+                className="object-cover w-full"
+              />
+            </div>
+            <div className="text-[11px] font-light leading-[16px] text-white my-[12px]">
+              透過顧問式諮詢，深入剖析當前挑戰，並結合實務經驗與您共同研討最佳解決方案。
+            </div>
+          </div>
+          <div className="overflow-hidden ">
+            <div className="relative">
+              <img
+                src="/home-3/2.svg"
+                alt="2"
+                className="object-cover w-full"
+              />
+            </div>
+
+            <div className="text-[11px] font-light leading-[16px] text-white my-[12px]">
+              提供成效檢視，確保穩健前行在正確的道路上。
+            </div>
+          </div>
+          <div className="overflow-hidden relative">
+            <div className="relative">
+              <img
+                src="/home-3/3.svg"
+                alt="2"
+                className="object-cover w-full"
+              />
+            </div>
+            <div className="text-[11px] font-light leading-[16px] text-white mt-[12px]">
+              透過顧問式諮詢，深入剖析當前挑戰，並結合實務經驗與您共同研討最佳解決方案。
+            </div>
+          </div>
+          <div className="text-[14px] font-regular text-white mb-[8px] opacity-80 mt-[44px]">
+            Why choose us
+          </div>
+          <div className="text-[20px] leading-[28px] font-semibold text-white mb-[12px]">
+            為什麼選擇我們
+          </div>
+          <LayoutGrid
+            num={3}
+            list={features}
+            renderItem={(item) => (
+              <div className="p-[10px] space-y-2 flex-1 flex items-center justify-center flex-col">
+                <p className="text-gray-500">{item.title}</p>
+                <p className="text-white text-xl">{item.desc}</p>
+              </div>
+            )}
+          />
+          <div className="text-[14px] font-regular text-white mb-[8px] opacity-80 mt-[44px]">
+            The results that can be brought by choosing
+          </div>
+          <div className="text-[20px] leading-[28px] font-semibold text-white mb-[12px]">
+            選擇能帶來的成果
+          </div>
+          <LayoutGrid
+            num={2}
+            list={Array.from({ length: 8 })}
+            renderItem={(item) => (
+              <div className="h-[140px] bg-red-500 w-full"></div>
+            )}
+          />
+          <div className="flex items-center justify-center flex-col w-full py-[60px]">
+            <div className="mb-[12px] text-[20px] leading-[28px] text-white">
+              讓靈感萌芽 使成果綻放
+            </div>
+            <Link href="/contact">
+              <div
+                className="text-[11px] leading-[16px] font-medium text-black py-[8px] px-[24px]"
+                style={{ backgroundColor: "rgba(248, 255, 49, 1)" }}
+              >
+                聯絡我們
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <Swiper
       className="w-full h-full relative"
       onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       modules={[Mousewheel]} // ✅ 启用模块
-      mousewheel // ✅ 开启鼠标滚轮
+      mousewheel={responsive.middle} // ✅ 开启鼠标滚轮
       slidesPerView={1}
       spaceBetween={30}
       noSwiping={true}
@@ -240,6 +412,18 @@ const HomeSwiper = () => {
             </div>
             <div className="flex items-center justify-center bg-black">
               <Image src="/home-4/8.png" alt="2" width={182} height={88} />
+            </div>
+          </div>
+
+          <div className="flex items-center justify-center flex-col w-full py-[60px]">
+            <div className="mb-[12px] text-[20px] leading-[28px] text-white">
+              讓靈感萌芽 使成果綻放
+            </div>
+            <div
+              className="text-[11px] leading-[16px] font-medium text-black py-[8px] px-[24px]"
+              style={{ backgroundColor: "rgba(248, 255, 49, 1)" }}
+            >
+              聯絡我們
             </div>
           </div>
 
