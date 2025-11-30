@@ -7,6 +7,32 @@ import { VideoPlayer } from "../video/player";
 import { SwiperPagination } from "./swiper-pagination";
 import { useState } from "react";
 import { Mousewheel } from "swiper/modules";
+const tag = [
+  {
+    en: "Branding Strategy",
+    zh: "品牌規劃",
+  },
+  {
+    en: "Web Design",
+    zh: "網站設計",
+  },
+  {
+    en: "Social Media Marketing",
+    zh: "社會行銷",
+  },
+  {
+    en: "WOM Marketing",
+    zh: "口碑行銷",
+  },
+  {
+    en: "Digital Advertising",
+    zh: "廣告投放",
+  },
+  {
+    en: "Print Production",
+    zh: "各類印刷",
+  },
+];
 const HomeSwiper = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
@@ -23,7 +49,7 @@ const HomeSwiper = () => {
       <SwiperPagination activeIndex={activeIndex} />
       <SwiperSlide>
         {/* 背景色 换图片 */}
-        <div>
+        <div className="w-full h-screen relative">
           <VideoPlayer />
           <div className="w-full h-full absolute left-0 top-0 flex justify-between pt-[128px] pb-[44px] px-[64px] flex-col">
             <div className="flex items-center justify-end">
@@ -56,7 +82,27 @@ const HomeSwiper = () => {
                 行銷的價值不只是曝光，而是為企業帶來真正的效益。我們不提供制式化的行銷包套，而是根據品牌現況，結合短期推廣與長期策略，為每個品牌量身規劃最適合的行銷方案。確保每一分投入都能發揮最大價值，幫助品牌被看見，也被選擇。
               </div>
             </div>
-            <div className="flex items-center justify-end mt-[22px]">
+            <div className="flex items-center justify-end my-[22px]">
+              <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
+            </div>
+            <div className="grid grid-cols-6 gap-[16px]">
+              {tag.map((item) => {
+                return (
+                  <div
+                    key={item.en}
+                    className="py-[26px] border-y border-[rgba(255,255,255,0.1)]"
+                  >
+                    <div className="text-[12px] font-[300] leading-[18px] text-white mb-[12px]">
+                      {item.en}
+                    </div>
+                    <div className="text-[16px] font-regular text-white leading-[14px]">
+                      {item.zh}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="flex items-center justify-start mt-[22px]">
               <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
             </div>
           </div>
