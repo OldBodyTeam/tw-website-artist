@@ -14,24 +14,35 @@ const HomeSwiper = () => {
       className="w-full h-full relative"
       onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       modules={[Mousewheel]} // ✅ 启用模块
-      mousewheel={true} // ✅ 开启鼠标滚轮
+      mousewheel // ✅ 开启鼠标滚轮
       slidesPerView={1}
       spaceBetween={30}
+      noSwiping={true}
+      noSwipingClass="swiper-no-swiping"
     >
       <SwiperPagination activeIndex={activeIndex} />
       <SwiperSlide>
-        <VideoPlayer />
-        <div className="w-full h-full absolute left-0 top-0 flex justify-between pt-[128px] pb-[44px] px-[64px] flex-col">
-          <div className="flex items-center justify-end">
-            <Image src="/home-1/story.png" alt="1" width={528} height={68} />
-          </div>
-          <div className="flex items-end justify-between">
-            <Image src="/home-1/company.png" alt="2" width={422} height={240} />
-            <Image src="/home-1/logo.png" alt="3" width={264} height={48} />
+        {/* 背景色 换图片 */}
+        <div>
+          <VideoPlayer />
+          <div className="w-full h-full absolute left-0 top-0 flex justify-between pt-[128px] pb-[44px] px-[64px] flex-col">
+            <div className="flex items-center justify-end">
+              <Image src="/home-1/story.png" alt="1" width={528} height={68} />
+            </div>
+            <div className="flex items-end justify-between">
+              <Image
+                src="/home-1/company.png"
+                alt="2"
+                width={422}
+                height={240}
+              />
+              <Image src="/home-1/logo.png" alt="3" width={264} height={48} />
+            </div>
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
+        {/* 无法滚动 滚动隐藏 */}
         <div className="w-full h-full bg-black flex flex-col  pt-[96px] pb-[44px] px-[64px]">
           <div className="mb-[16px]">
             <div className="max-w-[850px]">
@@ -49,7 +60,7 @@ const HomeSwiper = () => {
               <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
             </div>
           </div>
-          <div className="flex-1 grid grid-cols-4 gap-[16px] overflow-x-hidden overflow-y-auto">
+          <div className="flex-1 grid grid-cols-4 gap-[16px] overflow-x-hidden overflow-y-auto swiper-no-mousewheel">
             {Array.from({ length: 40 }).map((_, index) => (
               <div key={index} className="bg-[#222222] w-full h-[304px]">
                 1
@@ -64,6 +75,7 @@ const HomeSwiper = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide>
+        {/* 按比例图片 */}
         <div className="w-full h-full bg-black flex flex-col  pt-[96px] pb-[44px] px-[64px]">
           <div className="mb-[16px] flex flex-col">
             <div className="w-[528px] self-end">
@@ -131,6 +143,7 @@ const HomeSwiper = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide>
+        {/* 加文字 */}
         <div className="w-full h-full bg-black flex flex-col  pt-[96px] pb-[44px] px-[64px]">
           <div className="mb-[16px]">
             <div className="max-w-[528px]">

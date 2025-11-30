@@ -35,9 +35,10 @@ export const menu = [
 const LeftNav = () => {
   const pathname = usePathname();
   return (
+    // 加条线
     <Drawer direction="left">
       <div className="md:bg-[#F8F8EC] md:h-screen fixed top-8 left-8 md:static md:top-auto md:left-auto z-50">
-        <DrawerTrigger>
+        <DrawerTrigger className="h-full">
           {/* Mobile Trigger */}
           <div className="md:hidden">
             <Image
@@ -66,15 +67,16 @@ const LeftNav = () => {
               />
               <RadioGroup defaultValue={menu[0].path} value={pathname}>
                 {menu.map((item) => (
-                  <Link key={item.path} href={item.path}>
+                  // 加手
+                  <Link key={item.path} href={item.path} className="cursor-pointer">
                     <Label
                       htmlFor={item.name}
-                      className="flex items-center justify-between w-full mb-[16px] "
+                      className="flex items-center justify-between w-full mb-[16px] cursor-pointer"
                     >
-                      <div className="text-[#0A090F] text-[16px] font-bold">
+                      <div className="text-[#0A090F] text-[16px] font-bold cursor-pointer">
                         {item.name}
                       </div>
-                      <RadioGroupItem value={item.path} id={item.name}>
+                      <RadioGroupItem value={item.path} id={item.name} className="cursor-pointer">
                         {item.name}
                       </RadioGroupItem>
                     </Label>
@@ -84,7 +86,7 @@ const LeftNav = () => {
               </RadioGroup>
             </div>
             <div>
-              <div className="text-[#231915]">亞堤思新創整合行销</div>
+              <Image src="/nav/nav-logo.png" alt="logo" width={160} height={16} />
               <div className="h-[1px] w-full my-[16px] bg-[#0A090F] opacity-10" />
               <div className="flex flex-col gap-[16px]">
                 <div className="flex items-center gap-[8px]">
