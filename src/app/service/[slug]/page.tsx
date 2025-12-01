@@ -189,7 +189,10 @@ export default function ServiceDetail() {
 
             <div className="space-y-[10px] flex flex-col gap-[10px] mt-[12px]">
               {capabilities.map((cap, index) => (
-                <div key={index} className="border border-border p-[12px] ">
+                <div
+                  key={index}
+                  className="border border-border p-[12px] !border-[rgba(255,255,255,0.1)]"
+                >
                   <h3 className="text-[16px] leading-[18px] text-white mb-[8px]">
                     {cap.title}
                   </h3>

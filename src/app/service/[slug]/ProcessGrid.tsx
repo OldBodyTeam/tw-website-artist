@@ -18,7 +18,7 @@ export const ProcessGrid: React.FC<ProcessGridProps> = ({ steps, title }) => {
           <div
             key={step.id}
             className={`
-            flex flex-col h-full border-border
+            flex flex-col h-full border-border border-[rgba(255,255,255,0.1)]
               ${index % 2 === 0 ? "border-r" : ""} 
               ${
                 index % 2 === 0 ? "py-[10px] pr-[10px]" : "py-[10px] pl-[10px]"
@@ -28,6 +28,7 @@ export const ProcessGrid: React.FC<ProcessGridProps> = ({ steps, title }) => {
                   ? "border-b"
                   : ""
               }
+              !border-[rgba(255,255,255,0.1)]
             `}
           >
             <span className="text-[11px] text-white leading-[16px] font-light mb-[8px]">
