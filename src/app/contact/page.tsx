@@ -7,13 +7,6 @@ export default function Contact() {
       {/* 顶部标题 */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 w-full">
         {/* Mobile Title */}
-        <Image
-          src="/home-2/mobile-title.png"
-          alt="Artist.com"
-          width={152}
-          height={45}
-          className="md:hidden"
-        />
 
         {/* Desktop Images */}
         <Image

@@ -121,9 +121,13 @@ const HomeSwiper = () => {
             num={3}
             list={tag}
             renderItem={(item) => (
-              <div className="p-6 space-y-2 flex-1 flex items-center justify-center flex-col">
-                <p className="text-gray-500">{item.en}</p>
-                <p className="text-white text-xl">{item.zh}</p>
+              <div className="p-[16px] space-y-2 flex-1 flex items-center justify-center flex-col">
+                <div className="text-gray-500 text-[11px] leading-[12px] mb-[16px]">
+                  {item.en}
+                </div>
+                <div className="text-white text-[14px] leading-[20px]">
+                  {item.zh}
+                </div>
               </div>
             )}
           />
@@ -132,7 +136,7 @@ const HomeSwiper = () => {
           </div>
           <div className="grid grid-cols-2 gap-[8px]">
             {Array.from({ length: 8 }).map((_, index) => (
-              <div key={index} className="h-[168px] w-full bg-amber-400">
+              <div key={index} className="h-[168px] w-full ">
                 {index}
               </div>
             ))}
@@ -190,27 +194,29 @@ const HomeSwiper = () => {
             為什麼選擇我們
           </div>
           <LayoutGrid
-            num={3}
+            num={2}
             list={features}
             renderItem={(item) => (
               <div className="p-[10px] space-y-2 flex-1 flex items-center justify-center flex-col">
-                <p className="text-gray-500">{item.title}</p>
-                <p className="text-white text-xl">{item.desc}</p>
+                <div className="text-gray-500 text-[14px] font-regular leading-[20px] mb-[24px] w-full text-left">
+                  {item.title}
+                </div>
+                <div className="text-white text-[11px] font-regular leading-[18px] opacity-[65]">
+                  {item.desc}
+                </div>
               </div>
             )}
           />
           <div className="text-[14px] font-regular text-white mb-[8px] opacity-80 mt-[44px]">
             The results that can be brought by choosing
           </div>
-          <div className="text-[20px] leading-[28px] font-semibold text-white mb-[12px]">
+          <div className="text-[20px] leading-[28px] font-semibold text-white mb-[24px]">
             選擇能帶來的成果
           </div>
           <LayoutGrid
             num={2}
             list={Array.from({ length: 8 })}
-            renderItem={(item) => (
-              <div className="h-[140px] bg-red-500 w-full"></div>
-            )}
+            renderItem={(item) => <div className="h-[140px]  w-full"></div>}
           />
           <div
             className="flex items-center justify-center flex-col w-full py-[60px] mt-[48px]"
