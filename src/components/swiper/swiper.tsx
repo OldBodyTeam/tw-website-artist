@@ -62,6 +62,28 @@ const features = [
     desc: "與多位專業攝影、影音、設計、活動合作夥伴緊密協作，為專案組成最強陣容，打造專屬解決方案。",
   },
 ];
+const items = [
+  {
+    title: "策略思維導向",
+    desc: "我們不追求表面上的曝光，而是從品牌定位、受眾分析到行銷布局，為品牌找到明確方向與市場定位。",
+  },
+  {
+    title: "跨領域整合",
+    desc: "結合品牌企劃、數位行銷與印刷物製作，從線上到線下，為品牌打造一致且完整的溝通體驗。",
+  },
+  {
+    title: "彈性與客製化",
+    desc: "依照品牌現況與需求量身打造，讓預算與成效都能發揮最大效益。",
+  },
+  {
+    title: "重視長期關係",
+    desc: "我們不是一次性的外包，而是陪伴品牌成長的夥伴，與客戶建立持續信任與互相支持的關係。",
+  },
+  {
+    title: "協力團隊整合",
+    desc: "與多位專業攝影、影音、設計、活動合作夥伴緊密協作，為專案組成最強陣容，打造專屬解決方案。",
+  },
+];
 const HomeSwiper = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const responsive = useResponsive();
@@ -190,7 +212,15 @@ const HomeSwiper = () => {
               <div className="h-[140px] bg-red-500 w-full"></div>
             )}
           />
-          <div className="flex items-center justify-center flex-col w-full py-[60px]">
+          <div
+            className="flex items-center justify-center flex-col w-full py-[60px] mt-[48px]"
+            style={{
+              backgroundImage: "url('/home-1/m.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
             <div className="mb-[12px] text-[20px] leading-[28px] text-white">
               讓靈感萌芽 使成果綻放
             </div>
@@ -370,66 +400,104 @@ const HomeSwiper = () => {
       </SwiperSlide>
       <SwiperSlide>
         {/* 加文字 */}
-        <div className="w-full h-full bg-black flex flex-col  pt-[96px] pb-[44px] px-[64px]">
-          <div className="mb-[16px]">
-            <div className="max-w-[528px]">
-              <div className="text-[20px] font-regular text-white mb-[8px]">
-                Partner
-              </div>
-              <div className="text-[48px] leading-[68px] font-regular text-white mb-[16px]">
-                合作夥伴
-              </div>
-              <div className="text-[16px] font-regular text-white">
-                在快速變革的商業生態中，我們始終相信：真正的合作夥伴關係是雙向賦能，更是彼此成長的見證。
-                我們珍視每一次與志同道合者的相遇——無論是技術創新的突破、市場邊界的拓展，還是服務體系的陞級，都因您的專業與信任而更具可能性。
+        <div className="w-full h-full bg-black flex flex-col  pt-[96px] pb-[44px] px-[64px] flex overflow-auto">
+          <div className="flex  swiper-no-mousewheel flex-col">
+            <div className="mb-[24px]">
+              <div className="max-w-[528px]">
+                <div className="text-[20px] font-regular text-white mb-[8px] opacity-[65]">
+                  Why choose us
+                </div>
+                <div className="text-[48px] leading-[68px] font-regular text-white mb-[16px]">
+                  為什麼選擇我們
+                </div>
               </div>
             </div>
-            <div className="flex items-center justify-end mt-[22px]">
-              <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
+            <div className="grid grid-cols-4 gap-[16px] mb-[32px]">
+              {items.map((v) => {
+                return (
+                  <div
+                    key={v.title}
+                    className="border-y border-[rgba(255,255,255,0.2)] py-[24px]"
+                  >
+                    <div className="text-[16px] font-regular text-white mb-[8px] leading-[24px]">
+                      {v.title}
+                    </div>
+                    <div className="text-[16px] font-light text-white opacity-[65] leading-[18px]">
+                      {v.desc}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-          </div>
-          <div className="flex-1 grid grid-cols-4 overflow-x-hidden overflow-y-auto gap-px bg-[rgba(255,255,255,0.2)]">
-            <div className="flex items-center justify-center bg-black">
-              <Image src="/home-4/1.png" alt="2" width={190} height={92} />
+            <div className="mb-[16px]">
+              <div className="max-w-[528px]">
+                <div className="text-[20px] font-regular text-white mb-[8px] opacity-[65]">
+                  The results that can be brought by choosing
+                </div>
+                <div className="text-[48px] leading-[68px] font-regular text-white mb-[16px]">
+                  選擇能帶來的成果
+                </div>
+              </div>
             </div>
-            <div className="flex items-center justify-center bg-black">
-              <Image src="/home-4/2.png" alt="2" width={235} height={114} />
+            {/* <div className="flex items-center justify-end mt-[22px]">
+            <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
+          </div> */}
+            <div className="flex-1 grid grid-cols-4 overflow-x-hidden overflow-y-auto gap-px bg-[rgba(255,255,255,0.2)]">
+              <div className="flex items-center justify-center bg-black">
+                <Image src="/home-4/1.png" alt="2" width={190} height={92} />
+              </div>
+              <div className="flex items-center justify-center bg-black">
+                <Image src="/home-4/2.png" alt="2" width={235} height={114} />
+              </div>
+              <div className="flex items-center justify-center bg-black">
+                <Image src="/home-4/3.png" alt="2" width={96} height={96} />
+              </div>
+              <div className="flex items-center justify-center bg-black">
+                <Image src="/home-4/4.png" alt="2" width={198} height={96} />
+              </div>
+              <div className="flex items-center justify-center bg-black">
+                <Image src="/home-4/5.png" alt="2" width={50} height={100} />
+              </div>
+              <div className="flex items-center justify-center bg-black">
+                <Image src="/home-4/6.png" alt="2" width={252} height={122} />
+              </div>
+              <div className="flex items-center justify-center bg-black">
+                <Image src="/home-4/7.png" alt="2" width={100} height={100} />
+              </div>
+              <div className="flex items-center justify-center bg-black">
+                <Image src="/home-4/8.png" alt="2" width={182} height={88} />
+              </div>
             </div>
-            <div className="flex items-center justify-center bg-black">
-              <Image src="/home-4/3.png" alt="2" width={96} height={96} />
-            </div>
-            <div className="flex items-center justify-center bg-black">
-              <Image src="/home-4/4.png" alt="2" width={198} height={96} />
-            </div>
-            <div className="flex items-center justify-center bg-black">
-              <Image src="/home-4/5.png" alt="2" width={50} height={100} />
-            </div>
-            <div className="flex items-center justify-center bg-black">
-              <Image src="/home-4/6.png" alt="2" width={252} height={122} />
-            </div>
-            <div className="flex items-center justify-center bg-black">
-              <Image src="/home-4/7.png" alt="2" width={100} height={100} />
-            </div>
-            <div className="flex items-center justify-center bg-black">
-              <Image src="/home-4/8.png" alt="2" width={182} height={88} />
-            </div>
-          </div>
 
-          <div className="flex items-center justify-center flex-col w-full py-[60px]">
-            <div className="mb-[12px] text-[20px] leading-[28px] text-white">
-              讓靈感萌芽 使成果綻放
-            </div>
             <div
-              className="text-[11px] leading-[16px] font-medium text-black py-[8px] px-[24px]"
-              style={{ backgroundColor: "rgba(248, 255, 49, 1)" }}
+              className="flex items-center justify-center flex-col w-full py-[60px] mt-[32px] mb-[48px]"
+              style={{
+                backgroundImage: "url('/home-1/PC.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
             >
-              聯絡我們
+              <div className="mb-[12px] text-[20px] leading-[28px] text-white">
+                讓靈感萌芽 使成果綻放
+              </div>
+              <div
+                className="text-[11px] leading-[16px] font-medium text-black py-[8px] px-[24px]"
+                style={{ backgroundColor: "rgba(248, 255, 49, 1)" }}
+              >
+                聯絡我們
+              </div>
             </div>
-          </div>
 
-          <div className="flex items-end justify-between">
-            <Image src="/home-2/company.png" alt="2" width={320} height={32} />
-            <Image src="/home-1/logo.svg" alt="2" width={264} height={48} />
+            <div className="flex items-end justify-between">
+              <Image
+                src="/home-2/company.png"
+                alt="2"
+                width={320}
+                height={32}
+              />
+              <Image src="/home-1/logo.svg" alt="2" width={264} height={48} />
+            </div>
           </div>
         </div>
       </SwiperSlide>
