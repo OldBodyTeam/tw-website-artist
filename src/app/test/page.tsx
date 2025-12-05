@@ -172,7 +172,7 @@ const TestPage = () => {
         scrollContainer={containerRef}
         style={{ zIndex: 10 }}
       >
-        <div className="h-screen overflow-hidden flex justify-between px-[44px]">
+        <div className="h-screen overflow-hidden flex justify-between px-[44px] flex-col md:flex-row">
           <div className="flex gap-6">
             <div className="text-xl text-white mt-9">
               <div
@@ -226,7 +226,7 @@ const TestPage = () => {
         scrollContainer={containerRef}
         style={{ zIndex: 20 }}
       >
-        <div className="overflow-hidden flex justify-between bg-[#0A090F] px-[44px]">
+        <div className="overflow-hidden flex justify-between bg-[#0A090F] px-[44px] flex-col md:flex-row">
           <div className="flex gap-6">
             <div
               className="text-xl text-white mt-9"
@@ -280,7 +280,7 @@ const TestPage = () => {
         style={{ zIndex: 30 }}
       >
         <div
-          className="overflow-hidden flex justify-between bg-[#0A090F] px-[44px]"
+          className="overflow-hidden flex justify-between bg-[#0A090F] px-[44px] flex-col md:flex-row "
           ref={thirdRef}
         >
           <div className="flex gap-6">
