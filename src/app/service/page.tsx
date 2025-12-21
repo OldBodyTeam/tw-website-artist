@@ -8,7 +8,7 @@ const list = [
     image: "bg-[#a23e00]", // 注意：颜色值格式统一（如#a23e00无需加[]）
     className:
       "md:[clip-path:polygon(0_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/service/branding",
+    href: "/service/branding-strategy",
   },
   {
     title: "網站設計",
@@ -16,7 +16,7 @@ const list = [
     image: "bg-[#FF6699]",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/service/website",
+    href: "/service/web-design",
   },
   {
     title: "社群行銷",
@@ -24,7 +24,7 @@ const list = [
     image: "bg-[#FF6700]",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/service/social",
+    href: "/service/social-media-marketing",
   },
   {
     title: "口碑行銷",
@@ -32,7 +32,7 @@ const list = [
     image: "bg-[#aF6600]",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/service/wom",
+    href: "/service/wom-marketing",
   },
   {
     title: "廣告投放",
@@ -40,7 +40,7 @@ const list = [
     image: "bg-[#Fa6600]",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/service/ad",
+    href: "/service/digital-advertising",
   },
   {
     title: "各類印刷",
@@ -48,7 +48,7 @@ const list = [
     image: "bg-[#F16610]",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/service/print",
+    href: "/service/print-production",
   },
 ];
 
