@@ -41,7 +41,7 @@ const StickyWatcher: React.FC<StickyWatcherProps> = ({
 
         // 4. 只有当“不可见”且“已经滚过阈值”时，才算吸顶
         const stuck = !entry.isIntersecting && isScrollingDownPastThreshold;
-
+        console.log("StickyWatcher - isStuck:", stuck);
         setIsStuck(stuck);
         if (onChange) {
           onChange(stuck);
