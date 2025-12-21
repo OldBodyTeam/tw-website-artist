@@ -87,13 +87,13 @@ export default function Service() {
             </div>
           </div>
 
-          <div
-            className="h-[124px] w-full absolute bottom-0 left-0 z-[9999]"
+          {/* <div
+            className="h-[124px] w-full absolute bottom-0 left-0 z-[0]"
             style={{
               background:
                 "linear-gradient(180deg, rgba(10, 9, 15, 0) 0%, rgba(10, 9, 15, 1) 100%)",
             }}
-          ></div>
+          ></div> */}
         </div>
       </div>
     </div>

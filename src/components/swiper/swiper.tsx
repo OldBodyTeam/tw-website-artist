@@ -425,7 +425,7 @@ const HomeSwiper = () => {
                     key={v.title}
                     className="border-y border-[rgba(255,255,255,0.2)] py-[24px]"
                   >
-                    <div className="text-[16px] font-regular text-white mb-[8px] leading-[24px]">
+                    <div className="text-[20px] font-medium text-white mb-[8px] leading-[24px]">
                       {v.title}
                     </div>
                     <div className="text-[16px] font-light text-white opacity-[65] leading-[18px]">
@@ -448,7 +448,7 @@ const HomeSwiper = () => {
             {/* <div className="flex items-center justify-end mt-[22px]">
             <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
           </div> */}
-            <div className="flex-1 grid grid-cols-4 overflow-x-hidden overflow-y-auto gap-px bg-[rgba(255,255,255,0.2)]">
+            <div className="flex-1 grid grid-cols-4 overflow-x-hidden overflow-y-auto gap-px bg-[rgba(255,255,255,0.2)] bg-black">
               <div className="flex items-center justify-center bg-black">
                 <Image src="/home-4/1.png" alt="2" width={190} height={92} />
               </div>
@@ -464,14 +464,15 @@ const HomeSwiper = () => {
               <div className="flex items-center justify-center bg-black">
                 <Image src="/home-4/5.png" alt="2" width={50} height={100} />
               </div>
-              <div className="flex items-center justify-center bg-black">
-                <Image src="/home-4/6.png" alt="2" width={252} height={122} />
-              </div>
+
               <div className="flex items-center justify-center bg-black">
                 <Image src="/home-4/7.png" alt="2" width={100} height={100} />
               </div>
               <div className="flex items-center justify-center bg-black">
                 <Image src="/home-4/8.png" alt="2" width={182} height={88} />
+              </div>
+              <div className="flex items-center justify-center bg-black invisible">
+                <Image src="/home-4/6.png" alt="2" width={252} height={122} />
               </div>
             </div>
 
