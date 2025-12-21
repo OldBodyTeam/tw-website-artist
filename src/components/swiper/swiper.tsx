@@ -10,6 +10,7 @@ import { Mousewheel } from "swiper/modules";
 import { configResponsive, useResponsive } from "ahooks";
 import { LayoutGrid } from "./layout";
 import Link from "next/link";
+import { a } from "./a";
 
 configResponsive({
   middle: 768,
@@ -135,9 +136,22 @@ const HomeSwiper = () => {
             <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
           </div>
           <div className="grid grid-cols-2 gap-[8px]">
-            {Array.from({ length: 8 }).map((_, index) => (
-              <div key={index} className="h-[168px] w-full ">
-                {index}
+            {a.map((item, index) => (
+              <div
+                key={index}
+                className="bg-[#222222] w-full aspect-[1/1] flex items-center justify-center overflow-hidden relative"
+              >
+                <img
+                  src={item.path}
+                  alt={item.description}
+                  className="aspect-[1/1]"
+                />
+                <div className="flex flex-col absolute bottom-0 left-0 bg-[rgba(0,0,0,0.5)] w-full p-[12px] text-white text-[12px] justify-between h-full hover:bg-transparent">
+                  <div className="text-[12px] text-white">{item.company}</div>
+                  <div className="text-[12px] text-white">
+                    {item.explanation}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -247,8 +261,8 @@ const HomeSwiper = () => {
     <Swiper
       className="w-full h-full relative"
       onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-      modules={[Mousewheel]} // ✅ 启用模块
-      mousewheel={responsive.middle} // ✅ 开启鼠标滚轮
+      // modules={[Mousewheel]} // ✅ 启用模块
+      // mousewheel={responsive.middle} // ✅ 开启鼠标滚轮
       slidesPerView={1}
       spaceBetween={30}
       noSwiping={true}
@@ -277,7 +291,7 @@ const HomeSwiper = () => {
       </SwiperSlide>
       <SwiperSlide>
         {/* 无法滚动 滚动隐藏 */}
-        <div className="w-full h-full bg-black flex flex-col  pt-[96px] pb-[44px] px-[64px]">
+        <div className="w-full bg-black h-full overflow-auto flex  flex-col  pt-[96px] pb-[44px] px-[64px]">
           <div className="mb-[16px]">
             <div className="max-w-[850px]">
               <div className="text-[20px] font-regular text-white mb-[8px]">
@@ -314,26 +328,41 @@ const HomeSwiper = () => {
               <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
             </div>
           </div>
-          <div className="flex-1 overflow-x-hidden overflow-y-hidden swiper-no-mousewheel relative">
-            <div className="overflow-x-hidden overflow-y-auto h-full">
-              <div className="grid grid-cols-4 gap-[16px] overflow-x-hidden overflow-y-auto swiper-no-mousewheel">
-                {Array.from({ length: 40 }).map((_, index) => (
-                  <div key={index} className="bg-[#222222] w-full h-[304px]">
-                    1
+          <div className="flex-1 relative">
+            <div className="overflow-x-hidden  h-full">
+              <div className="grid grid-cols-4 gap-[16px] overflow-x-hidden ">
+                {a.map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-[#222222] w-full aspect-[1/1] flex items-center justify-center overflow-hidden relative"
+                  >
+                    <img
+                      src={item.path}
+                      alt={item.description}
+                      className="aspect-[1/1]"
+                    />
+                    <div className="flex flex-col absolute bottom-0 left-0 bg-[rgba(0,0,0,0.5)] w-full p-[12px] text-white text-[12px] justify-between h-full hover:bg-transparent">
+                      <div className="text-[12px] text-white">
+                        {item.company}
+                      </div>
+                      <div className="text-[12px] text-white">
+                        {item.explanation}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div
+            {/* <div
               className="h-[124px] w-full absolute bottom-0 left-0 z-[9999]"
               style={{
                 background:
                   "linear-gradient(180deg, rgba(10, 9, 15, 0) 0%, rgba(10, 9, 15, 1) 100%)",
               }}
-            ></div>
+            ></div> */}
           </div>
-          <div className="flex items-end justify-between">
+          <div className="flex items-end justify-between mt-[12px]">
             <Image src="/home-2/company.png" alt="2" width={320} height={32} />
             <Image src="/home-1/logo.svg" alt="2" width={264} height={48} />
           </div>
@@ -398,7 +427,7 @@ const HomeSwiper = () => {
             </div>
           </div>
 
-          <div className="flex items-end justify-between">
+          <div className="flex items-end justify-between mt-[12px]">
             <Image src="/home-2/company.png" alt="2" width={320} height={32} />
             <Image src="/home-1/logo.svg" alt="2" width={264} height={48} />
           </div>
