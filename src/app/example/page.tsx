@@ -154,7 +154,7 @@ export default function Service() {
                 <div
                   key={item.en}
                   className="py-[26px] border-y border-[rgba(255,255,255,0.1)] cursor-pointer"
-                  onClick={() => setKeys(item.key)}
+                  onClick={() => setKeys(item.key || "")}
                 >
                   <div
                     className="text-[12px] font-[300] leading-[18px] text-white mb-[12px]"
