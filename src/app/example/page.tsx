@@ -89,7 +89,7 @@ export default function Service() {
           <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
         </div>
         <div className="grid grid-cols-2 gap-[8px]">
-          {get(a, `${keys}`, []).map((item, index) => (
+          {get(a, `${keys}`, [] as any[]).map((item, index) => (
             <div
               key={index}
               className="bg-[#222222] w-full aspect-[1/1] flex items-center justify-center overflow-hidden relative"
@@ -183,7 +183,7 @@ export default function Service() {
         <div className="flex-1 overflow-x-hidden relative">
           <div className="overflow-x-hidden ">
             <div className="grid grid-cols-4 gap-[16px] overflow-x-hidden ">
-              {get(a, `${keys}`, []).map((item, index) => (
+              {get(a, `${keys}`, [] as any[]).map((item, index) => (
                 <div
                   key={index}
                   className="bg-[#222222] w-full aspect-[1/1] flex items-center justify-center overflow-hidden relative cursor-pointer"
