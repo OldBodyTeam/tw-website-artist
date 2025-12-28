@@ -153,24 +153,30 @@ const LeftNav = () => {
                 </div>
               </div>
               <div className="flex items-center justify-between my-[32px]">
-                <Image
-                  src="/nav/face.svg"
-                  alt="location"
-                  width={30}
-                  height={30}
-                />
-                <Image
-                  src="/nav/tel.svg"
-                  alt="location"
-                  width={30}
-                  height={30}
-                />
-                <Image
-                  src="/nav/ins.svg"
-                  alt="location"
-                  width={30}
-                  height={30}
-                />
+                <Link href="https://www.facebook.com/artistmkt">
+                  <Image
+                    src="/nav/face.svg"
+                    alt="location"
+                    width={30}
+                    height={30}
+                  />
+                </Link>
+                <Link href="https://www.linkedin.com/company/108332681/admin/dashboard/">
+                  <Image
+                    src="/nav/tel.svg"
+                    alt="location"
+                    width={30}
+                    height={30}
+                  />
+                </Link>
+                <Link href="https://www.instagram.com/artistmkt">
+                  <Image
+                    src="/nav/ins.svg"
+                    alt="location"
+                    width={30}
+                    height={30}
+                  />
+                </Link>
               </div>
               <div className="text-[#32373d] text-[12px] font-regular">
                 c 2025 亞堤思新創整合行销 | Artist MKT. All Rights Reserved.

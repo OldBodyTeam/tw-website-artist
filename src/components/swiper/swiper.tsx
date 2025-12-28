@@ -221,12 +221,12 @@ const HomeSwiper = () => {
               </div>
             )}
           />
-          <div className="text-[14px] font-regular text-white mb-[8px] opacity-80 mt-[44px]">
+          {/* <div className="text-[14px] font-regular text-white mb-[8px] opacity-80 mt-[44px]">
             The results that can be brought by choosing
-          </div>
-          <div className="text-[20px] leading-[28px] font-semibold text-white mb-[24px]">
+          </div> */}
+          {/* <div className="text-[20px] leading-[28px] font-semibold text-white mb-[24px]">
             選擇能帶來的成果
-          </div>
+          </div> */}
           <LayoutGrid
             num={2}
             list={Array.from({ length: 8 })}
@@ -378,7 +378,9 @@ const HomeSwiper = () => {
                 精準｜放大價值
               </div>
               <div className="text-[16px] font-regular text-white">
-                每一個品牌都值得被看見。我們以整合行銷的專業，針對品牌現況與目標，打造專屬策略，讓您的投入不只是成本，而是能轉化為實際效益的投資。除了行銷策略與數位推廣，我們同時擁有印刷專業與自有設備，能把關從線上到線下的每一個環節，確保品牌不僅在網路上被看見，更能透過精緻實體輸出延伸價值。透過無縫整合，讓您的品牌形象更完整、更具說服力。
+                每一個品牌都值得被看見。我們以整合行銷的專業，針對品牌現況與目標，打造專屬策略，讓您的投入不只是成本，而是能轉化為實際效益的投資。
+                <br />
+                除了行銷策略與數位推廣，我們同時擁有印刷專業與自有設備，能把關從線上到線下的每一個環節，確保品牌不僅在網路上被看見，更能透過精緻實體輸出延伸價值。透過無縫整合，讓您的品牌形象更完整、更具說服力。
               </div>
             </div>
             <div className="flex items-center justify-end mt-[22px] self-start">
@@ -462,16 +464,16 @@ const HomeSwiper = () => {
                 );
               })}
             </div>
-            <div className="mb-[16px]">
-              <div className="max-w-[528px]">
-                <div className="text-[20px] font-regular text-white mb-[8px] opacity-[65]">
+            {/* <div className="mb-[16px]"> */}
+            {/* <div className="max-w-[528px]"> */}
+            {/* <div className="text-[20px] font-regular text-white mb-[8px] opacity-[65]">
                   The results that can be brought by choosing
-                </div>
-                <div className="text-[48px] leading-[68px] font-regular text-white mb-[16px]">
+                </div> */}
+            {/* <div className="text-[48px] leading-[68px] font-regular text-white mb-[16px]">
                   選擇能帶來的成果
-                </div>
-              </div>
-            </div>
+                </div> */}
+            {/* </div> */}
+            {/* </div> */}
             {/* <div className="flex items-center justify-end mt-[22px]">
             <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
           </div> */}
