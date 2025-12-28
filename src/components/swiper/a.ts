@@ -6,6 +6,8 @@ export const a = [
     explanation: "",
     image_format: "png",
     path: "home-ex/產品包裝承製｜德商AARON.png",
+    first: "產品包裝承製｜德商",
+    second: "AARON",
   },
   {
     category: "產品包裝承製",
@@ -14,6 +16,8 @@ export const a = [
     explanation: "",
     image_format: "png",
     path: "home-ex/產品包裝承製｜德商NEXTCOVER.png",
+    first: "產品包裝承製｜德商",
+    second: "NEXTCOVER",
   },
   {
     category: "精裝書冊承製",
@@ -22,6 +26,8 @@ export const a = [
     explanation: "",
     image_format: "png",
     path: "home-ex/精裝書冊承製｜彰化縣明倫國中美術班.png",
+    first: "精裝書冊承製",
+    second: "彰化縣明倫國中美術班",
   },
   {
     category: "客製專貼",
@@ -30,6 +36,8 @@ export const a = [
     explanation: "",
     image_format: "JPG",
     path: "home-ex/客製專貼.JPG",
+    first: "",
+    second: "客製專貼",
   },
   {
     category: "口碑行銷",
@@ -38,6 +46,8 @@ export const a = [
     explanation: "",
     image_format: "png",
     path: "home-ex/口碑行銷｜十方光合.png",
+    first: "口碑行銷",
+    second: "十方光合",
   },
   {
     category: "口碑行銷",
@@ -46,6 +56,8 @@ export const a = [
     explanation: "",
     image_format: "png",
     path: "home-ex/口碑行銷｜EatFun.png",
+    first: "口碑行銷",
+    second: "EatFun",
   },
   {
     category: "口碑行銷",
@@ -54,6 +66,8 @@ export const a = [
     explanation: "",
     image_format: "png",
     path: "home-ex/口碑行銷｜HighKart微型電動車.png",
+    first: "口碑行銷",
+    second: "HighKart微型電動車",
   },
   {
     category: "品牌規劃",
@@ -62,6 +76,8 @@ export const a = [
     explanation: "",
     image_format: "JPG",
     path: "home-ex/品牌規劃｜VI視覺識別規劃｜識別應用設計｜華威綠能科技有限公司.JPG",
+    first: "品牌規劃｜VI視覺識別規劃｜識別應用設計",
+    second: "華威綠能科技有限公司",
   },
   {
     category: "品牌規劃",
@@ -70,6 +86,8 @@ export const a = [
     explanation: "",
     image_format: "JPG",
     path: "home-ex/品牌規劃｜VI視覺識別規劃｜識別應用設計｜上海鴻·美術館.JPG",
+    first: "品牌規劃｜VI視覺識別規劃｜識別應用設計",
+    second: "上海鴻·美術館",
   },
   {
     category: "品牌規劃",
@@ -78,6 +96,8 @@ export const a = [
     explanation: "捷風車業",
     image_format: "png",
     path: "home-ex/品牌規劃｜VI視覺識別規劃｜識別應用設計｜印刷品設計｜捷風車業.png",
+    first: "品牌規劃｜VI視覺識別規劃｜識別應用設計｜印刷品設計",
+    second: "捷風車業",
   },
   {
     category: "平面設計",
@@ -86,6 +106,8 @@ export const a = [
     explanation: "藝時代",
     image_format: "png",
     path: "home-ex/平面設計｜印刷品設計｜藝時代.png",
+    first: "平面設計｜印刷品設計",
+    second: "藝時代",
   },
   {
     category: "平面設計",
@@ -94,6 +116,8 @@ export const a = [
     explanation: "BRASS HANA",
     image_format: "png",
     path: "home-ex/平面設計｜印刷品設計｜BRASS HANA.png",
+    first: "平面設計｜印刷品設計",
+    second: "BRASS HANA",
   },
   {
     category: "平面設計",
@@ -102,6 +126,8 @@ export const a = [
     explanation: "",
     image_format: "png",
     path: "home-ex/平面設計｜彰化縣政府青年創業一對一陪伴輔導服務.png",
+    first: "平面設計",
+    second: "彰化縣政府青年創業一對一陪伴輔導服務",
   },
   {
     category: "網站設計",
@@ -110,6 +136,8 @@ export const a = [
     explanation: "",
     image_format: "png",
     path: "home-ex/網站設計｜安禾建設.png",
+    first: "網站設計",
+    second: "安禾建設",
   },
   {
     category: "網站設計",
@@ -118,6 +146,8 @@ export const a = [
     explanation: "",
     image_format: "png",
     path: "home-ex/網站設計｜安閔AHXYC.png",
+    first: "網站設計",
+    second: "安閔AHXYC",
   },
   {
     category: "行銷策略規劃",
@@ -126,6 +156,8 @@ export const a = [
     explanation: "",
     image_format: "png",
     path: "home-ex/行銷策略規劃｜社群行銷｜廣告投放｜漢英建設.png",
+    first: "行銷策略規劃｜社群行銷｜廣告投放",
+    second: "漢英建設",
   },
   {
     category: "行銷策略規劃",
@@ -134,6 +166,8 @@ export const a = [
     explanation: "",
     image_format: "png",
     path: "home-ex/行銷策略規劃｜社群行銷｜廣告投放｜業通高空室.png",
+    first: "行銷策略規劃｜社群行銷｜廣告投放",
+    second: "業通高空室",
   },
   {
     category: "行銷策略規劃",
@@ -142,6 +176,8 @@ export const a = [
     explanation: "",
     image_format: "png",
     path: "home-ex/行銷策略規劃｜社群行銷｜廣告投放｜中橙隔熱紙.png",
+    first: "行銷策略規劃｜社群行銷｜廣告投放",
+    second: "中橙隔熱紙",
   },
   {
     category: "印刷物承製",
@@ -150,6 +186,8 @@ export const a = [
     explanation: "",
     image_format: "JPG",
     path: "home-ex/印刷物承製｜彰化。旅庫.JPG",
+    first: "印刷物承製",
+    second: "彰化。旅庫",
   },
   {
     category: "LINE官方帳號",
@@ -158,5 +196,7 @@ export const a = [
     explanation: "",
     image_format: "png",
     path: "home-ex/LINE官方帳號｜益載室內裝修有限公司.png",
+    first: "LINE官方帳號",
+    second: "益載室內裝修有限公司",
   },
 ];

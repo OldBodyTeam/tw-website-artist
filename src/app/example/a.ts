@@ -6,6 +6,8 @@ export const a = {
       description: "AARON",
       image_format: "png",
       path: "a/產品包裝承製｜德商AARON.png",
+      first: "產品包裝承製｜德商",
+      second: "AARON",
     },
     {
       category: "產品包裝承製",
@@ -13,6 +15,8 @@ export const a = {
       description: "BLUECHAIN",
       image_format: "png",
       path: "a/產品包裝承製｜德商BLUECHAIN.png",
+      first: "產品包裝承製｜德商",
+      second: "BLUECHAIN",
     },
     {
       category: "產品包裝承製",
@@ -20,6 +24,8 @@ export const a = {
       description: "NEXTCOVER",
       image_format: "png",
       path: "a/產品包裝承製｜德商NEXTCOVER.png",
+      first: "產品包裝承製｜德商",
+      second: "NEXTCOVER",
     },
     {
       category: "產品包裝承製",
@@ -27,6 +33,8 @@ export const a = {
       description: "啾啾咖啡",
       image_format: "png",
       path: "a/產品包裝承製｜啾啾咖啡.png",
+      first: "產品包裝承製",
+      second: "啾啾咖啡",
     },
     {
       category: "產品包裝承製",
@@ -34,6 +42,8 @@ export const a = {
       description: "Halfords",
       image_format: "png",
       path: "a/產品包裝承製｜英商Halfords.png",
+      first: "產品包裝承製｜英商",
+      second: "Halfords",
     },
     {
       category: "產品包裝承製",
@@ -41,6 +51,8 @@ export const a = {
       description: "",
       image_format: "png",
       path: "a/產品包裝承製｜永濂有限公司.png",
+      first: "產品包裝承製",
+      second: "永濂有限公司",
     },
     {
       category: "產品包裝承製",
@@ -48,6 +60,8 @@ export const a = {
       description: "SUPER B ",
       image_format: "png",
       path: "a/產品包裝承製｜SUPER B .png",
+      first: "產品包裝承製",
+      second: "SUPER B ",
     },
     {
       category: "產品包裝承製",
@@ -55,6 +69,8 @@ export const a = {
       description: "SUPER B",
       image_format: "png",
       path: "a/產品包裝承製｜SUPER B.png",
+      first: "產品包裝承製",
+      second: "SUPER B",
     },
     {
       category: "產品吊卡承製",
@@ -62,6 +78,8 @@ export const a = {
       description: "Fuxon",
       image_format: "png",
       path: "a/產品吊卡承製｜德商Fuxon.png",
+      first: "產品吊卡承製｜德商",
+      second: "Fuxon",
     },
     {
       category: "產品吊卡承製",
@@ -69,6 +87,8 @@ export const a = {
       description: "i冒號SY",
       image_format: "png",
       path: "a/產品吊卡承製｜i冒號SY.png",
+      first: "產品吊卡承製",
+      second: "i冒號SY",
     },
     {
       category: "產品吊卡承製",
@@ -76,6 +96,8 @@ export const a = {
       description: "SATORI",
       image_format: "png",
       path: "a/產品吊卡承製｜SATORI.png",
+      first: "產品吊卡承製",
+      second: "SATORI",
     },
     {
       category: "產品紙袋承製",
@@ -83,6 +105,8 @@ export const a = {
       description: "Body Soigne",
       image_format: "png",
       path: "a/產品紙袋承製｜Body Soigne.png",
+      first: "產品紙袋承製",
+      second: "Body Soigne",
     },
     {
       category: "精裝書冊承製",
@@ -90,6 +114,8 @@ export const a = {
       description: "",
       image_format: "png",
       path: "a/精裝書冊承製｜彰化縣和美鎮邉社社區發展協會.png",
+      first: "精裝書冊承製",
+      second: "彰化縣和美鎮邉社社區發展協會",
     },
     {
       category: "精裝書冊承製",
@@ -97,6 +123,8 @@ export const a = {
       description: "",
       image_format: "png",
       path: "a/精裝書冊承製｜彰化縣明倫國中美術班.png",
+      first: "精裝書冊承製",
+      second: "彰化縣明倫國中美術班",
     },
     {
       category: "客製喜帖",
@@ -104,13 +132,17 @@ export const a = {
       description: "",
       image_format: "JPG",
       path: "a/客製喜帖.JPG",
+      first: "",
+      second: "客製喜帖",
     },
     {
       category: "印刷物承製",
-      company: "彰化。旅庫",
+      company: "彰化 | 旅庫",
       description: "",
       image_format: "JPG",
       path: "a/印刷物承製｜彰化。旅庫.JPG",
+      first: "印刷物承製 | 彰化",
+      second: "旅庫",
     },
   ],
   b: [
@@ -120,6 +152,8 @@ export const a = {
       description: "十方光合",
       image_format: "png",
       path: "b/口碑行銷｜十方光合.png",
+      first: "口碑行銷",
+      second: "十方光合",
     },
     {
       category: "口碑行銷",
@@ -127,6 +161,8 @@ export const a = {
       description: "EatFun",
       image_format: "png",
       path: "b/口碑行銷｜EatFun.png",
+      first: "口碑行銷",
+      second: "EatFun",
     },
     {
       category: "口碑行銷",
@@ -134,6 +170,8 @@ export const a = {
       description: "HighKart微型電動車",
       image_format: "png",
       path: "b/口碑行銷｜HighKart微型電動車.png",
+      first: "口碑行銷",
+      second: "HighKart微型電動車",
     },
   ],
   c: [
@@ -143,6 +181,8 @@ export const a = {
       description: "印刷品設計｜屋咪Woomi",
       image_format: "png",
       path: "c/品牌規劃｜印刷品設計｜屋咪Woomi.png",
+      first: "品牌規劃｜印刷品設計",
+      second: "屋咪Woomi",
     },
     {
       category: "品牌規劃",
@@ -150,6 +190,8 @@ export const a = {
       description: "LOGO標誌｜安達速運",
       image_format: "png",
       path: "c/品牌規劃｜LOGO標誌｜安達速運.png",
+      first: "品牌規劃｜LOGO標誌",
+      second: "安達速運",
     },
     {
       category: "品牌規劃",
@@ -157,6 +199,8 @@ export const a = {
       description: "LOGO標誌｜初旭民宿",
       image_format: "png",
       path: "c/品牌規劃｜LOGO標誌｜初旭民宿.png",
+      first: "品牌規劃｜LOGO標誌",
+      second: "初旭民宿",
     },
     {
       category: "品牌規劃",
@@ -165,6 +209,8 @@ export const a = {
         "VI視覺識別規劃｜識別應用設計｜包裝設計｜印刷品設計｜嘉義涼麵",
       image_format: "JPG",
       path: "c/品牌規劃｜VI視覺識別規劃｜識別應用設計｜包裝設計｜印刷品設計｜嘉義涼麵.JPG",
+      first: "品牌規劃｜VI視覺識別規劃｜識別應用設計｜包裝設計｜印刷品設計",
+      second: "嘉義涼麵",
     },
     {
       category: "品牌規劃",
@@ -172,6 +218,8 @@ export const a = {
       description: "VI視覺識別規劃｜識別應用設計｜福曜開發",
       image_format: "png",
       path: "c/品牌規劃｜VI視覺識別規劃｜識別應用設計｜福曜開發.png",
+      first: "品牌規劃｜VI視覺識別規劃｜識別應用設計",
+      second: "福曜開發",
     },
     {
       category: "品牌規劃",
@@ -179,6 +227,8 @@ export const a = {
       description: "VI視覺識別規劃｜識別應用設計",
       image_format: "JPG",
       path: "c/品牌規劃｜VI視覺識別規劃｜識別應用設計｜華威綠能科技有限公司.JPG",
+      first: "品牌規劃｜VI視覺識別規劃｜識別應用設計",
+      second: "華威綠能科技有限公司",
     },
     {
       category: "品牌規劃",
@@ -186,6 +236,8 @@ export const a = {
       description: "VI視覺識別規劃｜識別應用設計｜華友週報",
       image_format: "avif",
       path: "c/品牌規劃｜VI視覺識別規劃｜識別應用設計｜華友週報.avif",
+      first: "品牌規劃｜VI視覺識別規劃｜識別應用設計",
+      second: "華友週報",
     },
     {
       category: "品牌規劃",
@@ -193,6 +245,8 @@ export const a = {
       description: "VI視覺識別規劃｜識別應用設計",
       image_format: "JPG",
       path: "c/品牌規劃｜VI視覺識別規劃｜識別應用設計｜上海鴻·美術館.JPG",
+      first: "品牌規劃｜VI視覺識別規劃｜識別應用設計",
+      second: "上海鴻·美術館",
     },
     {
       category: "品牌規劃",
@@ -200,6 +254,8 @@ export const a = {
       description: "VI視覺識別規劃｜識別應用設計｜印刷品設計｜捷風車業",
       image_format: "png",
       path: "c/品牌規劃｜VI視覺識別規劃｜識別應用設計｜印刷品設計｜捷風車業.png",
+      first: "品牌規劃｜VI視覺識別規劃｜識別應用設計｜印刷品設計",
+      second: "捷風車業",
     },
     {
       category: "平面設計",
@@ -207,6 +263,8 @@ export const a = {
       description: "包裝規劃｜CHUANXI",
       image_format: "png",
       path: "c/平面設計｜包裝規劃｜CHUANXI.png",
+      first: "平面設計｜包裝規劃",
+      second: "CHUANXI",
     },
     {
       category: "平面設計",
@@ -214,6 +272,8 @@ export const a = {
       description: "包裝規劃｜LoFreys",
       image_format: "png",
       path: "c/平面設計｜包裝規劃｜LoFreys.png",
+      first: "平面設計｜包裝規劃",
+      second: "LoFreys",
     },
     {
       category: "平面設計",
@@ -221,6 +281,8 @@ export const a = {
       description: "印刷品設計｜藝時代",
       image_format: "png",
       path: "c/平面設計｜印刷品設計｜藝時代.png",
+      first: "平面設計｜印刷品設計",
+      second: "藝時代",
     },
     {
       category: "平面設計",
@@ -228,6 +290,8 @@ export const a = {
       description: "印刷品設計｜BRASS HANA",
       image_format: "png",
       path: "c/平面設計｜印刷品設計｜BRASS HANA.png",
+      first: "平面設計｜印刷品設計",
+      second: "BRASS HANA",
     },
     {
       category: "平面設計",
@@ -235,6 +299,8 @@ export const a = {
       description: "青年創業一對一陪伴輔導服務",
       image_format: "png",
       path: "c/平面設計｜彰化縣政府青年創業一對一陪伴輔導服務.png",
+      first: "平面設計",
+      second: "彰化縣政府青年創業一對一陪伴輔導服務",
     },
   ],
   d: [
@@ -244,6 +310,8 @@ export const a = {
       description: "廣告投放｜現代牙醫診所",
       image_format: "png",
       path: "d/社群行銷｜廣告投放｜現代牙醫診所.png",
+      first: "社群行銷｜廣告投放",
+      second: "現代牙醫診所",
     },
     {
       category: "社群行銷",
@@ -251,6 +319,8 @@ export const a = {
       description: "謙浪屹飽_工作區域1",
       image_format: "png",
       path: "d/社群行銷｜謙浪屹飽_工作區域1.png",
+      first: "社群行銷",
+      second: "謙浪屹飽_工作區域1",
     },
     {
       category: "社群行銷",
@@ -258,6 +328,8 @@ export const a = {
       description: "影音製作｜PPTOY",
       image_format: "png",
       path: "d/社群行銷｜影音製作｜PPTOY.png",
+      first: "社群行銷｜影音製作",
+      second: "PPTOY",
     },
     {
       category: "行銷策略規劃",
@@ -265,6 +337,8 @@ export const a = {
       description: "社群行銷｜廣告投放｜漢英建設",
       image_format: "png",
       path: "d/行銷策略規劃｜社群行銷｜廣告投放｜漢英建設.png",
+      first: "行銷策略規劃｜社群行銷｜廣告投放",
+      second: "漢英建設",
     },
     {
       category: "行銷策略規劃",
@@ -272,6 +346,8 @@ export const a = {
       description: "社群行銷｜廣告投放｜嘉點貼膜",
       image_format: "png",
       path: "d/行銷策略規劃｜社群行銷｜廣告投放｜嘉點貼膜.png",
+      first: "行銷策略規劃｜社群行銷｜廣告投放",
+      second: "嘉點貼膜",
     },
     {
       category: "行銷策略規劃",
@@ -279,6 +355,8 @@ export const a = {
       description: "社群行銷｜廣告投放｜晴簾坊窗簾傢飾",
       image_format: "png",
       path: "d/行銷策略規劃｜社群行銷｜廣告投放｜晴簾坊窗簾傢飾.png",
+      first: "行銷策略規劃｜社群行銷｜廣告投放",
+      second: "晴簾坊窗簾傢飾",
     },
     {
       category: "行銷策略規劃",
@@ -286,6 +364,8 @@ export const a = {
       description: "社群行銷｜廣告投放｜業通高空車",
       image_format: "png",
       path: "d/行銷策略規劃｜社群行銷｜廣告投放｜業通高空車.png",
+      first: "行銷策略規劃｜社群行銷｜廣告投放",
+      second: "業通高空車",
     },
     {
       category: "行銷策略規劃",
@@ -293,6 +373,8 @@ export const a = {
       description: "社群行銷｜廣告投放｜中橙隔熱紙",
       image_format: "png",
       path: "d/行銷策略規劃｜社群行銷｜廣告投放｜中橙隔熱紙.png",
+      first: "行銷策略規劃｜社群行銷｜廣告投放",
+      second: "中橙隔熱紙",
     },
     {
       category: "行銷策略規劃",
@@ -300,6 +382,8 @@ export const a = {
       description: "社群行銷｜廣告投放｜中天精品典檔",
       image_format: "png",
       path: "d/行銷策略規劃｜社群行銷｜廣告投放｜中天精品典檔.png",
+      first: "行銷策略規劃｜社群行銷｜廣告投放",
+      second: "中天精品典檔",
     },
     {
       category: "行銷策略規劃",
@@ -307,6 +391,8 @@ export const a = {
       description: "社群行銷｜口碑行銷｜廣告投放｜威瑞生物科技",
       image_format: "png",
       path: "d/行銷策略規劃｜社群行銷｜口碑行銷｜廣告投放｜威瑞生物科技.png",
+      first: "行銷策略規劃｜社群行銷｜口碑行銷｜廣告投放",
+      second: "威瑞生物科技",
     },
     {
       category: "行銷策略規劃",
@@ -314,6 +400,8 @@ export const a = {
       description: "社群行銷｜口碑行銷｜廣告投放｜EatFun",
       image_format: "png",
       path: "d/行銷策略規劃｜社群行銷｜口碑行銷｜廣告投放｜EatFun.png",
+      first: "行銷策略規劃｜社群行銷｜口碑行銷｜廣告投放",
+      second: "EatFun",
     },
     {
       category: "行銷策略規劃",
@@ -321,6 +409,8 @@ export const a = {
       description: "社群行銷｜口碑行銷｜廣告投放｜HighKart微型電動車",
       image_format: "png",
       path: "d/行銷策略規劃｜社群行銷｜口碑行銷｜廣告投放｜HighKart微型電動車.png",
+      first: "行銷策略規劃｜社群行銷｜口碑行銷｜廣告投放",
+      second: "HighKart微型電動車",
     },
     {
       category: "行銷策略規劃",
@@ -328,6 +418,8 @@ export const a = {
       description: "社群行銷｜影音製作｜HighKart微型電動車",
       image_format: "png",
       path: "d/行銷策略規劃｜社群行銷｜影音製作｜HighKart微型電動車.png",
+      first: "行銷策略規劃｜社群行銷｜影音製作",
+      second: "HighKart微型電動車",
     },
     {
       category: "LINE官方帳號",
@@ -335,6 +427,8 @@ export const a = {
       description: "東之初",
       image_format: "png",
       path: "d/LINE官方帳號｜東之初.png",
+      first: "LINE官方帳號",
+      second: "東之初",
     },
     {
       category: "LINE官方帳號",
@@ -342,6 +436,8 @@ export const a = {
       description: "",
       image_format: "png",
       path: "d/LINE官方帳號｜益載室內裝修有限公司.png",
+      first: "LINE官方帳號",
+      second: "益載室內裝修有限公司",
     },
     {
       category: "LINE官方帳號",
@@ -349,6 +445,8 @@ export const a = {
       description: "中橙隔熱紙",
       image_format: "png",
       path: "d/LINE官方帳號｜中橙隔熱紙.png",
+      first: "LINE官方帳號",
+      second: "中橙隔熱紙",
     },
   ],
   e: [
@@ -358,6 +456,8 @@ export const a = {
       description: "艾爾瑞特藝術所",
       image_format: "png",
       path: "e/網站設計｜艾爾瑞特藝術所.png",
+      first: "網站設計",
+      second: "艾爾瑞特藝術所",
     },
     {
       category: "網站設計",
@@ -365,6 +465,8 @@ export const a = {
       description: "",
       image_format: "png",
       path: "e/網站設計｜安禾建設.png",
+      first: "網站設計",
+      second: "安禾建設",
     },
     {
       category: "網站設計",
@@ -372,6 +474,8 @@ export const a = {
       description: "AHXYC",
       image_format: "png",
       path: "e/網站設計｜安閔AHXYC.png",
+      first: "網站設計",
+      second: "安閔AHXYC",
     },
     {
       category: "網站設計",
@@ -379,6 +483,8 @@ export const a = {
       description: "",
       image_format: "png",
       path: "e/網站設計｜DBP得美袋製造股份有限公司.png",
+      first: "網站設計",
+      second: "DBP得美袋製造股份有限公司",
     },
     {
       category: "網站設計",
@@ -386,6 +492,8 @@ export const a = {
       description: "MONGOLIAN安全帽",
       image_format: "png",
       path: "e/網站設計｜MONGOLIAN安全帽.png",
+      first: "網站設計",
+      second: "MONGOLIAN安全帽",
     },
   ],
 };

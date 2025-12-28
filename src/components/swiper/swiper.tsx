@@ -343,11 +343,9 @@ const HomeSwiper = () => {
                     />
                     <div className="flex flex-col absolute bottom-0 left-0 bg-[rgba(0,0,0,0.5)] w-full p-[12px] text-white text-[12px] justify-between h-full hover:bg-transparent">
                       <div className="text-[12px] text-white">
-                        {item.company}
+                        {item.second}
                       </div>
-                      <div className="text-[12px] text-white">
-                        {item.explanation}
-                      </div>
+                      <div className="text-[12px] text-white">{item.first}</div>
                     </div>
                   </div>
                 ))}
