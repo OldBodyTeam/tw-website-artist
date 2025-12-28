@@ -78,7 +78,7 @@ const LeftNav = () => {
         </DrawerTrigger>
         <DrawerTitle></DrawerTitle>
         <DrawerContent className="backdrop-blur-[8px]">
-          <div className="bg-[#F8F8EC] h-screen p-[40px] flex flex-col justify-between">
+          <div className="bg-[#F8F8EC] h-screen p-[24px] md:p-[40px] flex flex-col justify-between">
             <div>
               <Image
                 src="/logo.svg"

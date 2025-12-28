@@ -89,22 +89,26 @@ export default function Service() {
           <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
         </div>
         <div className="grid grid-cols-2 gap-[8px]">
-          {get(a, `${keys}`, [] as any[]).map((item, index) => (
-            <div
-              key={index}
-              className="bg-[#222222] w-full aspect-[1/1] flex items-center justify-center overflow-hidden relative"
-            >
-              <img
-                src={item.path}
-                alt={item.description}
-                className="aspect-[1/1]"
-              />
-              <div className="flex flex-col absolute bottom-0 left-0 bg-[rgba(0,0,0,0.5)] w-full p-[12px] text-white text-[12px] justify-between h-full hover:bg-transparent">
-                <div className="text-[12px] text-white">{item.second}</div>
-                <div className="text-[12px] text-white">{item.first}</div>
+          {get(a, `${keys}`, [] as any[]).map((item) => {
+            console.log(item.second);
+            console.log(item.first);
+            return (
+              <div
+                key={item.path}
+                className="bg-[#222222] w-full aspect-[1/1] flex items-center justify-center overflow-hidden relative"
+              >
+                {/* <img
+                  src={item.path}
+                  alt={item.description}
+                  className="aspect-[1/1]"
+                /> */}
+                <div className="flex flex-col absolute bottom-0 left-0 bg-[rgba(0,0,0,0.5)] w-full p-[12px] text-white text-[12px] justify-between h-full hover:bg-transparent">
+                  <div className="text-[12px] text-white">{item.second}</div>
+                  <div className="text-[12px] text-white">{item.first}</div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     );

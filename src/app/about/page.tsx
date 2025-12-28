@@ -368,15 +368,15 @@ const TestPage = () => {
             </div>
 
             <div className="mt-12 text-base leading-relaxed text-gray-300 space-y-4">
-              <p>
+              <p className="text-[14px]">
                 行銷不是單一面的操作，而是需要結合不同的角度與工具，才能發揮最大效益。
               </p>
-              <p>
+              <p className="text-[14px]">
                 這正是我們標誌的設計理念，象徵亞堤思以多元整合的思維，串聯策略、設計、數位與實體，讓每一個面向彼此支撐，共同成就品牌的成長。
               </p>
             </div>
 
-            <p className="mt-8 text-base text-gray-300">
+            <p className="mt-[24px] text-base text-gray-300 text-[14px]">
               品牌的核心理念不只是理念本身，而是需要落實在實際策略與行動中。我們將這份理念明確地轉化為。
             </p>
           </div>
