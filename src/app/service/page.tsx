@@ -6,7 +6,7 @@ const list = [
     title: "品牌規劃",
     desc: "Branding Strategy",
     image: "bg-[#a23e00]", // 注意：颜色值格式统一（如#a23e00无需加[]）
-    bgImage: "/ps/品牌规划PC@2x.png",
+    bgImage: "/ps/branding-strategy.png",
     className:
       "md:[clip-path:polygon(0_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
     href: "/service/branding-strategy",
@@ -15,7 +15,7 @@ const list = [
     title: "網站設計",
     desc: "Website Design",
     image: "bg-[#FF6699]",
-    bgImage: "/ps/网站设计PC@2x.png",
+    bgImage: "/ps/web-design.png",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
     href: "/service/web-design",
@@ -24,7 +24,7 @@ const list = [
     title: "社群行銷",
     desc: "Social Media Marketing",
     image: "bg-[#FF6700]",
-    bgImage: "/ps/社群行销PC@2x.png",
+    bgImage: "/ps/social-media-marketing.png",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
     href: "/service/social-media-marketing",
@@ -33,7 +33,7 @@ const list = [
     title: "口碑行銷",
     desc: "WOM Marketing",
     image: "bg-[#aF6600]",
-    bgImage: "/ps/口碑行销PC@2x.png",
+    bgImage: "/ps/wom-marketing.png",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
     href: "/service/wom-marketing",
@@ -42,7 +42,7 @@ const list = [
     title: "廣告投放",
     desc: "Digital Advertising",
     image: "bg-[#Fa6600]",
-    bgImage: "/ps/广告投放PC@2x.png",
+    bgImage: "/ps/digital-advertising.png",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
     href: "/service/digital-advertising",
@@ -51,7 +51,7 @@ const list = [
     title: "各類印刷",
     desc: "Print Production",
     image: "bg-[#F16610]",
-    bgImage: "/ps/各类印刷PC@2x.png",
+    bgImage: "/ps/print-production.png",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
     href: "/service/print-production",
