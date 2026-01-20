@@ -6,6 +6,7 @@ const list = [
     title: "品牌規劃",
     desc: "Branding Strategy",
     image: "bg-[#a23e00]", // 注意：颜色值格式统一（如#a23e00无需加[]）
+    bgImage: "/ps/品牌规划PC@2x.png",
     className:
       "md:[clip-path:polygon(0_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
     href: "/service/branding-strategy",
@@ -14,6 +15,7 @@ const list = [
     title: "網站設計",
     desc: "Website Design",
     image: "bg-[#FF6699]",
+    bgImage: "/ps/网站设计PC@2x.png",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
     href: "/service/web-design",
@@ -22,6 +24,7 @@ const list = [
     title: "社群行銷",
     desc: "Social Media Marketing",
     image: "bg-[#FF6700]",
+    bgImage: "/ps/社群行销PC@2x.png",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
     href: "/service/social-media-marketing",
@@ -30,6 +33,7 @@ const list = [
     title: "口碑行銷",
     desc: "WOM Marketing",
     image: "bg-[#aF6600]",
+    bgImage: "/ps/口碑行销PC@2x.png",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
     href: "/service/wom-marketing",
@@ -38,6 +42,7 @@ const list = [
     title: "廣告投放",
     desc: "Digital Advertising",
     image: "bg-[#Fa6600]",
+    bgImage: "/ps/广告投放PC@2x.png",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
     href: "/service/digital-advertising",
@@ -46,6 +51,7 @@ const list = [
     title: "各類印刷",
     desc: "Print Production",
     image: "bg-[#F16610]",
+    bgImage: "/ps/各类印刷PC@2x.png",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
     href: "/service/print-production",
@@ -81,7 +87,10 @@ export default function Example() {
           <Link href={v.href} key={v.title} className="block flex-1 flex">
             <div
               // 修复1：使用v.image作为背景色，同时设置flex布局让内容垂直居中
-              className={`${v.image} flex flex-col justify-end items-center md:flex-row md:items-end md:justify-center h-full md:h-auto pb-[16px] md:pb-[40px] overflow-hidden ${v.className} md:-ml-[18px] md:rounded-none flex-1 cursor-pointer`}
+              className={`${v.image} flex flex-col justify-end items-center md:flex-row md:items-end md:justify-center h-full md:h-auto pb-[16px] md:pb-[40px] overflow-hidden ${v.className} md:-ml-[18px] md:rounded-none flex-1 cursor-pointer bg-cover bg-center bg-no-repeat`}
+              style={{
+                backgroundImage: `url(${v.bgImage})`,
+              }}
             >
               {/* 修复2：竖排容器添加高度，确保文字垂直排列空间 */}
               <div className="flex flex-col md:flex-row gap-[4px] md:gap-[8px] items-center justify-center md:min-h-[132px]">

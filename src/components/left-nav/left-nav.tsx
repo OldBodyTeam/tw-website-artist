@@ -126,7 +126,7 @@ const LeftNav = () => {
               <div className="flex flex-col gap-[16px]">
                 <div className="flex items-center gap-[8px]">
                   <Image
-                    src="/nav/location.svg"
+                    src="/nav/chat.svg"
                     alt="location"
                     width={18}
                     height={18}
@@ -144,7 +144,7 @@ const LeftNav = () => {
                 </div>
                 <div className="flex items-center gap-[8px]">
                   <Image
-                    src="/nav/chat.svg"
+                    src="/nav/location.svg"
                     alt="location"
                     width={18}
                     height={18}
@@ -155,15 +155,7 @@ const LeftNav = () => {
               <div className="flex items-center justify-between my-[32px]">
                 <Link href="https://www.facebook.com/artistmkt">
                   <Image
-                    src="/nav/face.svg"
-                    alt="location"
-                    width={30}
-                    height={30}
-                  />
-                </Link>
-                <Link href="https://www.linkedin.com/company/108332681/admin/dashboard/">
-                  <Image
-                    src="/nav/tel.svg"
+                    src="/nav/ins.svg"
                     alt="location"
                     width={30}
                     height={30}
@@ -171,7 +163,15 @@ const LeftNav = () => {
                 </Link>
                 <Link href="https://www.instagram.com/artistmkt">
                   <Image
-                    src="/nav/ins.svg"
+                    src="/nav/tel.svg"
+                    alt="location"
+                    width={30}
+                    height={30}
+                  />
+                </Link>
+                <Link href="https://www.linkedin.com/company/108332681/admin/dashboard">
+                  <Image
+                    src="/nav/face.svg"
                     alt="location"
                     width={30}
                     height={30}
@@ -179,7 +179,7 @@ const LeftNav = () => {
                 </Link>
               </div>
               <div className="text-[#32373d] text-[12px] font-regular">
-                c 2025 亞堤思新創整合行销 | Artist MKT. All Rights Reserved.
+                © 2025 亞堤思新創整合行销 | Artist MKT. All Rights Reserved.
               </div>
             </div>
           </div>
