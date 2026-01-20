@@ -1,12 +1,11 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, SwiperClass } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
 import { VideoPlayer } from "../video/player";
 import { SwiperPagination } from "./swiper-pagination";
 import { useState } from "react";
-import { Mousewheel } from "swiper/modules";
 import { configResponsive, useResponsive } from "ahooks";
 import { LayoutGrid } from "./layout";
 import Link from "next/link";
@@ -87,6 +86,9 @@ const items = [
 ];
 const HomeSwiper = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(
+    null,
+  );
   const responsive = useResponsive();
   if (!responsive?.middle) {
     return (
@@ -260,6 +262,7 @@ const HomeSwiper = () => {
   return (
     <Swiper
       className="w-full h-full relative"
+      onSwiper={(swiper) => setSwiperInstance(swiper)}
       onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       // modules={[Mousewheel]} // ✅ 启用模块
       // mousewheel={responsive.middle} // ✅ 开启鼠标滚轮
@@ -268,6 +271,38 @@ const HomeSwiper = () => {
       noSwiping={true}
       noSwipingClass="swiper-no-swiping"
     >
+      <div className="absolute bottom-[112px] right-[64px] z-50 flex gap-[16px] cursor-pointer no-select">
+        <div
+          className={`group relative w-[42px] h-[42px] flex items-center justify-center border border-[#FFFFFF] overflow-hidden ${
+            activeIndex === 0 ? "opacity-50 pointer-events-none" : ""
+          }`}
+          onClick={() => swiperInstance?.slidePrev()}
+        >
+          <div className="absolute inset-0 bg-white origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100" />
+          <Image
+            src="/arrow.svg"
+            alt="prev"
+            width={24}
+            height={24}
+            className="rotate-180 relative z-10 transition-all duration-300 group-hover:invert"
+          />
+        </div>
+        <div
+          className={`group relative w-[42px] h-[42px] flex items-center justify-center border border-[#FFFFFF] overflow-hidden ${
+            activeIndex === 3 ? "opacity-50 pointer-events-none" : ""
+          }`}
+          onClick={() => swiperInstance?.slideNext()}
+        >
+          <div className="absolute inset-0 bg-white origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100" />
+          <Image
+            src="/arrow.svg"
+            alt="next"
+            width={24}
+            height={24}
+            className="relative z-10 transition-all duration-300 group-hover:invert"
+          />
+        </div>
+      </div>
       <SwiperPagination activeIndex={activeIndex} />
       <SwiperSlide>
         {/* 背景色 换图片 */}
