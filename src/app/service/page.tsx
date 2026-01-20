@@ -87,7 +87,7 @@ export default function Example() {
           <Link href={v.href} key={v.title} className="block flex-1 flex">
             <div
               // 修复1：使用v.image作为背景色，同时设置flex布局让内容垂直居中
-              className={`${v.image} flex flex-col justify-end items-center md:flex-row md:items-end md:justify-center h-full md:h-auto pb-[16px] md:pb-[40px] overflow-hidden ${v.className} md:-ml-[18px] md:rounded-none flex-1 cursor-pointer bg-cover bg-center bg-no-repeat`}
+              className={` flex flex-col justify-end items-center md:flex-row md:items-end md:justify-center h-full md:h-auto pb-[16px] md:pb-[40px] overflow-hidden ${v.className} md:-ml-[18px] md:rounded-none flex-1 cursor-pointer bg-cover bg-center bg-no-repeat`}
               style={{
                 backgroundImage: `url(${v.bgImage})`,
               }}

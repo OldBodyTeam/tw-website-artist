@@ -11,6 +11,7 @@ import { Label } from "../ui/label";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { configResponsive, useResponsive, useScroll } from "ahooks";
+import { useState } from "react";
 
 configResponsive({
   middle: 768,
@@ -40,10 +41,11 @@ export const menu = [
 const LeftNav = () => {
   const pathname = usePathname();
   const responsive = useResponsive();
+  const [visible, setVisible] = useState(false);
 
   return (
     // 加条线
-    <Drawer direction="left">
+    <Drawer direction="left" open={visible}>
       <div className="md:bg-[#F8F8EC] md:h-screen fixed top-8 left-8 md:static md:top-auto md:left-auto z-50">
         <DrawerTrigger className="h-full">
           {/* Mobile Trigger */}
@@ -59,7 +61,10 @@ const LeftNav = () => {
           </div> */}
           {/* Desktop Trigger */}
           {responsive?.middle ? (
-            <div className="hidden md:flex w-[48px] h-full flex-col items-center px-[8px] py-[40px] gap-[16px]">
+            <div
+              className="hidden md:flex w-[48px] h-full flex-col items-center px-[8px] py-[40px] gap-[16px]"
+              onClick={() => setVisible(true)}
+            >
               <Image src="/nav-icon.svg" alt="logo" width={32} height={32} />
               <div className="flex-1 bg-[#0A090F] w-[1px] opacity-10"></div>
             </div>
@@ -71,6 +76,7 @@ const LeftNav = () => {
                 width={22}
                 height={22}
                 className="absolute top-[16px] left-[16px]"
+                onClick={() => setVisible(true)}
               />
               <Image src="/home-1/1.svg" alt="menu" width={132} height={24} />
             </div>
@@ -98,6 +104,7 @@ const LeftNav = () => {
                     <Label
                       htmlFor={item.name}
                       className="flex items-center justify-between w-full mb-[16px] cursor-pointer"
+                      onClick={() => setVisible(false)}
                     >
                       <div className="text-[#0A090F] text-[16px] font-bold cursor-pointer">
                         {item.name}
