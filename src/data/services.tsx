@@ -55,10 +55,10 @@ export interface Service {
 export const services: Service[] = [
   {
     slug: "print-production",
-    serviceType: "各类印刷（Print Production）",
+    serviceType: "各類印刷（Print Production）",
     title: "Precision in print, perfection in brand.",
     description:
-      "拥有20余年印刷经验，提供完整印刷解决方案，从设计、印前完稿确认、细部校对，到纸材选择与加工建议（如烫金、打凸、局部上光），每环节提供专业建议，确保作品完美呈现品牌形象。支持1只起印，无论少量或大量印刷，均可提供最适化方案满足品牌需求。",
+      "擁有 20 餘年印刷經驗，我們提供完整的印刷解決方案，從設計、印前完稿確認、細部校對，到紙材選擇與加工建議（如燙金、打凸、局部上光），每一個環節都能提供最專業建議，確保每件作品完美呈現品牌形象。1只就能印。無論少量或大量印刷，我們都能提供最適化方案，滿足各種品牌需求。",
     ourApproach: {
       title: "Our Approach",
       subtitle: "From design to flawless execution.",
@@ -76,7 +76,7 @@ export const services: Service[] = [
       title: "Our Capabilities",
       subtitle: "Comprehensive print solutions.",
       content:
-        "提供从设计、印前校稿、纸材与加工建议、版面安排的全流程服务，通过专业印刷设备掌控每环节。可满足各类纸品及专案客制化需求，协助品牌精准呈现作品价值与质感。",
+        "我們提供從設計、印前校稿、紙材與加工建議、版面安排，專業印刷設備掌握每個環節。各類紙品及專案客製化需求，我們都能協助品牌精準呈現每一件作品的價值與質感。",
     },
     whatWeDo: {
       title: "What We Do",
@@ -85,6 +85,33 @@ export const services: Service[] = [
         "设计与印前完稿确认、细部校对",
         "纸材选择与加工建议",
         "专案客制化印刷方案",
+      ],
+      contentGroups: [
+        {
+          groupName: "",
+          items: [
+            {
+              id: "01",
+              name: "名片、貼紙、吊卡、禮盒、海報、布條、手冊等各類紙品印刷",
+              detail: ``,
+            },
+            {
+              id: "02",
+              name: "設計與印前完稿確認、細部校對",
+              detail: ``,
+            },
+            {
+              id: "03",
+              name: "紙材選擇與加工建議",
+              detail: ``,
+            },
+            {
+              id: "04",
+              name: "專案客製化印刷方案",
+              detail: ``,
+            },
+          ],
+        },
       ],
     },
     images: [
