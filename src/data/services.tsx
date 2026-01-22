@@ -350,34 +350,41 @@ export const services: Service[] = [
   },
   {
     slug: "social-media-marketing",
-    serviceType: "社群营销（Social Media Marketing）",
+    serviceType: "社群行銷（Social Media Marketing）",
     title: "Social isn’t posting, it’s conversing.",
     description:
-      "社群平台不仅是信息传递管道，更是与受众互动、培养忠诚度的重要场域。通过策略与创意，让品牌在社群中不仅被看见，更能被记住与持续关注。",
+      "社群平台不只是資訊傳遞的管道，更是與受眾互動、培養忠誠度的重要場域。我們透過策略與創意，讓品牌在社群中不僅被看見，更能被記住與持續關注。",
     ourApproach: {
       title: "Our Approach",
       subtitle: "From content to community.",
-      content:
-        "提供从内容规划、文案撰写、图面设计到影音制作的一站式服务，根据Facebook、Instagram、Threads、TikTok、LINE官方帐号等不同平台特性，为品牌量身打造专属风格。不仅制作内容，更制定策略：从贴文主题设计、时事议题操作到活动策划，逐步建立品牌与粉丝的沟通管道；通过持续互动与讨论热点创造，让粉丝成为品牌最佳代言人，将社群经营转化为品牌资产，扩大影响力并累积与受众的长期关系。",
+      content: (
+        <>
+          我們提供從內容規劃、文案撰寫、圖面設計到影音製作的一站式服務，根據不同平台特性Facebook、Instagram、Threads、TikTok、LINE
+          官方帳號，為品牌量身打造專屬風格。
+          <div className="mt-[16px]"></div>
+          我們不僅製作內容，更制定策略。從貼文主題設計、時事議題操作到活動策劃，逐步建立品牌與粉絲之間的溝通管道。透過持續互動與討論熱點的創造，讓粉絲成為品牌的最佳代言人。
+          將社群經營轉化為品牌資產，擴大品牌影響力，並累積與受眾的長期關係。
+        </>
+      ),
     },
     ourCapabilities: {
       title: "Our Capabilities",
-      subtitle: "让品牌在社群中不只被看见，更能被记住。",
+      subtitle: "讓品牌在社群中不只被看見，更能被記住。",
       capabilityList: [
         {
           type: "吸引注意力",
           detail:
-            "以创意议题与独特风格吸引受众，让贴文不仅是信息，更是能引发讨论与分享的话题。",
+            "以創意議題與獨特風格吸引受眾，讓貼文不只是資訊，而是能引發討論與分享的話題。",
         },
         {
-          type: "创造互动",
+          type: "創造互動",
           detail:
-            "通过贴文设计、影音内容与活动策划，建立双向沟通，让粉丝主动参与、产生情感连结。",
+            "透過貼文設計、影音內容與活動策劃，建立雙向溝通，讓粉絲主動參與、產生情感連結。",
         },
         {
-          type: "驱动成效",
+          type: "驅動成效",
           detail:
-            "结合社群广告投放与数据分析，持续优化策略，并以每季回报方式将成果与数据转化为具体方向，让社群影响力真正带动品牌成长。",
+            "結合社群廣告投放與數據分析，我們不僅持續優化策略，更以每季回報的方式，將成果與數據轉化為具體方向，讓社群影響力真正帶動品牌成長。",
         },
       ],
     },
@@ -385,21 +392,21 @@ export const services: Service[] = [
       title: "What We Do",
       contentGroups: [
         {
-          groupName: "经营平台",
-          content: "Facebook、Instagram、Threads、TikTok、LINE 官方帐号",
+          groupName: "經營平台",
+          content: "Facebook、Instagram、Threads、TikTok、LINE 官方帳號",
         },
         {
-          groupName: "执行内容",
+          groupName: "執行內容",
           content:
-            "品牌风格定位、受众分析、内容规划、实体活动规划、文案撰写、图面设计、影音制作",
+            "品牌風格定位、受眾分析、內容規劃、實體活動規劃、文案撰寫、圖面設計、影音製作",
         },
         {
-          groupName: "互动经营",
-          content: "粉丝互动、线上活动规划、话题引导、社群参与度提升",
+          groupName: "互動經營",
+          content: "粉絲互動、線上活動規劃、話題引導、社群參與度提升",
         },
         {
-          groupName: "营销优化",
-          content: "广告投放、数据追踪、成效分析、策略调整",
+          groupName: "行銷優化",
+          content: "廣告投放、數據追蹤、成效分析、策略調整",
         },
       ],
     },
