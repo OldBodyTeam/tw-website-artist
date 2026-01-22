@@ -32,7 +32,7 @@ export const ProcessGrid: React.FC<ProcessGridProps> = ({ steps, title }) => {
             `}
           >
             <span className="text-[11px] text-white leading-[16px] font-light mb-[8px]">
-              Step | {step.number}
+              {step.number}
             </span>
             <h4 className="text-[16px] text-white leading-[24px] font-semibold mb-[8px]">
               {step.title}

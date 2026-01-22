@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface ServiceImage {
   fileName?: string;
   format?: string;
@@ -30,11 +32,11 @@ export interface Service {
   slug: string;
   serviceType: string;
   title: string;
-  description: string;
+  description: ReactNode;
   ourApproach: {
     title: string;
     subtitle: string;
-    content: string;
+    content: ReactNode;
   };
   ourCapabilities: {
     title: string;
@@ -60,8 +62,15 @@ export const services: Service[] = [
     ourApproach: {
       title: "Our Approach",
       subtitle: "From design to flawless execution.",
-      content:
-        "依靠自有Kodak Trendsetter 800 CPT制版机与海德堡六色印刷机等专业印刷设备，高效完成各类纸品印刷（含名片、贴纸、吊卡、礼盒、宣传海报、布条、手册等）。从设计、校稿到印刷与后加工，以细腻工艺与严格品管确保成品精准呈现，提升品牌专业度与吸引力。",
+      content: (
+        <>
+          依靠自有的 Kodak Trendsetter 800 CPT
+          製版機與海德堡六色印刷機等專業印刷設備，我們高效完成各類紙品印刷，包括名片、貼紙、吊卡、禮盒、宣傳海報、布條、手冊等。
+          <div className="mt-[16px]">
+            從設計、校稿到印刷與後加工，每一步我們以細膩工藝與嚴格品管確保成品精準呈現，讓品牌形象更具專業與吸引力。
+          </div>
+        </>
+      ),
     },
     ourCapabilities: {
       title: "Our Capabilities",
@@ -93,29 +102,55 @@ export const services: Service[] = [
   },
   {
     slug: "digital-advertising",
-    serviceType: "广告投放（Digital Advertising）",
+    serviceType: "廣告投放（Digital Advertising）",
     title: "Turning exposure into action.",
     description:
-      "广告已不仅是单纯曝光，更是影响消费者决策、驱动营收的重要推手。根据品牌需求，在Facebook、Instagram、TikTok、Google、YouTube、LINE等平台精准操盘，让品牌在对的时间遇见对的人。",
+      "廣告已不僅是單純的曝光，而是影響消費者決策、驅動營收的重要推手。我們根據品牌需求，在 Facebook、Instagram、TikTok、Google、YouTube、LINE 等平台進行精準操盤，讓品牌能在對的時間遇見對的人。",
     ourApproach: {
       title: "Our Approach",
       subtitle: "From strategy to conversion.",
-      content:
-        "确保每一分营销投入发挥最大效益。从策略规划、受众分析到素材制作与投放，持续优化、调整广告方向，找出最能引发顾客共鸣的议题，提高广告转化率，最终帮助品牌达成营收目标。",
+      content: (
+        <>
+          每一分行行銷投入都發揮最大效益。
+          <div className="mt-[16px]"></div>
+          從策略規劃、受眾分析到素材製作與投放。優化、調整廣告方向，找出最能引發顧客共鳴的議題，提高廣告轉換率，最終幫助品牌達成營收目標。
+        </>
+      ),
     },
     ourCapabilities: {
       title: "Our Capabilities",
       subtitle: "Maximizing reach, optimizing impact.",
       content:
-        "覆盖Meta、Google、TikTok、LINE平台广告投放，含广告策略规划、目标受众与竞品市场分析，掌控全环节。文案、图面与影音素材制作均自主完成，同时持续追踪数据、分析成效、优化调整，确保每一分预算发挥最大效益。",
+        "Meta、Google、TikTok、LINE 平台的廣告投放，到廣告策略規劃、目標受眾與競品市場分析，我們掌握每個環節。文案、圖面與影音素材製作均由我們負責，並持續追蹤數據、分析成效、優化，確保每一分預算都發揮最大效益。",
     },
     whatWeDo: {
       title: "What We Do",
-      contentList: [
-        "广告与策略",
-        "受众分析与竞品研究",
-        "素材制作（图文、影音）",
-        "成效追踪与优化调整",
+      contentGroups: [
+        {
+          groupName: "",
+          items: [
+            {
+              id: "01",
+              name: "廣告與策略",
+              detail: ``,
+            },
+            {
+              id: "02",
+              name: "受眾分析與競品研究",
+              detail: ``,
+            },
+            {
+              id: "03",
+              name: "素材製作（圖文、影音）",
+              detail: ``,
+            },
+            {
+              id: "04",
+              name: "成效追蹤與優化調整",
+              detail: ``,
+            },
+          ],
+        },
       ],
     },
     images: [],
@@ -152,30 +187,45 @@ export const services: Service[] = [
   },
   {
     slug: "branding-strategy",
-    serviceType: "品牌规划（Branding Strategy）",
+    serviceType: "品牌規劃（Branding Strategy）",
     title: "Not just a logo, but a living brand.",
-    description:
-      "Logo并非品牌全部，真正能让品牌烙印在消费者心中的是完整系统：从定位、语言到视觉的一致性。当品牌能清晰表达自我、与消费者产生共鸣，就能被理解、被记住，并在竞争激烈市场中建立独特地位。我们相信，品牌核心不在视觉装饰，而在让消费者每一次接触时，都能感受到相同价值与态度。",
+    description: (
+      <>
+        Logo並不是品牌的全部。真正能讓品牌烙印在消費者心裡的，是一套完整的系統：從定位、語言到視覺的一致性。
+        <div className="my-[8px]"></div>
+        當品牌能清楚地表達自己、與消費者產生共鳴，就能被理解、被記住，並在競爭激烈的市場中建立獨特地位。
+        <div className="my-[8px]"></div>
+        我們相信，品牌的核心不在於視覺的裝飾，而在於如何讓消費者在每一次接觸時，都能感受到相同的價值與態度。
+      </>
+    ),
     ourApproach: {
       title: "Our Approach",
       subtitle: "From insight to identity.",
-      content:
-        "设计开始前，不急于绘制第一条线，而是通过深度访谈、产业研究与策略分析，挖掘品牌最独特优势与个性；协助厘清产品与服务定位，找出优于同业的市场区隔，将结果转化为品牌语言与视觉逻辑，贯穿所有对外接触点（名片、印刷物、网站、社群、广告），确保品牌呈现一致专业形象。过程中每一份设计不仅是美化，更是能带来实际效益的资产，让品牌在消费者心中逐步累积信任与影响力。",
+      content: (
+        <>
+          在設計開始之前，我們不會急於畫出第一條線，而是透過深度訪談、產業研究與策略分析，去挖掘品牌最獨特的優勢與個性。
+          <div className="my-[8px]"></div>
+          我們會協助釐清產品與服務的定位，並找出優於同業的市場區隔。這些結果將轉化為品牌語言與視覺邏輯，貫穿所有的對外接觸點，從名片、印刷物、網站到社群與廣告，確保品牌呈現出一致而專業的形象。
+          <div className="my-[8px]"></div>
+          在這個過程中，每一份設計都不只是單純的美化，而是能帶來實際效益的資產，讓品牌在消費者心中逐漸累積信任與影響力。
+        </>
+      ),
     },
     ourCapabilities: {
       title: "Our Capabilities",
       subtitle: "Shaping image, executing with precision.",
-      content: "服务不止于设计Logo，而是提供从策略到执行的完整解决方案：",
+      content:
+        "我們的服務不僅止於設計 Logo，而是提供一整套從策略到執行的完整解決方案：",
       capabilityList: [
         {
           type: "Identity Building",
           detail:
-            "从企业诊断出发，深入理解品牌现状与挑战，规划完整品牌形象策略；通过CIS或VI建立品牌核心视觉语言，设计能长期发挥作用的Logo与识别系统，让品牌拥有清晰、一致且具延展性的基础。",
+            "從企業診斷出發，深入理解品牌現況與挑戰，進而規劃完整的品牌形象策略。透過 CIS或 VI，建立品牌的核心視覺語言，並設計出能長期發揮作用的 Logo 與識別系統，讓品牌擁有清晰、一致且具延展性的基礎。",
         },
         {
           type: "Design Execution",
           detail:
-            "建立清晰品牌形象后，转化为具体设计应用，涵盖识别系统应用、产品与包装设计、印刷品制作；这些设计不仅是视觉呈现，更是协助品牌在市场中被辨识、被信任的具体工具。",
+            "在建立清晰的品牌形象後，我們將其轉化為具體的設計應用，涵蓋識別系統應用、產品與包裝設計、印刷品製作。這些設計不只是視覺上的呈現，更是能夠協助品牌在市場中被辨識、被信任的具體工具。",
         },
       ],
     },
@@ -187,55 +237,56 @@ export const services: Service[] = [
           items: [
             {
               id: "01",
-              name: "企业诊断",
-              detail:
-                "从现状与市场切入找出问题核心，厘清发展方向；协助企业掌握优势与机会，建立明确成长策略。",
+              name: "企業診斷",
+              detail: `從現況與市場切入找出問題核心，釐清發展方向。\n
+協助企業掌握優勢與機會，建立明確成長策略。`,
             },
             {
               id: "02",
-              name: "品牌形象规划",
-              detail:
-                "以理念与定位塑造品牌个性，打造独特识别感；让品牌在市场中更易被理解、记住并建立信任。",
+              name: "品牌形象規劃",
+              detail: `以理念與定位塑造品牌個性，打造獨特識別感。\n
+讓品牌在市場中更易被理解、記住並建立信任。`,
             },
             {
               id: "03",
-              name: "CIS 企业识别设计",
-              detail:
-                "整合理念、视觉与行为规范，打造完整识别架构；协助企业建立一致形象，提升内外沟通效率。",
+              name: "CIS 企業識別設計",
+              detail: `整合理念、視覺與行為規範，打造完整識別架構。\n
+協助企業建立一致形象，提升內外溝通效率。`,
             },
             {
               id: "04",
-              name: "VI 视觉识别规划",
-              detail:
-                "以色彩、字体与版式建立品牌视觉规则；确保所有呈现一致、美观，强化辨识度。",
+              name: "VI 視覺識別規劃",
+              detail: `以色彩、字體與版式建立品牌視覺規則。\n
+確保所有呈現一致、美觀，強化辨識度。`,
             },
             {
               id: "05",
-              name: "Logo 设计",
-              detail:
-                "以图形语言呈现品牌精神与定位；打造简洁有力的视觉核心，留下深刻印象。",
+              name: "Logo 設計",
+              detail: `以圖形語言呈現品牌精神與定位。\n
+打造簡潔有力的視覺核心，留下深刻印象。`,
             },
           ],
         },
         {
-          groupName: "设计执行",
+          groupName: "設計執行",
           items: [
             {
               id: "01",
-              name: "识别应用设计",
-              detail:
-                "将品牌视觉延伸至线下实际接触点；让整体形象更完整统一，提升品牌专业感。",
+              name: "識別應用設計",
+              detail: `將品牌視覺延伸至線下實際接觸點。\n
+讓整體形象更完整統一，提升品牌專業感。`,
             },
             {
               id: "02",
-              name: "包装设计",
-              detail:
-                "以美感与功能兼具的设计展现产品特色；强化品牌质感，使商品在陈列中更吸睛。",
+              name: "包裝設計",
+              detail: `以美感與功能兼具的設計展現產品特色。\n
+強化品牌質感，使商品在陳列中更吸睛。`,
             },
             {
               id: "03",
-              name: "印刷品设计",
-              detail: "排版与设计呈现品牌延伸；打造兼具质感与实用性的印刷品。",
+              name: "印刷品設計",
+              detail: `排版與設計呈現品牌延伸。\n
+打造兼具質感與實用性的印刷品。`,
             },
           ],
         },
