@@ -80,12 +80,6 @@ export const services: Service[] = [
     },
     whatWeDo: {
       title: "What We Do",
-      contentList: [
-        "名片、贴纸、吊卡、礼盒、海报、布条、手册等各类纸品印刷",
-        "设计与印前完稿确认、细部校对",
-        "纸材选择与加工建议",
-        "专案客制化印刷方案",
-      ],
       contentGroups: [
         {
           groupName: "",
@@ -184,30 +178,63 @@ export const services: Service[] = [
   },
   {
     slug: "wom-marketing",
-    serviceType: "口碑营销（WOM Marketing）",
+    serviceType: "口碑行銷（WOM Marketing）",
     title: "Trust speaks louder than ads.",
     description:
-      "消费者购买前常先「爬文做功课」，除品牌自我塑造外，第三方真实推荐更能建立信任、影响消费决策。口碑营销的力量不在于声量堆叠，而在于真实体验能否引发共鸣，进而转化为消费者实际行动。",
+      "消費者在購買前的第一步往往是「爬文做功課」。除了品牌自我塑造之外，第三方的真實推薦更能建立信任，並有效影響消費決策。口碑行銷的力量，不在於聲量的堆疊，而在於真實體驗能否引起共鳴，進而轉化為消費者的實際行動。",
     ourApproach: {
       title: "Our Approach",
       subtitle: "From authenticity to influence.",
-      content:
-        "注重「真实」与「共鸣」，协助品牌精准挑选调性契合的部落客、KOL与KOC，让其通过自身经验与风格分享内容。合作中从需求确认、关键词规划到文章审核，确保内容兼具真实性与效益，为品牌创造长期稳定曝光；通过真实推荐与多元合作，让品牌不仅被看见，更能被信任，在消费者心中建立影响力。",
+      content: (
+        <>
+          我們重於「真實」與「共鳴」。協助品牌精準挑選調性契合的部落客、 KOL
+          與KOC，讓他們透過自身經驗與風格分享內容。
+          <div className="mt-[16px]"></div>
+          在合作上，我們從需求確認、關鍵字規劃到文章審核，確保內容兼具真實性與效益，為品牌創造長期而穩定的曝光。
+          <div className="mt-[16px]"></div>
+          透過真實推薦與多元合作，讓品牌不只是被看見，更能被信任，並在消費者心中建立影響力。
+        </>
+      ),
     },
     ourCapabilities: {
       title: "Our Capabilities",
       subtitle: "Shaping trust, amplifying influence.",
       content:
-        "从合作规划到内容执行，协助品牌在多元管道建立真实可信的口碑影响力。不仅协助媒合合适KOL、KOC与部落客，还提供内容指引、话题营造与社群扩散，确保每一分投入带来实际影响。",
+        "從合作規劃到內容執行，協助品牌在多元管道中建立真實可信的口碑影響力。我們不僅協助媒合合適 KOL、KOC 與部落客，也提供內容指引、話題營造與社群擴散，確保每一分投入都能帶來實際影響。",
     },
     whatWeDo: {
       title: "What We Do",
-      contentList: [
-        "KOL / KOC 合作规划",
-        "部落客合作规划",
-        "品牌需求与内容指引",
-        "社群平台口碑扩散",
-        "网络平面新闻采购",
+      contentGroups: [
+        {
+          groupName: "",
+          items: [
+            {
+              id: "01",
+              name: "KOL / KOC 合作規劃",
+              detail: ``,
+            },
+            {
+              id: "02",
+              name: "部落客 合作規劃",
+              detail: ``,
+            },
+            {
+              id: "03",
+              name: "品牌需求與內容指引",
+              detail: ``,
+            },
+            {
+              id: "04",
+              name: "社群平台口碑擴散",
+              detail: ``,
+            },
+            {
+              id: "05",
+              name: "網路平面新聞採購",
+              detail: ``,
+            },
+          ],
+        },
       ],
     },
     images: [],
