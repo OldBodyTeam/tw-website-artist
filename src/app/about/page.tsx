@@ -84,9 +84,15 @@ const TestPage = () => {
     setIsThirdSticky(stuck);
   });
   const thirdRef = useRef<HTMLDivElement>(null);
+  const [isMounted, setIsMounted] = useState(false);
 
   // 用于移动端判断滑动方向
   const lastTouchY = useRef(0);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   // --- 核心修改：拦截滚动事件 ---
   useEffect(() => {
     const container = containerRef.current;
@@ -135,7 +141,13 @@ const TestPage = () => {
       container.removeEventListener("touchmove", handleTouchMove);
     };
   }, [isThirdSticky]); // 当 sticky 状态改变时重新绑定
+
   const responsive = useResponsive();
+
+  if (!isMounted) {
+    return null;
+  }
+
   if (!responsive?.middle) {
     return (
       <div
