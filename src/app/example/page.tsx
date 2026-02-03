@@ -112,7 +112,7 @@ export default function Service() {
         <div className="flex items-center justify-start my-[12px]">
           <Image src="/home-2/dd.png" alt="divider" width={256} height={18} />
         </div>
-        <div className="grid grid-cols-2 gap-[8px]">
+        <div className="grid grid-cols-2 gap-[8px] [content-visibility:auto] [contain-intrinsic-size:1px_800px]">
           {selectedItems.map((item) => (
             <PortfolioCard key={item.path} item={item} />
           ))}
@@ -190,7 +190,7 @@ export default function Service() {
           </div>
           <div className="flex-1 overflow-x-hidden relative">
             <div className="overflow-x-hidden ">
-              <div className="grid grid-cols-4 gap-[16px] overflow-x-hidden ">
+              <div className="grid grid-cols-4 gap-[16px] overflow-x-hidden [content-visibility:auto] [contain-intrinsic-size:1px_1200px]">
                 {selectedItems.map((item) => (
                   <PortfolioCard key={item.path} item={item} />
                 ))}

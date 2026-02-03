@@ -15,22 +15,19 @@ const LayoutGrid = <T,>({
   return (
     <div>
       {Array.from({ length: row }).map((_, rowIndex) => {
+        const rowItems = list.slice(rowIndex * num, rowIndex * num + num);
+
         return (
           <div key={rowIndex}>
             <div className="flex">
-              {Array.from({ length: num }).map((_, colIndex) => {
-                const itemIndex = rowIndex * num + colIndex;
-                const item = list[itemIndex] ?? ({} as T);
-
-                return (
-                  <div key={colIndex} className="flex-1 flex">
-                    {renderItem(item, colIndex)}
-                    {colIndex < num - 1 && (
-                      <div className="border-r border-[rgba(255,255,255,0.1)]"></div>
-                    )}
-                  </div>
-                );
-              })}
+              {rowItems.map((item, colIndex) => (
+                <div key={colIndex} className="flex-1 flex">
+                  {renderItem(item, colIndex)}
+                  {colIndex < rowItems.length - 1 && (
+                    <div className="border-r border-[rgba(255,255,255,0.1)]"></div>
+                  )}
+                </div>
+              ))}
             </div>
             {rowIndex < row - 1 && (
               <div className="border-b border-[rgba(255,255,255,0.1)]"></div>
