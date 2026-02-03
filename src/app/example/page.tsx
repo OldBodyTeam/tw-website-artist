@@ -2,7 +2,7 @@
 import { Divider } from "antd";
 import Image from "next/image";
 import { configResponsive, useResponsive } from "ahooks";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { get } from "lodash";
 import { a } from "./a";
 import { LayoutGrid } from "@/components/swiper/layout";
@@ -45,6 +45,16 @@ const tag = [
 export default function Service() {
   const responsive = useResponsive();
   const [keys, setKeys] = useState("c");
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+
   if (!responsive?.middle) {
     return (
       <div className="flex-1 bg-[#0A090F] h-screen px-[16px] py-[28px] overflow-auto">

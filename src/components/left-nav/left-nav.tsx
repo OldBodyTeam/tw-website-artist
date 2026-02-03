@@ -11,7 +11,7 @@ import { Label } from "../ui/label";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { configResponsive, useResponsive, useScroll } from "ahooks";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 configResponsive({
   middle: 768,
@@ -42,6 +42,16 @@ const LeftNav = () => {
   const pathname = usePathname();
   const responsive = useResponsive();
   const [visible, setVisible] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // 监听路由变化，自动关闭侧边栏
+  useEffect(() => {
+    setVisible(false);
+  }, [pathname]);
 
   return (
     // 加条线
@@ -60,7 +70,7 @@ const LeftNav = () => {
             </div>
           </div> */}
           {/* Desktop Trigger */}
-          {responsive?.middle ? (
+          {isMounted && responsive?.middle ? (
             <div
               className="hidden md:flex w-[48px] h-full flex-col items-center px-[8px] py-[40px] gap-[16px]"
               onClick={() => setVisible(true)}
@@ -68,7 +78,7 @@ const LeftNav = () => {
               <Image src="/nav-icon.svg" alt="logo" width={32} height={32} />
               <div className="flex-1 bg-[#0A090F] w-[1px] opacity-10"></div>
             </div>
-          ) : (
+          ) : isMounted ? (
             <div className="w-full fixed top-0 left-0 flex items-center justify-center z-30 p-[16px]">
               <Image
                 src="/nav/mobile-menu.svg"
@@ -80,7 +90,7 @@ const LeftNav = () => {
               />
               <Image src="/home-1/1.svg" alt="menu" width={132} height={24} />
             </div>
-          )}
+          ) : null}
         </DrawerTrigger>
         <DrawerTitle></DrawerTitle>
         <DrawerContent className="backdrop-blur-[8px]">
