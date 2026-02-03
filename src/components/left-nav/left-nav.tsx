@@ -10,12 +10,8 @@ import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { configResponsive, useResponsive, useScroll } from "ahooks";
 import { useState, useEffect } from "react";
 
-configResponsive({
-  middle: 768,
-});
 export const menu = [
   {
     name: "首頁",
@@ -40,13 +36,7 @@ export const menu = [
 ];
 const LeftNav = () => {
   const pathname = usePathname();
-  const responsive = useResponsive();
   const [visible, setVisible] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   // 监听路由变化，自动关闭侧边栏
   useEffect(() => {
@@ -55,42 +45,33 @@ const LeftNav = () => {
 
   return (
     // 加条线
-    <Drawer direction="left" open={visible}>
+    <Drawer direction="left" open={visible} onOpenChange={setVisible}>
       <div className="md:bg-[#F8F8EC] md:h-screen fixed top-8 left-8 md:static md:top-auto md:left-auto z-50">
-        <DrawerTrigger className="h-full">
-          {/* Mobile Trigger */}
-          {/* <div className="md:hidden absolute w-full">
-            <div>
-              <Image
-                src="/nav/mobile-menu.svg"
-                alt="menu"
-                width={32}
-                height={32}
-              />
-            </div>
-          </div> */}
-          {/* Desktop Trigger */}
-          {isMounted && responsive?.middle ? (
-            <div
-              className="hidden md:flex w-[48px] h-full flex-col items-center px-[8px] py-[40px] gap-[16px]"
-              onClick={() => setVisible(true)}
-            >
-              <Image src="/nav-icon.svg" alt="logo" width={32} height={32} />
-              <div className="flex-1 bg-[#0A090F] w-[1px] opacity-10"></div>
-            </div>
-          ) : isMounted ? (
-            <div className="w-full fixed top-0 left-0 flex items-center justify-center z-30 p-[16px]">
-              <Image
-                src="/nav/mobile-menu.svg"
-                alt="menu"
-                width={22}
-                height={22}
-                className="absolute top-[16px] left-[16px]"
-                onClick={() => setVisible(true)}
-              />
-              <Image src="/home-1/1.svg" alt="menu" width={132} height={24} />
-            </div>
-          ) : null}
+        {/* Mobile Trigger */}
+        <DrawerTrigger asChild>
+          <button
+            type="button"
+            className="md:hidden w-full fixed top-0 left-0 flex items-center justify-center z-30 p-[16px]"
+          >
+            <Image
+              src="/nav/mobile-menu.svg"
+              alt="menu"
+              width={22}
+              height={22}
+              className="absolute top-[16px] left-[16px]"
+            />
+            <Image src="/home-1/1.svg" alt="menu" width={132} height={24} />
+          </button>
+        </DrawerTrigger>
+        {/* Desktop Trigger */}
+        <DrawerTrigger asChild>
+          <button
+            type="button"
+            className="hidden md:flex w-[48px] h-full flex-col items-center px-[8px] py-[40px] gap-[16px]"
+          >
+            <Image src="/nav-icon.svg" alt="logo" width={32} height={32} />
+            <div className="flex-1 bg-[#0A090F] w-[1px] opacity-10"></div>
+          </button>
         </DrawerTrigger>
         <DrawerTitle></DrawerTitle>
         <DrawerContent className="backdrop-blur-[8px]">
@@ -103,7 +84,7 @@ const LeftNav = () => {
                 height={32}
                 className="mb-[40px]"
               />
-              <RadioGroup defaultValue={menu[0].path} value={pathname}>
+              <RadioGroup value={pathname}>
                 {menu.map((item) => (
                   // 加手
                   <Link
@@ -170,7 +151,11 @@ const LeftNav = () => {
                 </div>
               </div>
               <div className="flex items-center justify-between my-[32px]">
-                <Link href="https://www.facebook.com/artistmkt" target="_blank">
+                <Link
+                  href="https://www.facebook.com/artistmkt"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image
                     src="/nav/ins.svg"
                     alt="location"
@@ -181,6 +166,7 @@ const LeftNav = () => {
                 <Link
                   href="https://www.instagram.com/artist.mkt/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <Image
                     src="/nav/tel.svg"
@@ -192,6 +178,7 @@ const LeftNav = () => {
                 <Link
                   href="https://www.linkedin.com/company/108332681/admin/dashboard"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <Image
                     src="/nav/face.svg"

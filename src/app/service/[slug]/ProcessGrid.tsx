@@ -1,17 +1,23 @@
-"use client";
-import React from "react";
-
-interface ProcessGridProps {
-  steps: any[];
+interface ProcessStep {
+  id: string;
+  number: string;
   title: string;
+  description: string;
 }
 
-export const ProcessGrid: React.FC<ProcessGridProps> = ({ steps, title }) => {
+interface ProcessGridProps {
+  steps: ProcessStep[];
+  title?: string;
+}
+
+export const ProcessGrid = ({ steps, title }: ProcessGridProps) => {
   return (
     <div className="mt-8">
-      <div className="text-[16px] text-white leading-[24px] font-semibold">
-        {title}
-      </div>
+      {title ? (
+        <div className="text-[16px] text-white leading-[24px] font-semibold">
+          {title}
+        </div>
+      ) : null}
 
       <div className="grid grid-cols-2  border-border">
         {steps.map((step, index) => (

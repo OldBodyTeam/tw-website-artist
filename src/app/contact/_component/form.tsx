@@ -8,7 +8,7 @@ const ContactForm = () => {
       <Form.Item name="name" label="聯絡人姓名">
         <Input placeholder="請輸入聯絡人姓名" className="w-full" />
       </Form.Item>
-      <Form.Item name="email" label="公司名稱">
+      <Form.Item name="company" label="公司名稱">
         <Input placeholder="請輸入公司名稱" className="w-full" />
       </Form.Item>
       <Form.Item name="phone" label="聯絡電話">
@@ -17,7 +17,7 @@ const ContactForm = () => {
       <Form.Item name="email" label="Email">
         <Input placeholder="請輸入Email" className="w-full" />
       </Form.Item>
-      <Form.Item name="message" label="洽詢項目（多選）">
+      <Form.Item name="inquiryType" label="洽詢項目（單選）">
         <Radio.Group className="flex gap-[12px] [&_.ant-radio-label]:!pl-[4px] [&_.ant-radio-label]:!pr-[4px] radio-primary">
           <Radio value={1}>品牌規劃</Radio>
           <Radio value={2}>網站設計</Radio>
@@ -30,9 +30,12 @@ const ContactForm = () => {
       <Form.Item name="message" label="需求內容">
         <Input.TextArea placeholder="請輸入需求內容" className="w-full" />
       </Form.Item>
-      <div className="cursor-pointer bg-[#F8FF31] w-full flex justify-center items-center text-[#0A090F] py-[12px] text-[14px]">
+      <button
+        type="submit"
+        className="cursor-pointer bg-[#F8FF31] w-full flex justify-center items-center text-[#0A090F] py-[12px] text-[14px]"
+      >
         提交
-      </div>
+      </button>
     </Form>
   );
 };

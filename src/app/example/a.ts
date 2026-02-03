@@ -1,4 +1,16 @@
-export const a = {
+export interface ExampleItem {
+  category: string;
+  company: string;
+  description: string;
+  image_format: string;
+  path: string;
+  first: string;
+  second: string;
+}
+
+export type ExampleData = Record<string, ExampleItem[]>;
+
+export const a: ExampleData = {
   a: [
     {
       category: "產品包裝承製",

@@ -1,11 +1,15 @@
-import { get } from "lodash";
+import type { ReactNode } from "react";
 
-export interface LayoutGridProps {
-  renderItem: (item: any, index: number) => React.ReactNode;
-  list: any[];
+export interface LayoutGridProps<T> {
+  renderItem: (item: T, index: number) => ReactNode;
+  list: readonly T[];
   num: number;
 }
-const LayoutGrid: React.FC<LayoutGridProps> = ({ renderItem, list, num }) => {
+const LayoutGrid = <T,>({
+  renderItem,
+  list,
+  num,
+}: LayoutGridProps<T>) => {
   const row = Math.ceil(list.length / num);
 
   return (
@@ -14,21 +18,19 @@ const LayoutGrid: React.FC<LayoutGridProps> = ({ renderItem, list, num }) => {
         return (
           <div key={rowIndex}>
             <div className="flex">
-              {Array.from({ length: num * row })
-                .slice(rowIndex * num, (rowIndex + 1) * num)
-                .map((item, colIndex) => {
-                  return (
-                    <div key={colIndex} className="flex-1 flex">
-                      {renderItem(
-                        get(list, rowIndex * num + colIndex, {}),
-                        colIndex
-                      )}
-                      {colIndex < num - 1 && (
-                        <div className="border-r border-[rgba(255,255,255,0.1)]"></div>
-                      )}
-                    </div>
-                  );
-                })}
+              {Array.from({ length: num }).map((_, colIndex) => {
+                const itemIndex = rowIndex * num + colIndex;
+                const item = list[itemIndex] ?? ({} as T);
+
+                return (
+                  <div key={colIndex} className="flex-1 flex">
+                    {renderItem(item, colIndex)}
+                    {colIndex < num - 1 && (
+                      <div className="border-r border-[rgba(255,255,255,0.1)]"></div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
             {rowIndex < row - 1 && (
               <div className="border-b border-[rgba(255,255,255,0.1)]"></div>
