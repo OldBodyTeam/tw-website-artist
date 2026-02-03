@@ -160,7 +160,7 @@ const LeftNav = () => {
                 </div>
               </div>
               <div className="flex items-center justify-between my-[32px]">
-                <Link href="https://www.facebook.com/artistmkt">
+                <Link href="https://www.facebook.com/artistmkt" target="_blank">
                   <Image
                     src="/nav/ins.svg"
                     alt="location"
@@ -168,7 +168,10 @@ const LeftNav = () => {
                     height={30}
                   />
                 </Link>
-                <Link href="https://www.instagram.com/artistmkt">
+                <Link
+                  href="https://www.instagram.com/artist.mkt/"
+                  target="_blank"
+                >
                   <Image
                     src="/nav/tel.svg"
                     alt="location"
@@ -176,7 +179,10 @@ const LeftNav = () => {
                     height={30}
                   />
                 </Link>
-                <Link href="https://www.linkedin.com/company/108332681/admin/dashboard">
+                <Link
+                  href="https://www.linkedin.com/company/108332681/admin/dashboard"
+                  target="_blank"
+                >
                   <Image
                     src="/nav/face.svg"
                     alt="location"
