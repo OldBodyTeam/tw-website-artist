@@ -18,7 +18,7 @@ const ContactForm = () => {
         <Input placeholder="請輸入Email" className="w-full" />
       </Form.Item>
       <Form.Item name="inquiryType" label="洽詢項目（單選）">
-        <Radio.Group className="flex gap-[12px] [&_.ant-radio-label]:!pl-[4px] [&_.ant-radio-label]:!pr-[4px] radio-primary">
+        <Radio.Group className="flex gap-3 [&_.ant-radio-label]:!px-1 radio-primary">
           <Radio value={1}>品牌規劃</Radio>
           <Radio value={2}>網站設計</Radio>
           <Radio value={3}>社群行銷</Radio>
@@ -32,7 +32,7 @@ const ContactForm = () => {
       </Form.Item>
       <button
         type="submit"
-        className="cursor-pointer bg-[#F8FF31] w-full flex justify-center items-center text-[#0A090F] py-[12px] text-[14px]"
+        className="cursor-pointer bg-brand w-full flex justify-center items-center text-ink py-3 text-sm font-medium"
       >
         提交
       </button>

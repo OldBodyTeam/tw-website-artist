@@ -24,13 +24,13 @@ const LayoutGrid = <T,>({
                 <div key={colIndex} className="flex-1 flex">
                   {renderItem(item, colIndex)}
                   {colIndex < rowItems.length - 1 && (
-                    <div className="border-r border-[rgba(255,255,255,0.1)]"></div>
+                    <div className="w-px bg-white/10"></div>
                   )}
                 </div>
               ))}
             </div>
             {rowIndex < row - 1 && (
-              <div className="border-b border-[rgba(255,255,255,0.1)]"></div>
+              <div className="h-px bg-white/10"></div>
             )}
           </div>
         );

@@ -13,7 +13,7 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
 
   if (!service) {
     return (
-      <div className="min-h-screen bg-[#0A090F] text-white flex items-center justify-center">
+      <div className="min-h-screen bg-ink text-white flex items-center justify-center">
         Service not found
       </div>
     );
@@ -60,7 +60,7 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
             {ourCapabilities.capabilityList.map((cap, idx) => (
               <div
                 key={idx}
-                className="p-[24px] border-[1px] border-[rgba(255,255,255,0.1)] bg-[rgba(20,19,24,1)] flex-1 min-w-[300px]"
+                className="p-[24px] border border-white/10 bg-night flex-1 min-w-[300px]"
               >
                 <div className="text-white text-[18px] leading-[21px] font-normal mb-[16px]">
                   {cap.type}
@@ -88,7 +88,7 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
             {(whatWeDo.contentList as string[]).map((item, idx) => (
               <div
                 key={`${item}-${idx}`}
-                className="text-white text-[16px] border-b border-[rgba(255,255,255,0.1)] py-4 flex items-center"
+                className="text-white text-[16px] border-b border-white/10 py-4 flex items-center"
               >
                 <div className="w-2 h-2 rounded-full bg-white mr-4 opacity-50"></div>
                 {item}
@@ -104,7 +104,7 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
               (item, idx) => (
                 <div
                   key={`${item.type}-${idx}`}
-                  className="border-t border-[rgba(255,255,255,0.1)] py-6"
+                  className="border-t border-white/10 py-6"
                 >
                   <h4 className="text-white text-[18px] mb-3 font-medium">
                     {item.type}
@@ -154,10 +154,10 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
   };
 
   return (
-    <div className="flex-1 bg-[#0A090F]">
+    <div className="flex-1 bg-ink">
       {/* Mobile View */}
       <div className="md:hidden h-screen overflow-auto">
-        <div className="flex-1 bg-[#0A090F]">
+        <div className="flex-1 bg-ink">
           <LeftNav />
           <div className="h-[54px]"></div>
 
@@ -187,7 +187,7 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
           </div>
 
           {/* Capabilities Section */}
-          <div className="px-[16px] py-[24px] bg-[rgba(104,104,109,0.1)]">
+          <div className="px-[16px] py-[24px] bg-fog/10">
             <h2 className="text-[20px] text-white mb-[14px] leading-[24px] mt-[6px]">
               {service.ourCapabilities.title}
             </h2>
@@ -205,7 +205,7 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
                   {service.ourCapabilities.capabilityList.map((cap, index) => (
                     <div
                       key={index}
-                      className="border border-border p-[12px] !border-[rgba(255,255,255,0.1)]"
+                      className="border border-border p-[12px] !border-white/10"
                     >
                       <h3 className="text-[16px] leading-[18px] text-white mb-[8px]">
                         {cap.type}
@@ -231,7 +231,7 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
       </div>
 
       {/* Desktop View */}
-      <div className="hidden md:flex flex-1 h-screen bg-[#0A090F] py-[20px] px-[16px] md:py-[44px] md:px-[64px] flex-col md:h-auto md:min-h-screen overflow-auto">
+      <div className="hidden md:flex flex-1 h-screen bg-ink py-[20px] px-[16px] md:py-[44px] md:px-[64px] flex-col md:h-auto md:min-h-screen overflow-auto">
         {/* 顶部标题 */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 w-full">
           <Image
@@ -257,7 +257,7 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
             className="hidden md:block"
           />
         </div>
-        <div className="mt-[32px] h-[1px] bg-[rgba(255,255,255,0.1)]" />
+        <div className="mt-[32px] h-px bg-white/10" />
 
         {/* 内容区域 */}
         <div className="flex flex-col mb-[88px]">
@@ -305,7 +305,7 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
             </div>
           </div>
         </div>
-        <div className="flex flex-col p-[64px] bg-[rgba(104,104,109,0.1)] mt-[88px] -mx-[64px]">
+        <div className="flex flex-col p-[64px] bg-fog/10 mt-[88px] -mx-[64px]">
           <div className="flex flex-col">
             <div className="text-white text-[36px] leading-[42px] font-semibold">
               {service.ourCapabilities.title}

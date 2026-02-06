@@ -5,7 +5,7 @@ const list = [
   {
     title: "品牌規劃",
     desc: "Branding Strategy",
-    image: "bg-[#a23e00]", // 注意：颜色值格式统一（如#a23e00无需加[]）
+    image: "bg-service-branding",
     bgImage: "/ps/branding-strategy.png",
     className:
       "md:[clip-path:polygon(0_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
@@ -14,7 +14,7 @@ const list = [
   {
     title: "網站設計",
     desc: "Website Design",
-    image: "bg-[#FF6699]",
+    image: "bg-service-web",
     bgImage: "/ps/web-design.png",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
@@ -23,7 +23,7 @@ const list = [
   {
     title: "社群行銷",
     desc: "Social Media Marketing",
-    image: "bg-[#FF6700]",
+    image: "bg-service-social",
     bgImage: "/ps/social-media-marketing.png",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
@@ -32,7 +32,7 @@ const list = [
   {
     title: "口碑行銷",
     desc: "WOM Marketing",
-    image: "bg-[#aF6600]",
+    image: "bg-service-wom",
     bgImage: "/ps/wom-marketing.png",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
@@ -41,7 +41,7 @@ const list = [
   {
     title: "廣告投放",
     desc: "Digital Advertising",
-    image: "bg-[#Fa6600]",
+    image: "bg-service-digital",
     bgImage: "/ps/digital-advertising.png",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
@@ -50,7 +50,7 @@ const list = [
   {
     title: "各類印刷",
     desc: "Print Production",
-    image: "bg-[#F16610]",
+    image: "bg-service-print",
     bgImage: "/ps/print-production.png",
     className:
       "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
@@ -79,7 +79,7 @@ export default function Example() {
           className="hidden md:block"
         />
       </div>
-      <Divider className="!mt-[32px] !bg-[rgba(255,255,255,0.1)] !border-[rgba(255,255,255,0.1)]" />
+      <Divider className="!mt-[32px] !bg-white/10 !border-white/10" />
 
       {/* 核心内容区：竖排文字列表 */}
       <div className="grid grid-cols-3 grid-rows-2 gap-y-[12px] md:flex md:flex-row justify-between items-stretch mt-[32px] md:mt-[64px] flex-1 md:gap-0">
@@ -87,7 +87,7 @@ export default function Example() {
           <Link href={v.href} key={v.title} className="block flex-1 flex">
             <div
               // 修复1：使用v.image作为背景色，同时设置flex布局让内容垂直居中
-              className={` flex flex-col justify-end items-center md:flex-row md:items-end md:justify-center h-full md:h-auto pb-[16px] md:pb-[40px] overflow-hidden ${v.className} md:-ml-[18px] md:rounded-none flex-1 cursor-pointer bg-cover bg-center bg-no-repeat`}
+              className={` flex flex-col justify-end items-center md:flex-row md:items-end md:justify-center h-full md:h-auto pb-[16px] md:pb-[40px] overflow-hidden ${v.image} ${v.className} md:-ml-[18px] md:rounded-none flex-1 cursor-pointer bg-cover bg-center bg-no-repeat`}
               style={{
                 backgroundImage: `url(${v.bgImage})`,
               }}

@@ -95,7 +95,7 @@ const HomeSwiper = () => {
       <div className="w-full h-full relative">
         <div className="w-full h-screen relative ">
           <VideoPlayer />
-          <div className="w-full h-full absolute left-0 top-0 flex justify-between pt-[128px] pb-[44px] px-[20px] flex-col bg-[rgba(10,9,15,0.35)]">
+          <div className="w-full h-full absolute left-0 top-0 flex justify-between pt-[128px] pb-[44px] px-[20px] flex-col bg-ink/35">
             <div className="flex items-end flex-col justify-end text-[32px] font-semibold text-white leading-[60px]">
               <span>懂你的品牌</span>
               <span>說你的故事</span>
@@ -117,7 +117,7 @@ const HomeSwiper = () => {
           <div className="text-[32px] leading-[1.2] font-semibold text-white mb-[24px]">
             專注成功每個細節
           </div>
-          <div className="text-[14px] leading-[1.6] font-regular text-[#ccc] mb-[40px]">
+          <div className="text-[14px] leading-[1.6] font-regular text-haze mb-[40px]">
             行銷的價值不只是曝光，而是為企業帶來真正的效益。我們不提供制式化的行銷包套，而是根據品牌現況，結合短期推廣與長期策略，為每個品牌量身規劃最適合的行銷方案。確保每一分投入都能發揮最大價值，幫助品牌被看見，也被選擇。
           </div>
           <LayoutGrid
@@ -141,14 +141,14 @@ const HomeSwiper = () => {
             {a.map((item, index) => (
               <div
                 key={index}
-                className="bg-[#222222] w-full aspect-[1/1] flex items-center justify-center overflow-hidden relative"
+                className="bg-graphite w-full aspect-[1/1] flex items-center justify-center overflow-hidden relative"
               >
                 <img
                   src={item.path}
                   alt={item.description}
                   className="aspect-[1/1]"
                 />
-                <div className="flex flex-col absolute bottom-0 left-0 bg-[rgba(0,0,0,0.5)] w-full p-[12px] text-white text-[12px] justify-between h-full hover:bg-transparent">
+                <div className="flex flex-col absolute bottom-0 left-0 bg-black/50 w-full p-[12px] text-white text-[12px] justify-between h-full hover:bg-transparent">
                   <div className="text-[12px] text-white">{item.company}</div>
                   <div className="text-[12px] text-white">
                     {item.explanation}
@@ -248,8 +248,7 @@ const HomeSwiper = () => {
             </div>
             <Link href="/contact">
               <div
-                className="text-[11px] leading-[16px] font-medium text-black py-[8px] px-[24px]"
-                style={{ backgroundColor: "rgba(248, 255, 49, 1)" }}
+                className="text-[11px] leading-[16px] font-medium text-black py-[8px] px-[24px] bg-brand"
               >
                 聯絡我們
               </div>
@@ -273,7 +272,7 @@ const HomeSwiper = () => {
     >
       <div className="absolute bottom-[112px] right-[64px] z-50 flex gap-[16px] cursor-pointer no-select">
         <div
-          className={`group relative w-[42px] h-[42px] flex items-center justify-center border border-[#FFFFFF] overflow-hidden ${
+          className={`group relative w-[42px] h-[42px] flex items-center justify-center border border-white overflow-hidden ${
             activeIndex === 0 ? "opacity-50 pointer-events-none" : ""
           }`}
           onClick={() => swiperInstance?.slidePrev()}
@@ -288,7 +287,7 @@ const HomeSwiper = () => {
           />
         </div>
         <div
-          className={`group relative w-[42px] h-[42px] flex items-center justify-center border border-[#FFFFFF] overflow-hidden ${
+          className={`group relative w-[42px] h-[42px] flex items-center justify-center border border-white overflow-hidden ${
             activeIndex === 3 ? "opacity-50 pointer-events-none" : ""
           }`}
           onClick={() => swiperInstance?.slideNext()}
@@ -308,7 +307,7 @@ const HomeSwiper = () => {
         {/* 背景色 换图片 */}
         <div className="w-full h-screen relative ">
           <VideoPlayer />
-          <div className="w-full h-full absolute left-0 top-0 flex justify-between pt-[128px] pb-[44px] px-[64px] flex-col bg-[rgba(10,9,15,0.35)]">
+          <div className="w-full h-full absolute left-0 top-0 flex justify-between pt-[128px] pb-[44px] px-[64px] flex-col bg-ink/35">
             <div className="flex items-center justify-end text-[48px] font-semibold text-white leading-[60px]">
               懂你的品牌，說你的故事
             </div>
@@ -347,7 +346,7 @@ const HomeSwiper = () => {
                 return (
                   <div
                     key={item.en}
-                    className="py-[26px] border-y border-[rgba(255,255,255,0.1)]"
+                    className="py-[26px] border-y border-white/10"
                   >
                     <div className="text-[12px] font-[300] leading-[18px] text-white mb-[12px]">
                       {item.en}
@@ -369,14 +368,14 @@ const HomeSwiper = () => {
                 {a.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-[#222222] w-full aspect-[1/1] flex items-center justify-center overflow-hidden relative"
+                    className="bg-graphite w-full aspect-[1/1] flex items-center justify-center overflow-hidden relative"
                   >
                     <img
                       src={item.path}
                       alt={item.description}
                       className="aspect-[1/1]"
                     />
-                    <div className="flex flex-col absolute bottom-0 left-0 bg-[rgba(0,0,0,0.5)] w-full p-[12px] text-white text-[12px] justify-between h-full hover:bg-transparent">
+                    <div className="flex flex-col absolute bottom-0 left-0 bg-black/50 w-full p-[12px] text-white text-[12px] justify-between h-full hover:bg-transparent">
                       <div className="text-[12px] text-white">
                         {item.second}
                       </div>
@@ -487,7 +486,7 @@ const HomeSwiper = () => {
                 return (
                   <div
                     key={v.title}
-                    className="border-y border-[rgba(255,255,255,0.2)] py-[24px]"
+                    className="border-y border-white/20 py-[24px]"
                   >
                     <div className="text-[20px] font-medium text-white mb-[8px] leading-[24px]">
                       {v.title}
@@ -512,7 +511,7 @@ const HomeSwiper = () => {
             {/* <div className="flex items-center justify-end mt-[22px]">
             <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
           </div> */}
-            <div className="flex-1 grid grid-cols-4 overflow-x-hidden overflow-y-auto gap-px bg-[rgba(255,255,255,0.2)] bg-black">
+            <div className="flex-1 grid grid-cols-4 overflow-x-hidden overflow-y-auto gap-px bg-white/20 bg-black">
               <div className="flex items-center justify-center bg-black">
                 <Image src="/home-4/1.png" alt="2" width={190} height={92} />
               </div>
@@ -553,8 +552,7 @@ const HomeSwiper = () => {
                 讓靈感萌芽 使成果綻放
               </div>
               <div
-                className="text-[11px] leading-[16px] font-medium text-black py-[8px] px-[24px]"
-                style={{ backgroundColor: "rgba(248, 255, 49, 1)" }}
+                className="text-[11px] leading-[16px] font-medium text-black py-[8px] px-[24px] bg-brand"
               >
                 聯絡我們
               </div>

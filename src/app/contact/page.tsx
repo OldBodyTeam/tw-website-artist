@@ -3,7 +3,7 @@ import { ContactForm } from "./_component/form";
 import { Divider } from "antd";
 export default function Contact() {
   return (
-    <div className="flex-1 h-screen bg-[#0A090F] py-[20px] px-[16px] md:py-[44px] md:px-[64px] flex flex-col md:h-auto md:min-h-screen">
+    <div className="flex-1 h-screen bg-ink py-[20px] px-[16px] md:py-[44px] md:px-[64px] flex flex-col md:h-auto md:min-h-screen">
       {/* 顶部标题 */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 w-full">
         {/* Mobile Title */}
@@ -24,7 +24,7 @@ export default function Contact() {
           className="hidden md:block"
         />
       </div>
-      <Divider className="!mt-[32px] !bg-[rgba(255,255,255,0.1)] !border-[rgba(255,255,255,0.1)]" />
+      <Divider className="!mt-[32px] !bg-white/10 !border-white/10" />
 
       {/* 内容区域 */}
       <div className="flex flex-col md:flex-row justify-between items-center mt-[32px] md:mt-[64px] flex-1 gap-[32px] md:gap-0">

@@ -30,7 +30,7 @@ const CORE_VALUES = [
 // 子组件：圆点列表项
 const BulletPoint = ({ text }: { text: string }) => (
   <div className="flex items-center gap-2">
-    <div className="w-2 h-2 rounded-full bg-[#F8FF31] flex-shrink-0" />
+    <div className="w-2 h-2 rounded-full bg-brand flex-shrink-0" />
     <div className="text-base">{text}</div>
   </div>
 );
@@ -90,7 +90,7 @@ const CoreValueItem = ({
   description: string;
 }) => (
   <div className="space-y-2">
-    <div className="font-semibold text-lg text-[#F8FF31]">{title}</div>
+    <div className="font-semibold text-lg text-brand">{title}</div>
     <div className="text-gray-300">{description}</div>
   </div>
 );

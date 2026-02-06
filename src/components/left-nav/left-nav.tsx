@@ -40,25 +40,26 @@ const LeftNav = () => {
 
   // 监听路由变化，自动关闭侧边栏
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setVisible(false);
   }, [pathname]);
 
   return (
     // 加条线
     <Drawer direction="left" open={visible} onOpenChange={setVisible}>
-      <div className="md:bg-[#F8F8EC] md:h-screen fixed top-8 left-8 md:static md:top-auto md:left-auto z-50">
+      <div className="md:bg-paper md:h-screen fixed top-8 left-8 md:static md:top-auto md:left-auto z-50">
         {/* Mobile Trigger */}
         <DrawerTrigger asChild>
           <button
             type="button"
-            className="md:hidden w-full fixed top-0 left-0 flex items-center justify-center z-30 p-[16px]"
+            className="md:hidden w-full fixed top-0 left-0 flex items-center justify-center z-30 p-4"
           >
             <Image
               src="/nav/mobile-menu.svg"
               alt="menu"
               width={22}
               height={22}
-              className="absolute top-[16px] left-[16px]"
+              className="absolute top-4 left-4"
             />
             <Image src="/home-1/1.svg" alt="menu" width={132} height={24} />
           </button>
@@ -67,22 +68,22 @@ const LeftNav = () => {
         <DrawerTrigger asChild>
           <button
             type="button"
-            className="hidden md:flex w-[48px] h-full flex-col items-center px-[8px] py-[40px] gap-[16px]"
+            className="hidden md:flex w-12 h-full flex-col items-center px-2 py-10 gap-4"
           >
             <Image src="/nav-icon.svg" alt="logo" width={32} height={32} />
-            <div className="flex-1 bg-[#0A090F] w-[1px] opacity-10"></div>
+            <div className="flex-1 w-px bg-ink/10"></div>
           </button>
         </DrawerTrigger>
         <DrawerTitle></DrawerTitle>
-        <DrawerContent className="backdrop-blur-0 md:backdrop-blur-[8px]">
-          <div className="bg-[#F8F8EC] h-screen p-[24px] md:p-[40px] flex flex-col justify-between">
+        <DrawerContent className="backdrop-blur-0 md:backdrop-blur">
+          <div className="bg-paper h-screen p-6 md:p-10 flex flex-col justify-between">
             <div>
               <Image
                 src="/logo.svg"
                 alt="logo"
                 width={176}
                 height={32}
-                className="mb-[40px]"
+                className="mb-10"
               />
               <RadioGroup value={pathname}>
                 {menu.map((item) => (
@@ -94,10 +95,10 @@ const LeftNav = () => {
                   >
                     <Label
                       htmlFor={item.name}
-                      className="flex items-center justify-between w-full mb-[16px] cursor-pointer"
+                      className="flex items-center justify-between w-full mb-4 cursor-pointer"
                       onClick={() => setVisible(false)}
                     >
-                      <div className="text-[#0A090F] text-[16px] font-bold cursor-pointer">
+                      <div className="text-ink text-base font-bold cursor-pointer">
                         {item.name}
                       </div>
                       <RadioGroupItem
@@ -108,7 +109,7 @@ const LeftNav = () => {
                         {item.name}
                       </RadioGroupItem>
                     </Label>
-                    <div className="w-full h-[1px] bg-[#0A090F] opacity-10"></div>
+                    <div className="w-full h-px bg-ink/10"></div>
                   </Link>
                 ))}
               </RadioGroup>
@@ -120,9 +121,9 @@ const LeftNav = () => {
                 width={160}
                 height={16}
               />
-              <div className="h-[1px] w-full my-[16px] bg-[#0A090F] opacity-10" />
-              <div className="flex flex-col gap-[16px]">
-                <div className="flex items-center gap-[8px]">
+              <div className="h-px w-full my-4 bg-ink/10" />
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-2">
                   <Image
                     src="/nav/chat.svg"
                     alt="location"
@@ -131,7 +132,7 @@ const LeftNav = () => {
                   />
                   彰化縣員林市園林大街80號
                 </div>
-                <div className="flex items-center gap-[8px]">
+                <div className="flex items-center gap-2">
                   <Image
                     src="/nav/phone.svg"
                     alt="location"
@@ -140,7 +141,7 @@ const LeftNav = () => {
                   />
                   0932-050383
                 </div>
-                <div className="flex items-center gap-[8px]">
+                <div className="flex items-center gap-2">
                   <Image
                     src="/nav/location.svg"
                     alt="location"
@@ -150,7 +151,7 @@ const LeftNav = () => {
                   artistmkt.co@gmail.com
                 </div>
               </div>
-              <div className="flex items-center justify-between my-[32px]">
+              <div className="flex items-center justify-between my-8">
                 <Link
                   href="https://www.facebook.com/artistmkt"
                   target="_blank"
@@ -188,7 +189,7 @@ const LeftNav = () => {
                   />
                 </Link>
               </div>
-              <div className="text-[#32373d] text-[12px] font-regular">
+              <div className="text-foreground/70 text-xs font-normal">
                 © 2025 亞堤思新創整合行销 | Artist MKT. All Rights Reserved.
               </div>
             </div>

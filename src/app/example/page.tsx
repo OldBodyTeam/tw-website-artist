@@ -44,7 +44,7 @@ const PortfolioCard = ({ item }: { item: ExampleItem }) => {
   const imageAlt = item.description || item.first || item.second || "portfolio";
 
   return (
-    <div className="bg-[#222222] w-full aspect-[1/1] flex items-center justify-center overflow-hidden relative">
+    <div className="bg-graphite w-full aspect-[1/1] flex items-center justify-center overflow-hidden relative">
       <Image
         src={imageSrc}
         alt={imageAlt}
@@ -52,7 +52,7 @@ const PortfolioCard = ({ item }: { item: ExampleItem }) => {
         sizes="(min-width: 768px) 25vw, 50vw"
         className="object-cover"
       />
-      <div className="flex flex-col absolute bottom-0 left-0 bg-[rgba(0,0,0,0.5)] w-full p-[12px] text-white text-[12px] justify-between h-full hover:bg-transparent">
+      <div className="flex flex-col absolute bottom-0 left-0 bg-black/50 w-full p-[12px] text-white text-[12px] justify-between h-full hover:bg-transparent">
         <div className="text-[12px] text-white">{item.second}</div>
         <div className="text-[12px] text-white">{item.first}</div>
       </div>
@@ -65,7 +65,7 @@ export default function Service() {
   const selectedItems = useMemo(() => a[activeKey] ?? [], [activeKey]);
 
   return (
-    <div className="flex-1 bg-[#0A090F] min-h-screen">
+    <div className="flex-1 bg-ink min-h-screen">
       {/* Mobile */}
       <div className="md:hidden h-screen px-[16px] py-[28px] overflow-auto">
         <div className="mt-[56px]">
@@ -120,7 +120,7 @@ export default function Service() {
       </div>
 
       {/* Desktop */}
-      <div className="hidden md:flex flex-1 h-screen overflow-auto relative bg-[#0A090F] p-[44px] flex-col">
+      <div className="hidden md:flex flex-1 h-screen overflow-auto relative bg-ink p-[44px] flex-col">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 w-full">
           <Image
             src="/home-2/company.png"
@@ -137,7 +137,7 @@ export default function Service() {
             className="hidden md:block"
           />
         </div>
-        <div className="mt-[32px] h-[1px] bg-[rgba(255,255,255,0.1)]" />
+        <div className="mt-[32px] h-px bg-white/10" />
 
         <div className="flex-1 flex flex-col ">
           <div className="mb-[16px]">
@@ -163,7 +163,7 @@ export default function Service() {
                   <button
                     key={item.en}
                     type="button"
-                    className="py-[26px] border-y border-[rgba(255,255,255,0.1)] cursor-pointer"
+                    className="py-[26px] border-y border-white/10 cursor-pointer"
                     onClick={() => setActiveKey(item.key)}
                   >
                     <div

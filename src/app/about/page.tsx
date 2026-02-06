@@ -34,13 +34,13 @@ const CORE_VALUES = [
 ];
 const BulletPoint = ({ text }: { text: string }) => (
   <div className="flex items-center gap-2">
-    <div className="w-2 h-2 rounded-full bg-[#F8FF31] flex-shrink-0" />
+    <div className="w-2 h-2 rounded-full bg-brand flex-shrink-0" />
     <div className="text-base">{text}</div>
   </div>
 );
 const BulletPointM = ({ text }: { text: string }) => (
   <div className="flex items-center gap-2">
-    <div className="w-2 h-2 rounded-full bg-[#F8FF31]" />
+    <div className="w-2 h-2 rounded-full bg-brand" />
     <div className="text-[12px] leading-[17px] text-white">{text}</div>
   </div>
 );
@@ -52,7 +52,7 @@ const CoreValueItem = ({
   description: string;
 }) => (
   <div className="space-y-2">
-    <div className="font-semibold text-lg text-[#F8FF31]">{title}</div>
+    <div className="font-semibold text-lg text-brand">{title}</div>
     <div className="text-gray-300">{description}</div>
   </div>
 );
@@ -151,7 +151,7 @@ const TestPage = () => {
   if (!responsive?.middle) {
     return (
       <div
-        className="h-full overflow-x-hidden overflow-y-scroll bg-[#0A090F]"
+        className="h-full overflow-x-hidden overflow-y-scroll bg-ink"
         ref={containerRef}
         style={{ overscrollBehavior: "none" }}
       >
@@ -252,7 +252,7 @@ const TestPage = () => {
           scrollContainer={containerRef}
           style={{ zIndex: 20 }}
         >
-          <div className="overflow-hidden flex justify-between bg-[#0A090F] px-[16px] flex-col md:flex-row">
+          <div className="overflow-hidden flex justify-between bg-ink px-[16px] flex-col md:flex-row">
             <div className="flex gap-6">
               <div
                 className="text-white mt-[16px] text-[14px] leading-[18px] opacity-65"
@@ -308,7 +308,7 @@ const TestPage = () => {
           style={{ zIndex: 30 }}
         >
           <div
-            className="overflow-hidden flex justify-between bg-[#0A090F] px-[16px] flex-col md:flex-row "
+            className="overflow-hidden flex justify-between bg-ink px-[16px] flex-col md:flex-row "
             ref={thirdRef}
           >
             <div className="flex gap-6">
@@ -358,7 +358,7 @@ const TestPage = () => {
   }
   return (
     <div
-      className="h-full overflow-x-hidden overflow-y-scroll bg-[#0A090F]"
+      className="h-full overflow-x-hidden overflow-y-scroll bg-ink"
       ref={containerRef}
       style={{ overscrollBehavior: "none" }}
     >
@@ -464,7 +464,7 @@ const TestPage = () => {
         scrollContainer={containerRef}
         style={{ zIndex: 20 }}
       >
-        <div className="overflow-hidden flex justify-between bg-[#0A090F] px-[44px] flex-col md:flex-row">
+        <div className="overflow-hidden flex justify-between bg-ink px-[44px] flex-col md:flex-row">
           <div className="flex gap-6">
             <div
               className="text-xl text-white mt-9"
@@ -518,7 +518,7 @@ const TestPage = () => {
         style={{ zIndex: 30 }}
       >
         <div
-          className="overflow-hidden flex justify-between bg-[#0A090F] px-[44px] flex-col md:flex-row "
+          className="overflow-hidden flex justify-between bg-ink px-[44px] flex-col md:flex-row "
           ref={thirdRef}
         >
           <div className="flex gap-6">
@@ -566,7 +566,7 @@ const A = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const size = useSize(containerRef);
   return (
-    <div className="h-screen flex flex-col bg-[#0A090F]">
+    <div className="h-screen flex flex-col bg-ink">
       <div className="px-[44px] pt-[44px]" ref={containerRef}>
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 w-full">
           {/* Mobile Title */}
@@ -587,7 +587,7 @@ const A = () => {
             className="hidden md:block"
           />
         </div>
-        <Divider className="!mt-[32px] !bg-[rgba(255,255,255,0.1)] !border-[rgba(255,255,255,0.1)]" />
+        <Divider className="!mt-[32px] !bg-white/10 !border-white/10" />
       </div>
       <div
         className="flex-1"

@@ -48,8 +48,8 @@ export default function RootLayout({
                 Radio: {
                   colorText: "rgba(255, 255, 255, 0.8)",
                   radioSize: 14,
-                  colorPrimary: "#f8ff31", // 选中颜色
-                  colorPrimaryHover: "#f8ff31",
+                  colorPrimary: "var(--brand)", // 选中颜色
+                  colorPrimaryHover: "var(--brand)",
                 },
               },
               token: {
