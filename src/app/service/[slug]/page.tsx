@@ -28,7 +28,7 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
   };
 
   const renderHeroImage = ({
-    className = "w-full h-auto object-cover",
+    className = "object-cover",
     sizes = "100vw",
   }: {
     className?: string;
@@ -38,8 +38,7 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
       <Image
         src={getImageSrc(0)}
         alt={service.title}
-        width={1200}
-        height={735}
+        fill
         className={className}
         sizes={sizes}
       />
@@ -113,7 +112,7 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
                     {item.detail}
                   </p>
                 </div>
-              )
+              ),
             )}
           </div>
         );
@@ -154,16 +153,18 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
   };
 
   return (
-    <div className="flex-1 bg-[#0A090F]">
+    <div className="flex-1 self-stretch min-h-0 h-full bg-[#0A090F] overflow-y-auto">
       {/* Mobile View */}
-      <div className="md:hidden h-screen overflow-auto">
+      <div className="md:hidden min-h-screen">
         <div className="flex-1 bg-[#0A090F]">
           <LeftNav />
           <div className="h-[54px]"></div>
 
           {/* Hero Section */}
           <div className="mb-[24px] px-[16px] py-[20px]">
-            {renderHeroImage()}
+            <div className="relative w-full aspect-[4/3]">
+              {renderHeroImage()}
+            </div>
             <h2 className="text-[20px] text-white mb-[14px] leading-[24px] mt-[18px]">
               {service.title}
             </h2>
@@ -174,7 +175,9 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
 
           {/* Approach Section */}
           <div className="px-[16px] py-[20px]">
-            {renderHeroImage()}
+            <div className="relative w-full aspect-[4/3]">
+              {renderHeroImage()}
+            </div>
             <h2 className="text-[20px] text-white mb-[14px] leading-[24px] mt-[18px] mb-[6px]">
               {service.ourApproach.title}
             </h2>
@@ -231,7 +234,7 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
       </div>
 
       {/* Desktop View */}
-      <div className="hidden md:flex flex-1 h-screen bg-[#0A090F] py-[20px] px-[16px] md:py-[44px] md:px-[64px] flex-col md:h-auto md:min-h-screen overflow-auto">
+      <div className="hidden md:flex flex-1 bg-[#0A090F] py-[20px] px-[16px] md:py-[44px] md:px-[64px] flex-col md:min-h-screen">
         {/* 顶部标题 */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 w-full">
           <Image
@@ -271,9 +274,9 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
               <div className="text-white text-[16px] leading-[24px] opacity-[65] font-extralight max-w-[600px] whitespace-pre-line">
                 {service.description}
               </div>
-              <div className="min-w-[752px] min-h-[460px] relative">
+              <div className="relative w-[752px] aspect-[4/3] shrink-0">
                 {renderHeroImage({
-                  className: "w-full h-full object-cover",
+                  className: "object-cover",
                   sizes: "(min-width: 768px) 50vw, 100vw",
                 })}
               </div>
@@ -297,9 +300,9 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
             <div className="text-white text-[16px] leading-[24px] opacity-[65] font-extralight max-w-[600px] whitespace-pre-line">
               {service.ourApproach.content}
             </div>
-            <div className="min-w-[752px] min-h-[460px] relative">
+            <div className="relative w-[752px] aspect-[4/3] shrink-0">
               {renderHeroImage({
-                className: "w-full h-full object-cover",
+                className: "object-cover",
                 sizes: "(min-width: 768px) 50vw, 100vw",
               })}
             </div>
