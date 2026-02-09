@@ -1,15 +1,11 @@
 import type { ReactNode } from "react";
 
 export interface LayoutGridProps<T> {
-  renderItem: (item: T, index: number) => ReactNode;
+  renderItem: (item: T, index: number, rowIndex: number) => ReactNode;
   list: readonly T[];
   num: number;
 }
-const LayoutGrid = <T,>({
-  renderItem,
-  list,
-  num,
-}: LayoutGridProps<T>) => {
+const LayoutGrid = <T,>({ renderItem, list, num }: LayoutGridProps<T>) => {
   const row = Math.ceil(list.length / num);
 
   return (
@@ -24,7 +20,7 @@ const LayoutGrid = <T,>({
 
                 return (
                   <div key={colIndex} className="flex-1 flex">
-                    {renderItem(item, colIndex)}
+                    {renderItem(item, colIndex, rowIndex)}
                     {colIndex < num - 1 && (
                       <div className="border-r border-[rgba(255,255,255,0.1)]"></div>
                     )}
