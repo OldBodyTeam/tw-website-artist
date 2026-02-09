@@ -110,14 +110,14 @@ export const services: Service[] = [
     },
     images: [
       {
-        fileName: "出版.jpg",
+        fileName: "print-production-1.jpg",
         format: "jpg",
-        path: "home-ex/出版.jpg",
+        path: "service-page/print-production-1.jpg",
       },
       {
-        fileName: "印刷.jpg",
-        format: "jpg",
-        path: "home-ex/印刷.jpg",
+        fileName: "print-production-2.png",
+        format: "png",
+        path: "service-page/print-production-2.png",
       },
     ],
   },
@@ -174,7 +174,18 @@ export const services: Service[] = [
         },
       ],
     },
-    images: [],
+    images: [
+      {
+        fileName: "digital-advertising-1.avif",
+        format: "avif",
+        path: "service-page/digital-advertising-1.avif",
+      },
+      {
+        fileName: "digital-advertising-2.avif",
+        format: "avif",
+        path: "service-page/digital-advertising-2.avif",
+      },
+    ],
   },
   {
     slug: "wom-marketing",
@@ -237,7 +248,18 @@ export const services: Service[] = [
         },
       ],
     },
-    images: [],
+    images: [
+      {
+        fileName: "branding-strategy-1.avif",
+        format: "avif",
+        path: "service-page/branding-strategy-1.avif",
+      },
+      {
+        fileName: "branding-strategy-2.avif",
+        format: "avif",
+        path: "service-page/branding-strategy-2.avif",
+      },
+    ],
   },
   {
     slug: "branding-strategy",
@@ -346,7 +368,18 @@ export const services: Service[] = [
         },
       ],
     },
-    images: [],
+    images: [
+      {
+        fileName: "social-media-marketing-1.avif",
+        format: "avif",
+        path: "service-page/social-media-marketing-1.avif",
+      },
+      {
+        fileName: "social-media-marketing-2.avif",
+        format: "avif",
+        path: "service-page/social-media-marketing-2.avif",
+      },
+    ],
   },
   {
     slug: "social-media-marketing",
@@ -410,7 +443,18 @@ export const services: Service[] = [
         },
       ],
     },
-    images: [],
+    images: [
+      {
+        fileName: "web-design-1.avif",
+        format: "avif",
+        path: "service-page/web-design-1.avif",
+      },
+      {
+        fileName: "web-design-2.avif",
+        format: "avif",
+        path: "service-page/web-design-2.avif",
+      },
+    ],
   },
   {
     slug: "web-design",
@@ -483,6 +527,17 @@ export const services: Service[] = [
         },
       ],
     },
-    images: [],
+    images: [
+      {
+        fileName: "web-design-1.avif",
+        format: "avif",
+        path: "service-page/web-design-1.avif",
+      },
+      {
+        fileName: "web-design-2.avif",
+        format: "avif",
+        path: "service-page/web-design-2.avif",
+      },
+    ],
   },
 ];
