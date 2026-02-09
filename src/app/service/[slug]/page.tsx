@@ -153,10 +153,10 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
   };
 
   return (
-    <div className="flex-1 min-h-screen overflow-x-hidden overflow-y-auto bg-[#0A090F] flex">
+    <div className="flex-1 h-screen overflow-x-hidden overflow-y-auto bg-[#0A090F] flex">
       <div className="flex-1 h-full">
         {/* Mobile View */}
-        <div className="md:hidden min-h-screen">
+        <div className="md:hidden min-h-screen overflow-x-hidden overflow-y-auto">
           <div className="flex-1 bg-[#0A090F]">
             <LeftNav />
             <div className="h-[54px]"></div>
