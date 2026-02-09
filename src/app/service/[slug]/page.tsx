@@ -19,29 +19,27 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
     );
   }
 
-  const getImageSrc = (index: number = 0) => {
-    const img = service.images?.[index];
-    if (img?.path) {
-      return `/${img.path}`;
-    }
-    return "/example/1.png";
-  };
-
-  const renderHeroImage = ({
+  const renderServiceImage = ({
+    index = 0,
     className = "object-cover",
     sizes = "100vw",
   }: {
+    index?: number;
     className?: string;
     sizes?: string;
   } = {}) => {
+    const img = service.images?.[index];
+    if (!img?.path) return null;
     return (
-      <Image
-        src={getImageSrc(0)}
-        alt={service.title}
-        fill
-        className={className}
-        sizes={sizes}
-      />
+      <div className="relative w-full aspect-[4/3]">
+        <Image
+          src={`/${img.path}`}
+          alt={`${service.title} ${index + 1}`}
+          fill
+          className={className}
+          sizes={sizes}
+        />
+      </div>
     );
   };
 
@@ -163,9 +161,7 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
 
             {/* Hero Section */}
             <div className="mb-[24px] px-[16px] py-[20px]">
-              <div className="relative w-full aspect-[4/3]">
-                {renderHeroImage()}
-              </div>
+              {renderServiceImage()}
               <h2 className="text-[20px] text-white mb-[14px] leading-[24px] mt-[18px]">
                 {service.title}
               </h2>
@@ -176,9 +172,7 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
 
             {/* Approach Section */}
             <div className="px-[16px] py-[20px]">
-              <div className="relative w-full aspect-[4/3]">
-                {renderHeroImage()}
-              </div>
+              {renderServiceImage({ index: 1 })}
               <h2 className="text-[20px] text-white mb-[14px] leading-[24px] mt-[18px] mb-[6px]">
                 {service.ourApproach.title}
               </h2>
@@ -277,12 +271,10 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
                 <div className="text-white text-[16px] leading-[24px] opacity-[65] font-extralight max-w-[600px] whitespace-pre-line">
                   {service.description}
                 </div>
-                <div className="relative w-[752px] aspect-[4/3] shrink-0">
-                  {renderHeroImage({
-                    className: "object-cover",
-                    sizes: "(min-width: 768px) 50vw, 100vw",
-                  })}
-                </div>
+                {renderServiceImage({
+                  className: "object-cover",
+                  sizes: "(min-width: 768px) 50vw, 100vw",
+                })}
               </div>
             </div>
           </div>
@@ -303,12 +295,11 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
               <div className="text-white text-[16px] leading-[24px] opacity-[65] font-extralight max-w-[600px] whitespace-pre-line">
                 {service.ourApproach.content}
               </div>
-              <div className="relative w-[752px] aspect-[4/3] shrink-0">
-                {renderHeroImage({
-                  className: "object-cover",
-                  sizes: "(min-width: 768px) 50vw, 100vw",
-                })}
-              </div>
+              {renderServiceImage({
+                index: 1,
+                className: "object-cover",
+                sizes: "(min-width: 768px) 50vw, 100vw",
+              })}
             </div>
           </div>
           <div className="flex flex-col p-[64px] bg-[rgba(104,104,109,0.1)] mt-[88px] -mx-[64px]">
