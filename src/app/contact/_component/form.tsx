@@ -69,32 +69,16 @@ const ContactForm = () => {
       onFinish={handleSubmit}
     >
       <Form.Item name="name" label="聯絡人姓名">
-        <Input
-          placeholder="請輸入聯絡人姓名"
-          className="w-full"
-          style={{ color: "#FFFFFF" }}
-        />
+        <Input placeholder="請輸入聯絡人姓名" className="w-full" />
       </Form.Item>
       <Form.Item name="company" label="公司名稱">
-        <Input
-          placeholder="請輸入公司名稱"
-          className="w-full"
-          style={{ color: "#FFFFFF" }}
-        />
+        <Input placeholder="請輸入公司名稱" className="w-full" />
       </Form.Item>
       <Form.Item name="phone" label="聯絡電話">
-        <Input
-          placeholder="請輸入聯絡電話"
-          className="w-full"
-          style={{ color: "#FFFFFF" }}
-        />
+        <Input placeholder="請輸入聯絡電話" className="w-full" />
       </Form.Item>
       <Form.Item name="email" label="Email">
-        <Input
-          placeholder="請輸入Email"
-          className="w-full"
-          style={{ color: "#FFFFFF" }}
-        />
+        <Input placeholder="請輸入Email" className="w-full" />
       </Form.Item>
       <Form.Item name="inquiryType" label="洽詢項目（單選）">
         <Radio.Group className="flex gap-[12px] [&_.ant-radio-label]:!pl-[4px] [&_.ant-radio-label]:!pr-[4px] radio-primary">
@@ -107,11 +91,7 @@ const ContactForm = () => {
         </Radio.Group>
       </Form.Item>
       <Form.Item name="message" label="需求內容">
-        <Input.TextArea
-          placeholder="請輸入需求內容"
-          className="w-full"
-          style={{ color: "#FFFFFF" }}
-        />
+        <Input.TextArea placeholder="請輸入需求內容" className="w-full" />
       </Form.Item>
       <button
         type="submit"
