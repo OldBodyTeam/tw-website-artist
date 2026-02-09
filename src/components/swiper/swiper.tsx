@@ -252,27 +252,17 @@ const HomeSwiper = () => {
               );
             }}
           />
-          <div
-            className="flex items-center justify-center flex-col w-full py-[60px] mt-[48px]"
-            style={{
-              backgroundImage: "url('/home-1/m.png')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          >
-            <div className="mb-[12px] text-[20px] leading-[28px] text-white">
-              讓靈感萌芽 使成果綻放
-            </div>
-            <Link href="/contact">
-              <div
-                className="text-[11px] leading-[16px] font-medium text-black py-[8px] px-[24px]"
-                style={{ backgroundColor: "rgba(248, 255, 49, 1)" }}
-              >
-                聯絡我們
-              </div>
-            </Link>
-          </div>
+          <Link href="/contact">
+            <div
+              className="flex items-center justify-center flex-col w-full py-[60px] mt-[48px] h-[100px]"
+              style={{
+                backgroundImage: "url('/banner/banner-mobile.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+          </Link>
         </div>
       </div>
     );
@@ -552,26 +542,17 @@ const HomeSwiper = () => {
                 );
               })}
             </div>
-
-            <div
-              className="flex items-center justify-center flex-col w-full py-[60px] mt-[32px] mb-[48px]"
-              style={{
-                backgroundImage: "url('/home-1/PC.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              <div className="mb-[12px] text-[20px] leading-[28px] text-white">
-                讓靈感萌芽 使成果綻放
-              </div>
+            <Link href="/contact">
               <div
-                className="text-[11px] leading-[16px] font-medium text-black py-[8px] px-[24px]"
-                style={{ backgroundColor: "rgba(248, 255, 49, 1)" }}
-              >
-                聯絡我們
-              </div>
-            </div>
+                className="flex items-center justify-center flex-col w-full py-[60px] mt-[32px] mb-[48px] h-[200px]"
+                style={{
+                  backgroundImage: "url('/banner/banner-desktop.png')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></div>
+            </Link>
 
             <div className="flex items-end justify-between">
               <Image

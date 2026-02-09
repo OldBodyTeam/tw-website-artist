@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <AntdRegistry>
           <AntdProvider>
-            <div className="flex items-start w-screen h-screen">
+            <div className="flex items-center w-screen h-screen">
               <LeftNav />
               <div className="flex-1">{children}</div>
             </div>
