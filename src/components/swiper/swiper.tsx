@@ -90,6 +90,10 @@ const HomeSwiper = () => {
     null,
   );
   const responsive = useResponsive();
+  const partners = Array.from({ length: 6 }).map((_, index) => ({
+    src: `/partners/partner-${index + 1}.png`,
+    alt: `partner-${index + 1}`,
+  }));
   if (!responsive?.middle) {
     return (
       <div className="w-full h-full relative">
@@ -231,8 +235,22 @@ const HomeSwiper = () => {
           </div> */}
           <LayoutGrid
             num={2}
-            list={Array.from({ length: 8 })}
-            renderItem={(item) => <div className="h-[140px]  w-full"></div>}
+            list={Array.from({ length: 6 })}
+            renderItem={(item, index, rowIndex) => {
+              const partner = partners[rowIndex * 2 + index];
+              return (
+                <div className="h-[140px] w-full flex items-center justify-center bg-black">
+                  {partner ? (
+                    <Image
+                      src={partner.src}
+                      alt={partner.alt}
+                      width={160}
+                      height={80}
+                    />
+                  ) : null}
+                </div>
+              );
+            }}
           />
           <div
             className="flex items-center justify-center flex-col w-full py-[60px] mt-[48px]"
@@ -513,31 +531,26 @@ const HomeSwiper = () => {
             <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
           </div> */}
             <div className="flex-1 grid grid-cols-4 overflow-x-hidden overflow-y-auto gap-px bg-[rgba(255,255,255,0.2)] bg-black">
-              <div className="flex items-center justify-center bg-black">
-                <Image src="/home-4/1.png" alt="2" width={190} height={92} />
-              </div>
-              <div className="flex items-center justify-center bg-black">
-                <Image src="/home-4/2.png" alt="2" width={235} height={114} />
-              </div>
-              <div className="flex items-center justify-center bg-black">
-                <Image src="/home-4/3.png" alt="2" width={96} height={96} />
-              </div>
-              <div className="flex items-center justify-center bg-black">
-                <Image src="/home-4/4.png" alt="2" width={198} height={96} />
-              </div>
-              <div className="flex items-center justify-center bg-black">
-                <Image src="/home-4/5.png" alt="2" width={50} height={100} />
-              </div>
-
-              <div className="flex items-center justify-center bg-black">
-                <Image src="/home-4/7.png" alt="2" width={100} height={100} />
-              </div>
-              <div className="flex items-center justify-center bg-black">
-                <Image src="/home-4/8.png" alt="2" width={182} height={88} />
-              </div>
-              <div className="flex items-center justify-center bg-black invisible">
-                <Image src="/home-4/6.png" alt="2" width={252} height={122} />
-              </div>
+              {Array.from({ length: 8 }).map((_, index) => {
+                const partner = partners[index];
+                return (
+                  <div
+                    key={`partner-${index}`}
+                    className={`flex items-center justify-center bg-black ${
+                      partner ? "" : "invisible"
+                    }`}
+                  >
+                    {partner ? (
+                      <Image
+                        src={partner.src}
+                        alt={partner.alt}
+                        width={190}
+                        height={92}
+                      />
+                    ) : null}
+                  </div>
+                );
+              })}
             </div>
 
             <div
