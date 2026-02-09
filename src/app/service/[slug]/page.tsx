@@ -165,9 +165,9 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
               <h2 className="text-[20px] text-white mb-[14px] leading-[24px] mt-[18px]">
                 {service.title}
               </h2>
-              <p className="text-[11px] leading-[16px] font-light text-white opacity-[0.65]">
+              <div className="text-[11px] leading-[16px] font-light text-white opacity-[0.65]">
                 {service.description}
-              </p>
+              </div>
             </div>
 
             {/* Approach Section */}
