@@ -237,7 +237,7 @@ const TestPage = () => {
             </div>
             <div className="flex-shrink-0 flex justify-end mt-[24px]  ml-[30px]">
               <Image
-                src="/contact/p.png"
+                src="/about-page/about-page-01.png"
                 alt={"Mission"}
                 width={450}
                 height={700}
@@ -292,7 +292,7 @@ const TestPage = () => {
             </div>
             <div className="flex-shrink-0 flex-shrink-0 mt-[24px] ml-[30px]">
               <Image
-                src="/contact/p.png"
+                src="/about-page/about-page-02.png"
                 alt={"Mission"}
                 width={450}
                 height={700}
@@ -343,7 +343,7 @@ const TestPage = () => {
             </div>
             <div className="flex-shrink-0 mt-[24px] ml-[30px]">
               <Image
-                src="/contact/p.png"
+                src="/about-page/about-page-03.png"
                 alt={"Mission"}
                 width={450}
                 height={700}
@@ -449,7 +449,7 @@ const TestPage = () => {
           </div>
           <div className="flex-shrink-0">
             <Image
-              src="/contact/p.png"
+              src="/about-page/about-page-01.png"
               alt={"Mission"}
               width={450}
               height={700}
@@ -502,7 +502,7 @@ const TestPage = () => {
           </div>
           <div className="flex-shrink-0">
             <Image
-              src="/contact/p.png"
+              src="/about-page/about-page-02.png"
               alt={"Mission"}
               width={450}
               height={700}
@@ -549,7 +549,7 @@ const TestPage = () => {
           </div>
           <div className="flex-shrink-0">
             <Image
-              src="/contact/p.png"
+              src="/about-page/about-page-03.png"
               alt={"Mission"}
               width={450}
               height={700}

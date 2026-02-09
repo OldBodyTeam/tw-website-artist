@@ -43,6 +43,7 @@ interface StickyCardProps {
   children: React.ReactNode;
   topOffset: number;
   isLast?: boolean;
+  imageSrc: string;
 }
 
 const StickyCard = ({
@@ -52,6 +53,7 @@ const StickyCard = ({
   children,
   topOffset,
   isLast = false,
+  imageSrc,
 }: StickyCardProps) => (
   <div
     className={`w-full ${
@@ -71,7 +73,7 @@ const StickyCard = ({
     </div>
     <div className="flex-shrink-0">
       <Image
-        src="/contact/p.png"
+        src={imageSrc}
         alt={title}
         width={450}
         height={700}
@@ -148,6 +150,7 @@ const ScrollPage = () => {
         title="Vision"
         subtitle="成為最值得信賴的整合行銷夥伴"
         topOffset={0}
+        imageSrc="/about-page/about-page-01.png"
       >
         <p>
           我們相信，每一個品牌都有獨特的價值，需要被看見並被理解。亞堤思的願景是透過專業行銷策略與設計美學，串聯數位與實體的完整行銷方案，幫助企業在快速變動的市場中找到長遠的定位。
@@ -163,6 +166,7 @@ const ScrollPage = () => {
         title="Mission"
         subtitle="讓行銷回歸本質：專業、透明、有效"
         topOffset={100}
+        imageSrc="/about-page/about-page-02.png"
       >
         <p>
           市面上的行銷服務常流於「方案式」與「短期效應」，導致許多企業無法真正受益。亞堤思的使命是傾聽品牌需求，量身打造策略，並且透過數據驗證、嚴謹執行與專業把關，確保每一分行銷投入都能發揮最大效益。
@@ -179,6 +183,7 @@ const ScrollPage = () => {
         subtitle="專業為基礎，透明為原則，效益為核心"
         topOffset={200}
         isLast={true}
+        imageSrc="/about-page/about-page-03.png"
       >
         <div className="space-y-6">
           {CORE_VALUES.map((value, index) => (
