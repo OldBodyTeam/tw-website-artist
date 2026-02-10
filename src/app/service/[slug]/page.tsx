@@ -161,18 +161,17 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
 
             {/* Hero Section */}
             <div className="mb-[24px] px-[16px] py-[20px]">
-              {renderServiceImage()}
               <h2 className="text-[20px] text-white mb-[14px] leading-[24px] mt-[18px]">
                 {service.title}
               </h2>
               <div className="text-[11px] leading-[16px] font-light text-white opacity-[0.65]">
                 {service.description}
               </div>
+              <div className="mt-[16px]">{renderServiceImage()}</div>
             </div>
 
             {/* Approach Section */}
             <div className="px-[16px] py-[20px]">
-              {renderServiceImage({ index: 1 })}
               <h2 className="text-[20px] text-white mb-[14px] leading-[24px] mt-[18px] mb-[6px]">
                 {service.ourApproach.title}
               </h2>
@@ -181,6 +180,9 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
               </p>
               <div className="text-[11px] leading-[16px] font-light text-white opacity-[0.65]">
                 {service.ourApproach.content}
+              </div>
+              <div className="mt-[16px]">
+                {renderServiceImage({ index: 1 })}
               </div>
             </div>
 
