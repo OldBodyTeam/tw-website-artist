@@ -261,7 +261,7 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
 
           {/* 内容区域 */}
           <div className="flex flex-col mb-[88px]">
-            <div className="">
+            <div className="mt-[16px]">
               <div className="flex flex-col gap-[4px] mb-[48px]">
                 <div className="text-white text-[36px] leading-[42px] font-semibold">
                   {service.title}

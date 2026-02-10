@@ -253,15 +253,13 @@ const HomeSwiper = () => {
             }}
           />
           <Link href="/contact">
-            <div
-              className="flex items-center justify-center flex-col w-full py-[60px] mt-[48px] h-[100px]"
-              style={{
-                backgroundImage: "url('/banner/banner-mobile.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            ></div>
+            <Image
+              className="w-full flex-1 h-auto mt-[48px]"
+              src="/banner/banner-mobile.png"
+              alt="banner mobile"
+              width={1200}
+              height={300}
+            />
           </Link>
         </div>
       </div>
@@ -543,15 +541,13 @@ const HomeSwiper = () => {
               })}
             </div>
             <Link href="/contact">
-              <div
-                className="flex items-center justify-center flex-col w-full py-[60px] mt-[32px] mb-[48px] h-[200px]"
-                style={{
-                  backgroundImage: "url('/banner/banner-desktop.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}
-              ></div>
+              <Image
+                className="w-full flex-1 h-auto mt-[32px] mb-[48px]"
+                src="/banner/banner-desktop.png"
+                alt="banner desktop"
+                width={1600}
+                height={400}
+              />
             </Link>
 
             <div className="flex items-end justify-between">

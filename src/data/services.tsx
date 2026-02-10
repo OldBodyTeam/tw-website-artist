@@ -370,14 +370,14 @@ export const services: Service[] = [
     },
     images: [
       {
-        fileName: "social-media-marketing-1.avif",
+        fileName: "branding-strategy-1.avif",
         format: "avif",
-        path: "service-page/social-media-marketing-1.avif",
+        path: "service-page/branding-strategy-1.avif",
       },
       {
-        fileName: "social-media-marketing-2.avif",
+        fileName: "branding-strategy-2.avif",
         format: "avif",
-        path: "service-page/social-media-marketing-2.avif",
+        path: "service-page/branding-strategy-2.avif",
       },
     ],
   },
@@ -445,14 +445,14 @@ export const services: Service[] = [
     },
     images: [
       {
-        fileName: "web-design-1.avif",
+        fileName: "social-media-marketing-1.avif",
         format: "avif",
-        path: "service-page/web-design-1.avif",
+        path: "service-page/social-media-marketing-1.avif",
       },
       {
-        fileName: "web-design-2.avif",
+        fileName: "social-media-marketing-2.avif",
         format: "avif",
-        path: "service-page/web-design-2.avif",
+        path: "service-page/social-media-marketing-2.avif",
       },
     ],
   },
