@@ -250,14 +250,14 @@ export const services: Service[] = [
     },
     images: [
       {
-        fileName: "branding-strategy-1.avif",
-        format: "avif",
-        path: "service-page/branding-strategy-1.avif",
+        fileName: "wom-marketing-1.jpg",
+        format: "jpg",
+        path: "service-page/wom-marketing-1.jpg",
       },
       {
-        fileName: "branding-strategy-2.avif",
-        format: "avif",
-        path: "service-page/branding-strategy-2.avif",
+        fileName: "wom-marketing-2.png",
+        format: "png",
+        path: "service-page/wom-marketing-2.png",
       },
     ],
   },
