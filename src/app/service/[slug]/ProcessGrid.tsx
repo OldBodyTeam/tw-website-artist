@@ -19,31 +19,28 @@ export const ProcessGrid = ({ steps, title }: ProcessGridProps) => {
         </div>
       ) : null}
 
-      <div className="grid grid-cols-2  border-border">
+      <div className="grid grid-cols-1 border-border sm:grid-cols-2">
         {steps.map((step, index) => (
           <div
             key={step.id}
-            className={`
-            flex flex-col h-full border-border border-[rgba(255,255,255,0.1)]
-              ${index % 2 === 0 ? "border-r" : ""} 
-              ${
-                index % 2 === 0 ? "py-[10px] pr-[10px]" : "py-[10px] pl-[10px]"
-              } 
-              ${
-                index < steps.length - (steps.length % 2 === 0 ? 2 : 1)
-                  ? "border-b"
-                  : ""
-              }
-              !border-[rgba(255,255,255,0.1)]
-            `}
+            className={[
+              "flex h-full flex-col border-[rgba(255,255,255,0.1)] py-5 sm:py-[10px]",
+              index < steps.length - 1 ? "border-b" : "",
+              index % 2 === 0 ? "sm:border-r sm:pr-[10px]" : "sm:pl-[10px]",
+              index < steps.length - (steps.length % 2 === 0 ? 2 : 1)
+                ? "sm:border-b"
+                : "sm:border-b-0",
+            ]
+              .filter(Boolean)
+              .join(" ")}
           >
-            <span className="text-[11px] text-white leading-[16px] font-light mb-[8px]">
+            <span className="mb-[10px] text-[12px] leading-[16px] font-light tracking-[0.16em] text-white/55 sm:mb-[8px] sm:tracking-normal sm:text-white">
               {step.number}
             </span>
-            <h4 className="text-[16px] text-white leading-[24px] font-semibold mb-[8px]">
+            <h4 className="mb-[10px] text-[18px] leading-[26px] font-semibold text-white sm:mb-[8px] sm:text-[16px] sm:leading-[24px]">
               {step.title}
             </h4>
-            <p className="text-[11px] text-white leading-[16px] font-light">
+            <p className="whitespace-pre-line text-[14px] leading-[22px] font-light text-white/72 sm:text-[11px] sm:leading-[16px] sm:text-white">
               {step.description}
             </p>
           </div>

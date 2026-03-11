@@ -31,9 +31,9 @@ export default function RootLayout({
       >
         <AntdRegistry>
           <AntdProvider>
-            <div className="flex items-center w-screen h-screen">
+            <div className="flex min-h-[100dvh] w-full items-stretch overflow-x-clip md:h-screen">
               <LeftNav />
-              <div className="flex-1">{children}</div>
+              <div className="min-w-0 flex-1">{children}</div>
             </div>
           </AntdProvider>
         </AntdRegistry>

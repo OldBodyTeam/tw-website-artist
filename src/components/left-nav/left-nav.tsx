@@ -10,7 +10,7 @@ import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export const menu = [
   {
@@ -38,29 +38,40 @@ const LeftNav = () => {
   const pathname = usePathname();
   const [visible, setVisible] = useState(false);
 
-  // 监听路由变化，自动关闭侧边栏
-  useEffect(() => {
-    setVisible(false);
-  }, [pathname]);
-
   return (
     // 加条线
     <Drawer direction="left" open={visible} onOpenChange={setVisible}>
-      <div className="md:bg-[#F8F8EC] md:h-screen fixed top-8 left-8 md:static md:top-auto md:left-auto z-50">
+      <div className="z-50 md:static md:h-screen md:bg-[#F8F8EC]">
         {/* Mobile Trigger */}
         <DrawerTrigger asChild>
           <button
             type="button"
-            className="md:hidden w-full fixed top-0 left-0 flex items-center justify-center z-30 p-[16px]"
+            aria-label="Open navigation menu"
+            className="fixed inset-x-0 top-0 z-30 flex items-center justify-center border-b border-white/6 bg-[#05050c]/88 pb-[10px] backdrop-blur-md md:hidden"
+            style={{
+              paddingTop: "calc(env(safe-area-inset-top) + 10px)",
+              paddingRight: "max(16px, env(safe-area-inset-right))",
+              paddingLeft: "max(16px, env(safe-area-inset-left))",
+            }}
           >
             <Image
               src="/nav/mobile-menu.svg"
               alt="menu"
               width={22}
               height={22}
-              className="absolute top-[16px] left-[16px]"
+              className="absolute"
+              style={{
+                top: "calc(env(safe-area-inset-top) + 10px)",
+                left: "max(16px, env(safe-area-inset-left))",
+              }}
             />
-            <Image src="/home-1/1.svg" alt="menu" width={132} height={24} />
+            <Image
+              src="/home-1/1.svg"
+              alt="menu"
+              width={132}
+              height={24}
+              className="h-auto w-[118px]"
+            />
           </button>
         </DrawerTrigger>
         {/* Desktop Trigger */}
@@ -75,7 +86,7 @@ const LeftNav = () => {
         </DrawerTrigger>
         <DrawerTitle></DrawerTitle>
         <DrawerContent className="backdrop-blur-[8px]">
-          <div className="bg-[#F8F8EC] h-screen p-[24px] md:p-[40px] flex flex-col justify-between">
+          <div className="flex min-h-[100dvh] flex-col justify-between overflow-y-auto bg-[#F8F8EC] pt-[calc(env(safe-area-inset-top)+24px)] pr-[max(24px,env(safe-area-inset-right))] pb-[calc(env(safe-area-inset-bottom)+24px)] pl-[max(24px,env(safe-area-inset-left))] md:h-screen md:min-h-0 md:p-[40px]">
             <div>
               <Image
                 src="/logo.svg"
