@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 // components/VideoPlayer.tsx
 "use client";
 
@@ -7,6 +8,7 @@ export const VideoPlayer = () => {
       <video
         autoPlay
         muted
+        // @ts-expect-error
         defaultMuted
         loop
         playsInline
