@@ -409,7 +409,7 @@ const HomeSwiper = () => {
       </SwiperSlide>
       <SwiperSlide>
         {/* 按比例图片 */}
-        <div className="w-full h-full bg-black flex flex-col  pt-[96px] pb-[44px] px-[64px]">
+        <div className="w-full h-full bg-black flex flex-col  pt-[96px] pb-[44px] px-[64px] flex overflow-auto">
           <div className="mb-[16px] flex flex-col">
             <div className="w-[528px] self-end">
               <div className="text-[20px] font-regular text-white mb-[8px]">

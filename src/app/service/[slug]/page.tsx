@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import { LeftNav } from "@/components/left-nav/left-nav";
 import { ProcessGrid } from "./ProcessGrid";
 import { services, ServiceWhatWeDoItem } from "@/data/services";
+import { serviceLinks } from "@/data/service-links";
 
 type ServiceDetailProps = {
   params: Promise<{ slug: string }>;
@@ -10,6 +12,9 @@ type ServiceDetailProps = {
 export default async function ServiceDetail({ params }: ServiceDetailProps) {
   const { slug } = await params;
   const service = services.find((s) => s.slug === slug);
+  const otherServiceLinks = serviceLinks.filter(
+    (l) => l.href.replace("/service/", "") !== slug,
+  );
 
   if (!service) {
     return (
@@ -150,6 +155,48 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
     return null;
   };
 
+  const renderOtherServices = ({
+    titleClassName,
+    containerClassName,
+    listClassName,
+    itemClassName,
+  }: {
+    titleClassName: string;
+    containerClassName: string;
+    listClassName: string;
+    itemClassName: string;
+  }) => {
+    if (!otherServiceLinks.length) return null;
+    return (
+      <div className={containerClassName}>
+        <div className={titleClassName}>
+          其他服務
+          {/* <span className="opacity-65 text-[12px] ml-4">Other Services</span> */}
+        </div>
+        <div className={listClassName}>
+          {otherServiceLinks.map((v) => (
+            <Link key={v.href} href={v.href} className={itemClassName}>
+              <div className="group relative overflow-hidden border border-[rgba(255,255,255,0.1)] bg-[rgba(20,19,24,1)]">
+                <div
+                  className="absolute inset-0 bg-cover bg-center opacity-45 group-hover:opacity-60 transition-opacity"
+                  style={{ backgroundImage: `url(${v.bgImage})` }}
+                />
+                <div className="relative z-10 p-[16px] flex flex-col justify-end min-h-[96px]">
+                  <div className="text-white text-[16px] leading-[20px] font-medium">
+                    {v.title}
+                  </div>
+                  <div className="text-white text-[12px] leading-[16px] opacity-65 mt-[4px]">
+                    {v.desc}
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="flex-1 h-screen overflow-x-hidden overflow-y-auto bg-[#0A090F] flex">
       <div className="flex-1 h-full">
@@ -229,6 +276,13 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
               </div>
               {renderWhatWeDo()}
             </div>
+
+            {renderOtherServices({
+              containerClassName: "px-[16px] py-[24px] pb-[40px]",
+              titleClassName: "text-[20px] text-white leading-[24px] mb-[16px]",
+              listClassName: "flex gap-[12px] overflow-x-auto",
+              itemClassName: "flex-none w-[180px]",
+            })}
           </div>
         </div>
 
@@ -321,6 +375,14 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
             </div>
             <div className="mt-[40px]">{renderWhatWeDo()}</div>
           </div>
+
+          {renderOtherServices({
+            containerClassName: "mt-[88px] mb-[40px]",
+            titleClassName:
+              "text-white text-[36px] leading-[42px] font-semibold mb-[32px] flex justify-center items-center",
+            listClassName: "grid grid-cols-5 gap-[16px]",
+            itemClassName: "w-full",
+          })}
         </div>
       </div>
     </div>

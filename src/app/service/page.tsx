@@ -1,62 +1,7 @@
 import { Divider } from "antd";
 import Image from "next/image";
 import Link from "next/link";
-const list = [
-  {
-    title: "品牌規劃",
-    desc: "Branding Strategy",
-    image: "bg-[#a23e00]", // 注意：颜色值格式统一（如#a23e00无需加[]）
-    bgImage: "/ps/branding-strategy.png",
-    className:
-      "md:[clip-path:polygon(0_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/service/branding-strategy",
-  },
-  {
-    title: "網站設計",
-    desc: "Website Design",
-    image: "bg-[#FF6699]",
-    bgImage: "/ps/web-design.png",
-    className:
-      "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/service/web-design",
-  },
-  {
-    title: "社群行銷",
-    desc: "Social Media Marketing",
-    image: "bg-[#FF6700]",
-    bgImage: "/ps/social-media-marketing.png",
-    className:
-      "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/service/social-media-marketing",
-  },
-  {
-    title: "口碑行銷",
-    desc: "WOM Marketing",
-    image: "bg-[#aF6600]",
-    bgImage: "/ps/wom-marketing.png",
-    className:
-      "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/service/wom-marketing",
-  },
-  {
-    title: "廣告投放",
-    desc: "Digital Advertising",
-    image: "bg-[#Fa6600]",
-    bgImage: "/ps/digital-advertising.png",
-    className:
-      "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/service/digital-advertising",
-  },
-  {
-    title: "各類印刷",
-    desc: "Print Production",
-    image: "bg-[#F16610]",
-    bgImage: "/ps/print-production.png",
-    className:
-      "md:[clip-path:polygon(18px_0,100%_0,calc(100%_-_18px)_100%,0_100%)]",
-    href: "/service/print-production",
-  },
-];
+import { serviceLinks } from "@/data/service-links";
 
 export default function Example() {
   return (
@@ -83,7 +28,7 @@ export default function Example() {
 
       {/* 核心内容区：竖排文字列表 */}
       <div className="grid grid-cols-3 grid-rows-2 gap-y-[12px] md:flex md:flex-row justify-between items-stretch mt-[32px] md:mt-[64px] flex-1 md:gap-0">
-        {list.map((v) => (
+        {serviceLinks.map((v) => (
           <Link href={v.href} key={v.title} className="block flex-1 flex">
             <div
               // 修复1：使用v.image作为背景色，同时设置flex布局让内容垂直居中
