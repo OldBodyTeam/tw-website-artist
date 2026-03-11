@@ -153,10 +153,8 @@ const HomeSwiper = () => {
                   className="aspect-[1/1]"
                 />
                 <div className="flex flex-col absolute bottom-0 left-0 bg-[rgba(0,0,0,0.5)] w-full p-[12px] text-white text-[12px] justify-between h-full hover:bg-transparent">
-                  <div className="text-[12px] text-white">{item.company}</div>
-                  <div className="text-[12px] text-white">
-                    {item.explanation}
-                  </div>
+                  <div className="text-[12px] text-white">{item.second}</div>
+                  <div className="text-[12px] text-white">{item.first}</div>
                 </div>
               </div>
             ))}
@@ -409,7 +407,7 @@ const HomeSwiper = () => {
       </SwiperSlide>
       <SwiperSlide>
         {/* 按比例图片 */}
-        <div className="w-full h-full bg-black flex flex-col  pt-[96px] pb-[44px] px-[64px] flex overflow-auto">
+        <div className="w-full h-full bg-black flex flex-col pt-[96px] pb-[44px] px-[64px] overflow-auto">
           <div className="mb-[16px] flex flex-col">
             <div className="w-[528px] self-end">
               <div className="text-[20px] font-regular text-white mb-[8px]">
@@ -428,7 +426,7 @@ const HomeSwiper = () => {
               <Image src="/home-2/dd.png" alt="2" width={256} height={18} />
             </div>
           </div>
-          <div className="flex-1 grid grid-cols-3 gap-[20px] overflow-x-hidden overflow-y-auto">
+          <div className="flex-1 grid grid-cols-3 gap-[20px]">
             <div className="overflow-hidden relative">
               <div className="relative">
                 <img
