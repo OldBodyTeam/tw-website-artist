@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { ContactForm } from "./_component/form";
 import { Divider } from "antd";
+import { createPageMetadata, pageSeo } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata(pageSeo.contact, "/contact");
+
 export default function Contact() {
   return (
     <div className="flex-1 h-screen bg-[#0A090F] py-[20px] px-[16px] md:py-[44px] md:px-[64px] flex flex-col md:h-auto md:min-h-screen">

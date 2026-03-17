@@ -1,12 +1,33 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ProcessGrid } from "./ProcessGrid";
 import { services, ServiceWhatWeDoItem } from "@/data/services";
 import { serviceLinks } from "@/data/service-links";
+import { createPageMetadata, getServiceSeoConfig, pageSeo } from "@/lib/seo";
 
 type ServiceDetailProps = {
   params: Promise<{ slug: string }>;
 };
+
+export async function generateMetadata({
+  params,
+}: ServiceDetailProps): Promise<Metadata> {
+  const { slug } = await params;
+  const seoConfig = getServiceSeoConfig(slug);
+
+  if (!seoConfig) {
+    return {
+      ...createPageMetadata(pageSeo.service, "/service"),
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
+  return createPageMetadata(seoConfig, `/service/${slug}`);
+}
 
 export default async function ServiceDetail({ params }: ServiceDetailProps) {
   const { slug } = await params;

@@ -18,11 +18,12 @@ const theme = {
       colorTextPlaceholder: "rgba(255, 255, 255, 0.8)",
       colorText: "white",
     },
-    Radio: {
+    Checkbox: {
       colorText: "rgba(255, 255, 255, 0.8)",
-      radioSize: 14,
+      checkboxSize: 14,
       colorPrimary: "#f8ff31",
       colorPrimaryHover: "#f8ff31",
+      colorBgContainer: "black",
     },
   },
   token: {

@@ -1,6 +1,6 @@
 "use client";
 
-import { Form, Input, Radio } from "antd";
+import { Checkbox, Form, Input } from "antd";
 import { useMemo, useState } from "react";
 
 const FORM_ACTION_URL =
@@ -80,15 +80,15 @@ const ContactForm = () => {
       <Form.Item name="email" label="Email">
         <Input placeholder="請輸入Email" className="w-full" />
       </Form.Item>
-      <Form.Item name="inquiryType" label="洽詢項目（單選）">
-        <Radio.Group className="flex gap-[12px] [&_.ant-radio-label]:!pl-[4px] [&_.ant-radio-label]:!pr-[4px] radio-primary">
-          <Radio value="品牌規劃">品牌規劃</Radio>
-          <Radio value="網站設計">網站設計</Radio>
-          <Radio value="社群行銷">社群行銷</Radio>
-          <Radio value="口碑行銷">口碑行銷</Radio>
-          <Radio value="廣告投放">廣告投放</Radio>
-          <Radio value="各類印刷">各類印刷</Radio>
-        </Radio.Group>
+      <Form.Item name="inquiryType" label="洽詢項目（多選）">
+        <Checkbox.Group className="flex gap-[12px] [&_.ant-checkbox-label]:!pl-[4px] [&_.ant-checkbox-label]:!pr-[4px] checkbox-primary [&_.ant-checkbox-inner]:!bg-[black] [&_.ant-checkbox-inner]:!border-[#F8FF31]">
+          <Checkbox value="品牌規劃">品牌規劃</Checkbox>
+          <Checkbox value="網站設計">網站設計</Checkbox>
+          <Checkbox value="社群行銷">社群行銷</Checkbox>
+          <Checkbox value="口碑行銷">口碑行銷</Checkbox>
+          <Checkbox value="廣告投放">廣告投放</Checkbox>
+          <Checkbox value="各類印刷">各類印刷</Checkbox>
+        </Checkbox.Group>
       </Form.Item>
       <Form.Item name="message" label="需求內容">
         <Input.TextArea placeholder="請輸入需求內容" className="w-full" />

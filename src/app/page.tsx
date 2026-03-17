@@ -1,4 +1,8 @@
+import type { Metadata } from "next";
 import { HomeSwiper } from "@/components/swiper/swiper";
+import { createPageMetadata, pageSeo } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata(pageSeo.home, "/");
 
 export default function Home() {
   return (

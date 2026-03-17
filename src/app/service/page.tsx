@@ -1,9 +1,13 @@
+import type { Metadata } from "next";
 import { Divider } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 import { serviceLinks } from "@/data/service-links";
+import { createPageMetadata, pageSeo } from "@/lib/seo";
 
-export default function Example() {
+export const metadata: Metadata = createPageMetadata(pageSeo.service, "/service");
+
+export default function ServicePage() {
   return (
     <div className="flex-1 h-screen bg-black py-[20px] px-[16px] md:py-[44px] md:px-[64px] flex flex-col md:h-auto md:min-h-screen">
       {/* 顶部图片 */}
